@@ -1,4 +1,4 @@
-w<?php
+<?php
 /**
  * xradar functions and definitions
  *

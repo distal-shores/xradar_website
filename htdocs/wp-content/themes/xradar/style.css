@@ -526,23 +526,42 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Header
  --------------------------------------------------------------*/
+#masthead {
+  margin-top: 50px;
+  position: relative;
+  z-index: 11;
+}
+#top-buffer {
+  background-color: DimGray;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .site-branding {
-  background-color: grey;
   display: inline-block;
   width: 40%;
+}
+.site-branding a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .site-branding .site-title {
   margin-left: 100px;
 }
 #site-navigation {
-  background-color: lightgrey;
   display: inline-block;
   float: right;
   width: 50%;
 }
 #site-navigation .menu-primary-menu-container ul li {
-  padding: 30px;
+  padding: 30px 15px 0px;
   text-transform: uppercase;
+}
+#site-navigation .menu-primary-menu-container ul li a {
+  color: white;
+  font-size: 24px;
 }
 /*--------------------------------------------------------------
  # Home
@@ -550,8 +569,10 @@ a:hover, a:active {
 #hero-photo {
   background-image: url('http://lorempixel.com/output/technics-q-c-1920-1079-7.jpg');
   position: absolute;
+  top: 80px;
   width: 100%;
   height: 1079px;
+  z-index: 1;
 }
 #hero-photo button {
   background-color: DarkGray;
@@ -567,7 +588,7 @@ a:hover, a:active {
 #hero-photo h1 {
   color: white;
   font-size: 60px;
-  margin-top: 200px;
+  margin-top: 300px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
