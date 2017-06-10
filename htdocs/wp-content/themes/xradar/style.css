@@ -545,6 +545,34 @@ a:hover, a:active {
   text-transform: uppercase;
 }
 /*--------------------------------------------------------------
+ # Home
+ --------------------------------------------------------------*/
+#hero-photo {
+  background-image: url('http://lorempixel.com/output/technics-q-c-1920-1079-7.jpg');
+  position: absolute;
+  width: 100%;
+  height: 1079px;
+}
+#hero-photo button {
+  background-color: DarkGray;
+  border: 5px solid black;
+  color: white;
+  display: block;
+  font-size: 36px;
+  height: 80px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 400px;
+}
+#hero-photo h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: 200px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*--------------------------------------------------------------
  # Infinite scroll
  --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

@@ -101,6 +101,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "site/header";
 
 /*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+@import "site/primary/home";
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
