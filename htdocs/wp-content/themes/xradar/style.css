@@ -190,7 +190,6 @@ body, button, input, select, textarea {
 }
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  color: red;
 }
 p {
   margin-bottom: 1.5em;
@@ -523,6 +522,27 @@ a:hover, a:active {
 }
 .bypostauthor {
   display: block;
+}
+/*--------------------------------------------------------------
+ # Header
+ --------------------------------------------------------------*/
+.site-branding {
+  background-color: grey;
+  display: inline-block;
+  width: 40%;
+}
+.site-branding .site-title {
+  margin-left: 100px;
+}
+#site-navigation {
+  background-color: lightgrey;
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+#site-navigation .menu-primary-menu-container ul li {
+  padding: 30px;
+  text-transform: uppercase;
 }
 /*--------------------------------------------------------------
  # Infinite scroll
