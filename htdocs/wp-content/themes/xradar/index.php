@@ -46,6 +46,25 @@ get_header(); ?>
                 </p>
                 <button class="cta-button">CTA Button</button>
             </section>
+            <section class="case-studies">
+                <h1>Case Studies</h1>
+                <button class="cta-button">CTA Button</button>
+            </section>
+            <section class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="contact-text">
+                    Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmetrical viral letterpress, McSweeney's seitan 3 wolf moon drinking vinegar sartorial pour-over messenger bag
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" value="" placeholder="Name">
+                        <input type="email" value="" placeholder="Email">
+                        <input type="text" value="" placeholder="Subject">
+                        <textarea type="text" value="" placeholder="Your message"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

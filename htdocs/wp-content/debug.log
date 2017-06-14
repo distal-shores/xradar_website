@@ -2291,3 +2291,5 @@
 [08-Jun-2017 04:01:55 UTC] PHP Warning:  mysql_connect(): No such file or directory in /Users/samcoll/Documents/vvv/vagrant-local/www/xradar/htdocs/wp-includes/wp-db.php on line 1568
 [08-Jun-2017 17:56:36 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [08-Jun-2017 17:56:36 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[13-Jun-2017 00:01:58 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[14-Jun-2017 17:34:59 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227

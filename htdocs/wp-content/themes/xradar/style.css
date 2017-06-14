@@ -526,42 +526,72 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Header
  --------------------------------------------------------------*/
-#masthead {
-  margin-top: 50px;
-  position: relative;
-  z-index: 11;
+@media (min-width: 1200px) {
+  #masthead {
+    display: block;
+    margin-top: 50px;
+    position: relative;
+    z-index: 11;
+  }
+  #top-buffer {
+    background-color: DimGray;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .site-branding {
+    display: inline-block;
+    width: 40%;
+  }
+  .site-branding a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-branding .site-title {
+    margin-left: 100px;
+  }
+  #site-navigation {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  #site-navigation .menu-primary-menu-container ul li {
+    padding: 30px 15px 0px;
+    text-transform: uppercase;
+  }
+  #site-navigation .menu-primary-menu-container ul li a {
+    color: white;
+    font-size: 24px;
+  }
 }
-#top-buffer {
-  background-color: DimGray;
-  height: 80px;
-  position: absolute;
-  top: 0;
-  width: 100%;
+/*--------------------------------------------------------------
+ # Footer
+ --------------------------------------------------------------*/
+#colophon {
+  background-color: LightGray;
+  padding: 25px 50px;
 }
-.site-branding {
+#colophon div {
+  box-sizing: border-box;
   display: inline-block;
-  width: 40%;
 }
-.site-branding a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
+#colophon .footer-logo {
+  font-size: 36px;
+  height: 50px;
+  width: 25%;
 }
-.site-branding .site-title {
-  margin-left: 100px;
+#colophon .footer-legal {
+  background-color: LightBlue;
+  font-size: 12px;
+  height: 100px;
+  padding: 25px;
+  width: 25%;
 }
-#site-navigation {
-  display: inline-block;
-  float: right;
-  width: 50%;
-}
-#site-navigation .menu-primary-menu-container ul li {
-  padding: 30px 15px 0px;
-  text-transform: uppercase;
-}
-#site-navigation .menu-primary-menu-container ul li a {
-  color: white;
-  font-size: 24px;
+#colophon .footer-social {
+  height: 100px;
+  width: 49%;
 }
 /*--------------------------------------------------------------
  # Home
@@ -585,9 +615,9 @@ a:hover, a:active {
   text-transform: uppercase;
 }
 #company-intro {
-  clear: both;
-  float: left;
+  background-color: white;
   margin-top: 1180px;
+  margin-bottom: 180px;
   padding: 0 150px;
 }
 #company-intro h1 {
@@ -602,6 +632,20 @@ a:hover, a:active {
   /* Firefox */
   column-count: 2;
 }
+.case-studies {
+  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+  background-image: url('https://unsplash.it/1920/1080');
+  clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+  padding-top: 100px;
+  text-align: center;
+  height: 500px;
+}
+.case-studies h1 {
+  font-size: 64px;
+}
+.case-studies .cta-button {
+  margin-top: 15px;
+}
 .cta-button {
   background-color: DimGray;
   border: 5px solid black;
@@ -612,6 +656,28 @@ a:hover, a:active {
   margin: 50px auto 0;
   text-transform: uppercase;
   width: 400px;
+}
+.contact-us div {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 50px 200px;
+}
+.contact-us h2 {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.contact-us .contact-text {
+  font-size: 24px;
+  width: 40%;
+}
+.contact-us .contact-form {
+  width: 40%;
+}
+.contact-us .contact-form form input, .contact-us .contact-form form textarea {
+  display: block;
+  margin: 10px;
+  width: 80%;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

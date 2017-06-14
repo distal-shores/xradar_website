@@ -14,17 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'xradar' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'xradar' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'xradar' ), 'xradar', '<a href="https://automattic.com/" rel="designer">Sam Coll</a>' );
-			?>
-		</div><!-- .site-info -->
+		<div class="footer-logo">
+            <strong>XRadar</strong>      
+        </div>
+		<div class="footer-legal">
+            <p>Disrupt salvia bespoke craft beer master cleanse. Butcher
+            craft beer YOLO, Portland hella deep v Schlitz. Tumblr Bushwick post-ironic Thundercats. Vinyl 90's keytar, literally cardigan Williamsburg YOLO squid pickled Etsy salvia lo-fi locavore. Meh leggings retro narwhal Neutra.</p>
+
+            <p>Disrupt salvia bespoke craft beer master cleanse. Butcher
+            craft beer YOLO, Portland hella deep v Schlitz. Tumblr Bushwick post-ironic Thundercats. Vinyl 90's keytar, literally cardigan Williamsburg YOLO squid pickled Etsy salvia lo-fi locavore. Meh leggings retro narwhal Neutra.</p>
+        </div>
+		<div class="footer-social"></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
