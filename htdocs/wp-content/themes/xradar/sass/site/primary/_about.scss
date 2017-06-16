@@ -1,0 +1,72 @@
+#overview {
+    background-color: white;
+    margin-top: 1180px;
+    padding: 0 150px;
+    h1 {
+        color: DimGray;
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    h2 {
+        color: DimGray;
+        margin-top: 150px;
+        text-align: center;
+        text-transform: capitalize; 
+        font-size: 32px;
+    }
+    .two-column {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    .grid-wrap {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .grid-item {
+        flex-basis: 400px;
+        font-size: 14px;
+        height: 500px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        img {
+            border-radius: 50%;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}
+#method-explanation {
+    .method-explanation {
+        background-color: white;
+        width: 40%;
+        font-size: 12px;
+        margin-top: -150px;
+        margin-left: 150px;
+        z-index: 10;
+        position: relative;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+    }
+    .hero-image2 {
+        -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+        background-image: url('https://unsplash.it/1920/1080');
+        clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+        padding-top: 100px;
+        text-align: center;
+        height: 500px;
+        h1 {
+            font-size: 64px;
+        }
+    }
+
+}
