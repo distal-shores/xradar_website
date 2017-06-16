@@ -527,6 +527,45 @@ a:hover, a:active {
  # Header
  --------------------------------------------------------------*/
 @media (min-width: 1200px) {
+  .site-header.services {
+    color: black;
+    height: 100px;
+    position: relative;
+    width: 100%;
+    background-color: white;
+  }
+  .site-header.services .submenu {
+    width: 100%;
+    height: 50px;
+    background-color: DimGrey;
+    position: absolute;
+    bottom: -50px;
+    z-index: 20;
+  }
+  .site-header.services .submenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: right;
+  }
+  .site-header.services .submenu ul li {
+    display: inline;
+  }
+  .site-header.services .submenu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+  }
+  .site-header.services #site-navigation {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container ul li a {
+    color: black;
+    font-size: 24px;
+  }
   #masthead {
     display: block;
     margin-top: 50px;
@@ -760,6 +799,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Services
  --------------------------------------------------------------*/
+.page-services #hero-photo {
+  top: 133px;
+}
 /*--------------------------------------------------------------
  # Infinite scroll
  --------------------------------------------------------------*/

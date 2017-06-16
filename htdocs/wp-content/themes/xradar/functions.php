@@ -47,6 +47,8 @@ function xradar_setup() {
 		'menu-1' => esc_html__( 'Primary', 'xradar' ),
 	) );
 
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
