@@ -6,7 +6,7 @@ Template Name: Case Studies
 
 <?php
 
-get_header(); ?>
+get_header('cstudies'); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main page-about" role="main">
