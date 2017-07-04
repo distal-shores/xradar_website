@@ -579,29 +579,31 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Footer
  --------------------------------------------------------------*/
-#colophon {
-  background-color: LightGray;
-  padding: 25px 50px;
-}
-#colophon div {
-  box-sizing: border-box;
-  display: inline-block;
-}
-#colophon .footer-logo {
-  font-size: 36px;
-  height: 50px;
-  width: 25%;
-}
-#colophon .footer-legal {
-  background-color: LightBlue;
-  font-size: 12px;
-  height: 100px;
-  padding: 25px;
-  width: 25%;
-}
-#colophon .footer-social {
-  height: 100px;
-  width: 49%;
+@media (min-width: 0) {
+  #colophon {
+    background-color: #1f1f1f;
+    border-top: 1px solid white;
+    padding: 25px 50px;
+  }
+  #colophon div {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  #colophon .footer-logo {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  #colophon .footer-logo span {
+    color: white;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 10px;
+  }
+  #colophon .footer-logo .logo {
+    width: 130px;
+  }
 }
 /*--------------------------------------------------------------
  # Home

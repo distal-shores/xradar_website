@@ -15,16 +15,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-logo">
-            <strong>XRadar</strong>      
+            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_light.svg">
+            <span>2017 Xradar &copy; <br> All rights reserved</span>      
         </div>
 		<div class="footer-legal">
-            <p>Disrupt salvia bespoke craft beer master cleanse. Butcher
-            craft beer YOLO, Portland hella deep v Schlitz. Tumblr Bushwick post-ironic Thundercats. Vinyl 90's keytar, literally cardigan Williamsburg YOLO squid pickled Etsy salvia lo-fi locavore. Meh leggings retro narwhal Neutra.</p>
 
-            <p>Disrupt salvia bespoke craft beer master cleanse. Butcher
-            craft beer YOLO, Portland hella deep v Schlitz. Tumblr Bushwick post-ironic Thundercats. Vinyl 90's keytar, literally cardigan Williamsburg YOLO squid pickled Etsy salvia lo-fi locavore. Meh leggings retro narwhal Neutra.</p>
         </div>
-		<div class="footer-social"></div>
+		<!-- <div class="footer-social"></div> -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

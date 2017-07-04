@@ -1,24 +1,29 @@
-#colophon {
-    background-color: LightGray;
-    padding: 25px 50px;
-    div {
-        box-sizing: border-box;
-        display: inline-block;
-    }
-    .footer-logo {
-        font-size: 36px;
-        height: 50px;
-        width: 25%;
-    }
-    .footer-legal {
-        background-color: LightBlue;
-        font-size: 12px;
-        height: 100px;
-        padding: 25px;
-        width: 25%
-    }
-    .footer-social {
-        height: 100px;
-        width: 49%;
+@include respond-to(mobile) {
+    #colophon {
+        background-color: $color__background-secondary;
+        border-top: 1px solid white;
+        padding: 25px 50px;
+        div {
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        .footer-logo {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            span {
+                color: white;
+                display: block;
+                font-size: $font__size-small;
+                line-height: $font__size-medium;
+                margin-top: 10px;
+            }
+            .logo {
+                width: 130px;
+            }
+        }
+        .footer-legal {
+
+        }
     }
 }
