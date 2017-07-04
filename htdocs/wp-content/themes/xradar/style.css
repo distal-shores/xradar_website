@@ -251,10 +251,11 @@ blockquote:before, q:before, blockquote:after, q:after {
   content: "";
 }
 hr {
-  background-color: #ccc;
+  background-image: linear-gradient(to right, #97da74, #62c4a9);
   border: 0;
-  height: 1px;
-  margin-bottom: 1.5em;
+  height: 10px;
+  margin: 20px auto;
+  width: 200px;
 }
 ul, ol {
   margin: 0 0 1.5em 3em;
@@ -545,83 +546,34 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Header
  --------------------------------------------------------------*/
-@media (min-width: 1200px) {
-  .site-header.services {
-    color: black;
-    height: 100px;
-    position: relative;
-    width: 100%;
-    background-color: white;
-  }
-  .site-header.services .submenu {
-    width: 100%;
-    height: 50px;
-    background-color: DimGrey;
-    position: absolute;
-    bottom: -50px;
-    z-index: 20;
-  }
-  .site-header.services .submenu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 50%;
-    float: right;
-  }
-  .site-header.services .submenu ul li {
-    display: inline;
-  }
-  .site-header.services .submenu ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 0 10px;
-  }
-  .site-header.services #site-navigation {
-    display: inline-block;
-    float: right;
-    width: 50%;
-  }
-  .site-header.services #site-navigation .menu-primary-menu-container ul li a {
-    color: black;
-    font-size: 24px;
-  }
+@media (min-width: 0) {
   #masthead {
-    display: block;
-    margin-top: 50px;
-    position: relative;
-    z-index: 11;
-  }
-  #top-buffer {
-    background-color: DimGray;
-    height: 80px;
+    background: transparent;
+    height: 150px;
+    padding-top: 35px;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 10;
   }
-  .site-branding {
-    display: inline-block;
-    width: 40%;
+  #masthead .logo {
+    padding-left: 25px;
+    width: 160px;
   }
-  .site-branding a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .site-branding .site-title {
-    margin-left: 100px;
-  }
-  #site-navigation {
-    display: inline-block;
-    float: right;
-    width: 50%;
-  }
-  #site-navigation .menu-primary-menu-container ul li {
-    padding: 30px 15px 0px;
-    text-transform: uppercase;
-  }
-  #site-navigation .menu-primary-menu-container ul li a {
-    color: white;
-    font-size: 24px;
+  #masthead .menu-toggle {
+    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/hamburger_menu.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: fill;
+    background: linear-gradient(to right, #97da74, #62c4a9);
+    background-repeat: no-repeat;
+    height: 40px;
+    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/hamburger_menu.svg');
+    mask-repeat: no-repeat;
+    mask-size: fill;
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    width: 30px;
   }
 }
 /*--------------------------------------------------------------
@@ -659,9 +611,9 @@ a:hover, a:active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
     background-image: url('http://lorempixel.com/output/technics-q-c-1920-1079-7.jpg');
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-    padding: 0 2px;
+    padding: 0 75px;
     position: absolute;
-    top: 80px;
+    top: 0;
     width: 100%;
     height: 600px;
     z-index: 1;
@@ -669,22 +621,18 @@ a:hover, a:active {
   #hero-photo h1 {
     color: white;
     font-size: 40px;
-    margin-top: 100px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-top: 200px;
     position: relative;
   }
   #primary {
     text-align: center;
   }
-  #primary hr {
-    background-image: linear-gradient(to right, #97da74, #62c4a9);
-    border: 0;
-    height: 10px;
-    width: 200px;
-  }
   #company-intro {
     background-color: white;
-    margin-top: 1115px;
-    margin-bottom: 180px;
+    margin-top: 675px;
+    margin-bottom: 75px;
     padding: 0 20px;
   }
   #company-intro h1 {
@@ -695,39 +643,61 @@ a:hover, a:active {
   #company-intro p {
     text-align: left;
   }
-}
-.case-studies {
-  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-  background-image: url('https://unsplash.it/1920/1080');
-  clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-  padding-top: 100px;
-  text-align: center;
-  height: 500px;
-}
-.case-studies h1 {
-  font-size: 64px;
-}
-.contact-us div {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 0 50px 200px;
-}
-.contact-us h2 {
-  text-align: center;
-  font-size: 48px;
-  text-transform: uppercase;
-}
-.contact-us .contact-text {
-  font-size: 24px;
-  width: 40%;
-}
-.contact-us .contact-form {
-  width: 40%;
-}
-.contact-us .contact-form form input, .contact-us .contact-form form textarea {
-  display: block;
-  margin: 10px;
-  width: 80%;
+  .blogroll {
+    padding-top: 50px;
+  }
+  .case-studies {
+    -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+    background-image: url('https://unsplash.it/1920/1080');
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+    padding-top: 100px;
+    text-align: center;
+    height: 500px;
+  }
+  .case-studies h1 {
+    color: white;
+    font-size: 36px;
+    margin-top: 8px;
+  }
+  .case-studies .pre-header {
+    color: white;
+    display: block;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+  .contact-us {
+    background-image: url('https://unsplash.it/1920/1600');
+    padding: 75px 0 50px 0;
+  }
+  .contact-us button {
+    margin-top: 15px;
+  }
+  .contact-us h2 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+  }
+  .contact-us form {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .contact-us form input, .contact-us form textarea {
+    border-color: #97da74;
+    border-radius: 20px;
+    border-width: 2px;
+    display: block;
+    margin: 10px;
+    padding: 5px 0 5px 15px;
+    width: 100%;
+  }
+  .contact-us form select {
+    width: 100%;
+  }
+  .contact-us p {
+    display: none;
+  }
 }
 /*--------------------------------------------------------------
  # Case Studies

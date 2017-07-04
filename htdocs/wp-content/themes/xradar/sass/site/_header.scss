@@ -1,6 +1,33 @@
 @include respond-to(mobile) {
 
-    
+    #masthead {
+        background: transparent;
+        height: 150px;
+        padding-top: 35px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        .logo {
+            padding-left: 25px;
+            width: 160px;
+        }
+        .menu-toggle {
+            -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/hamburger_menu.svg');
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: fill;
+            background: linear-gradient(to right, $color__border-button-top, $color__border-button-bottom);
+            background-repeat: no-repeat;
+            height: 40px;
+            mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/hamburger_menu.svg');
+            mask-repeat: no-repeat;
+            mask-size: fill;
+            position: absolute;
+            right: 25px;
+            top: 40px;
+            width: 30px;
+        }
+    }
 }
 
 

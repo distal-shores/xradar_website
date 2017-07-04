@@ -32,7 +32,8 @@ get_header(); ?>
                 <button class="cta-button black">Learn More</button>
             </section>
             <section class="case-studies">
-                <h1>Case Studies</h1>
+                <span class="pre-header">- Case Study -</span>
+                <h1>Port Mann Bridge</h1>
                 <button class="cta-button">View Case Study</button>
             </section>
             <section class="blogroll">
@@ -41,18 +42,20 @@ get_header(); ?>
             </section>
             <section class="contact-us">
                 <h2>Get In Touch</h2>
-                <div class="contact-text">
-                    Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmetrical viral letterpress, McSweeney's seitan 3 wolf moon drinking vinegar sartorial pour-over messenger bag
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" value="" placeholder="Name">
-                        <input type="email" value="" placeholder="Email">
-                        <input type="text" value="" placeholder="Subject">
-                        <textarea type="text" value="" placeholder="Your message"></textarea>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
+                <p>
+                    We have offices all over Canada in Victoria, Vancouver, Toronto, Montreal and Quebec City. Get in touch and we will be happy to provide you with a quote for our services.
+                </p>
+                <form>
+                    <input type="text" value="" name="name" placeholder="Name">
+                    <input type="text" value="" name="company" placeholder="Company">
+                    <input type="email" value="" name="email" placeholder="Email">
+                    <input type="text" value="" name="phone" placeholder="Phone">
+                    <textarea type="text" value="" name="message" placeholder="Your message"></textarea>
+                    <select placeholder="Current Location">
+                        <option>Current Location</option>
+                    </select>
+                    <button type="submit" value="Submit" class="cta-button">Submit</button>
+                </form>
             </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
