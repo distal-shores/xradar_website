@@ -11,12 +11,31 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6em 1em .4em;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
-
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+	}
+}
+
+.cta-button {
+	background: transparent;
+	border: 5px solid;
+	border-color: $color__border-button-top;
+	border-radius: 40px;
+	box-sizing: border-box;
+	color: white;
+	display: block;
+	font-size: $font__size-small-plus;
+	font-weight: 800;
+	height: 45px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 7px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	width: 250px;
+	&.black {
+		color: black;
 	}
 }

@@ -17,41 +17,30 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div id="hero-photo">
-				<h1>Splash Tagline</h1>
-				<button class="cta-button">CTA Button</button>
+				<h1>Canada Wide Concrete Scanning</h1>
+				<button class="cta-button">Our Services</button>
 			</div>
             <section id="company-intro">
-                <h1>Company Introduction</h1>
-                <p class="two-column">
-                    Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's
-                    street art letterpress hoodie occupy Wes Anderson Banksy.
-                    Asymmetrical viral letterpress, McSweeney's seitan 3 wolf moon
-                    drinking vinegar sartorial pour-over messenger bag photo booth
-                    umami next level craft beer. Tote bag 8-bit flannel dreamcatcher photo
-                    booth. Tofu photo booth American Apparel, cliche brunch swag
-                    freegan lomo retro cray Vice gastropub post-ironic +1 pickled. Marfa
-                    Tonx next level, Banksy lo-fi vegan pop-up chia small batch DIY seitan
-                    asymmetrical viral. Disrupt salvia bespoke craft beer master cleanse.
-                    Butcher cornhole gentrify pop-up, raw denim viral literally.
-                    Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's
-                    street art letterpress hoodie occupy Wes Anderson Banksy.
-                    Asymmetrical viral letterpress, McSweeney's seitan 3 wolf moon
-                    drinking vinegar sartorial pour-over messenger bag photo booth
-                    umami next level craft beer. Tote bag 8-bit flannel dreamcatcher photo
-                    booth. Tofu photo booth American Apparel, cliche brunch swag
-                    freegan lomo retro cray Vice gastropub post-ironic +1 pickled. Marfa
-                    Tonx next level, Banksy lo-fi vegan pop-up chia small batch DIY seitan
-                    asymmetrical viral. Disrupt salvia bespoke craft beer master cleanse.
-                    Butcher cornhole gentrify pop-up, raw denim viral literally.
+                <h1>Canada's Leading Provider of Concrete Scanning Services</h1>
+                <hr>
+                <p>
+                    Using the most advanced technology in the industry, our dedicated team saves you time and money by scanning and mapping the position of underground objects, allowing you to cut and core safely.
                 </p>
-                <button class="cta-button">CTA Button</button>
+                <p>
+                    We are proud industry leaders and deliver our services to a huge range of sectors, including construction, earth sciences, archaeology, and military, to name a few.
+                </p>
+                <button class="cta-button black">Learn More</button>
             </section>
             <section class="case-studies">
                 <h1>Case Studies</h1>
-                <button class="cta-button">CTA Button</button>
+                <button class="cta-button">View Case Study</button>
+            </section>
+            <section class="blogroll">
+                <h1>Latest Blog Posts</h1>
+                <hr>
             </section>
             <section class="contact-us">
-                <h2>Contact Us</h2>
+                <h2>Get In Touch</h2>
                 <div class="contact-text">
                     Keytar McSweeney's Williamsburg, readymade leggings try-hard 90's street art letterpress hoodie occupy Wes Anderson Banksy. Asymmetrical viral letterpress, McSweeney's seitan 3 wolf moon drinking vinegar sartorial pour-over messenger bag
                 </div>

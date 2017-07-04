@@ -24,7 +24,14 @@
 }
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == "small" {
+
+  @if $breakpoint == "mobile" {
+    @media (min-width: 0) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "small" {
     @media (min-width: 767px) {
       @content;
     }

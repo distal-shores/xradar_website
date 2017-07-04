@@ -2300,3 +2300,5 @@
 [16-Jun-2017 03:48:34 UTC] PHP Parse error:  Invalid numeric literal in /srv/www/xradar/htdocs/wp-content/themes/xradar/about.php on line 57
 [16-Jun-2017 03:48:39 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [16-Jun-2017 03:48:50 UTC] PHP Parse error:  Invalid numeric literal in /srv/www/xradar/htdocs/wp-content/themes/xradar/about.php on line 57
+[17-Jun-2017 00:30:53 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[04-Jul-2017 18:01:01 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
