@@ -687,7 +687,9 @@ a:hover, a:active {
 @media (min-width: 0) {
   #hero-photo {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-    background-image: url('http://lorempixel.com/output/technics-q-c-1920-1079-7.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://xradar.dev/wp-content/uploads/2017/07/home_hero.jpg');
+    background-size: cover;
+    background-position: center top;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
     padding: 0 75px;
     position: absolute;
@@ -729,7 +731,7 @@ a:hover, a:active {
   }
   .case-studies {
     -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-    background-image: url('https://unsplash.it/1920/1080');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/home_cs_hero.jpg');
     clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
     padding-top: 100px;
     text-align: center;
@@ -760,6 +762,9 @@ a:hover, a:active {
     color: white;
     font-size: 28px;
     text-align: center;
+  }
+  .contact-us hr {
+    display: none;
   }
   .contact-us form {
     display: block;
@@ -797,7 +802,7 @@ a:hover, a:active {
   #company-intro h1 {
     font-size: 40px;
     font-weight: 800;
-    line-height: 52px;
+    line-height: 60px;
   }
   #company-intro p {
     text-align: center;
@@ -806,7 +811,7 @@ a:hover, a:active {
     height: 800px;
   }
   #hero-photo h1 {
-    font-size: 52px;
+    font-size: 60px;
     font-weight: 700;
     margin-top: 350px;
   }
@@ -820,16 +825,18 @@ a:hover, a:active {
     position: relative;
   }
   #case-studies .case-studies {
-    background-image: url('https://unsplash.it/1920/1080');
-    padding-top: 100px;
     height: 650px;
-    position: relative;
     z-index: 10;
   }
   #case-studies .case-studies h1 {
     color: white;
-    font-size: 36px;
+    font-size: 60px;
     margin-top: 8px;
+  }
+  #case-studies .case-studies .pre-header {
+    letter-spacing: 1px;
+    margin-top: 175px;
+    font-size: 16px;
   }
   #case-studies .rhombus-right {
     -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
@@ -841,6 +848,36 @@ a:hover, a:active {
     top: 0;
     width: 100%;
     z-index: -1;
+  }
+  .contact-us h1 {
+    color: white;
+    font-size: 60px;
+  }
+  .contact-us hr {
+    display: block;
+  }
+  .contact-us p {
+    color: white;
+    display: block;
+    font-size: 18px;
+    margin-top: 25px;
+    padding: 0 400px;
+  }
+  .contact-us form {
+    width: 50%;
+    white-space: nowrap;
+  }
+  .contact-us form input, .contact-us form textarea {
+    margin: 10px;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+  }
+  .contact-us form input.half-width, .contact-us form textarea.half-width {
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+    white-space: normal;
+    width: 48%;
   }
   .rhombus-left {
     -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);

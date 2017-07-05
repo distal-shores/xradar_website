@@ -46,15 +46,16 @@ get_header(); ?>
                 <hr>
             </section>
             <section class="contact-us">
-                <h2>Get In Touch</h2>
+                <h1>Get in Touch</h1>
+                <hr>
                 <p>
                     We have offices all over Canada in Victoria, Vancouver, Toronto, Montreal and Quebec City. Get in touch and we will be happy to provide you with a quote for our services.
                 </p>
                 <form>
                     <input type="text" value="" name="name" placeholder="Name">
                     <input type="text" value="" name="company" placeholder="Company">
-                    <input type="email" value="" name="email" placeholder="Email">
-                    <input type="text" value="" name="phone" placeholder="Phone">
+                    <input class="half-width" type="email" value="" name="email" placeholder="Email">
+                    <input class="half-width" type="text" value="" name="phone" placeholder="Phone">
                     <textarea type="text" value="" name="message" placeholder="Your message"></textarea>
                     <select placeholder="Current Location">
                         <option>Current Location</option>
