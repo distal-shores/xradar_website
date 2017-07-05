@@ -16,8 +16,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+            <div class="rhombus-left"></div>
 			<div id="hero-photo">
 				<h1>Canada Wide Concrete Scanning</h1>
+                <p>Xradar will save you time and money with the most advanced scanning techniques in the industry</p>
 				<button class="cta-button">Our Services</button>
 			</div>
             <section id="company-intro">
@@ -31,10 +33,13 @@ get_header(); ?>
                 </p>
                 <button class="cta-button black">Learn More</button>
             </section>
-            <section class="case-studies">
-                <span class="pre-header">- Case Study -</span>
-                <h1>Port Mann Bridge</h1>
-                <button class="cta-button">View Case Study</button>
+            <section id="case-studies">
+                <div class="rhombus-right"></div>
+                <div class="case-studies">
+                    <span class="pre-header">- Case Study -</span>
+                    <h1>Port Mann Bridge</h1>
+                    <button class="cta-button">View Case Study</button>
+                </div>
             </section>
             <section class="blogroll">
                 <h1>Latest Blog Posts</h1>

@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
-	<div id="top-buffer"></div>
+	<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
 	<header id="masthead" class="site-header" role="banner">
 	
 		<div class="site-branding">

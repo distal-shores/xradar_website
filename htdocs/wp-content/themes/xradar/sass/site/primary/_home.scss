@@ -17,6 +17,9 @@
             margin-top: 200px;
             position: relative;
         }
+        p {
+            display: none;
+        }
     }
     #primary {
         text-align: center;
@@ -34,11 +37,6 @@
         p {
             text-align: left;
         }
-        // .two-column {
-        //     -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        //     -moz-column-count: 2; /* Firefox */
-        //     column-count: 2;
-        // }
     }
     .blogroll {
         padding-top: 50px;
@@ -60,6 +58,9 @@
             display: block;
             margin-top: 50px;
             text-transform: uppercase;
+        }
+        .rhombus-right {
+            display: none;
         }
     }
     .contact-us {
@@ -88,11 +89,82 @@
                 width: 100%;
             }
             select {
-                width: 100%;
+                margin-left: 12px;
+                width: 99%;
             }
         }
         p {
             display: none;
         }
+    }
+    .rhombus-left {
+        display: none;
+    }
+}
+
+@include respond-to(small) {
+    #company-intro {
+        background-color: white;
+        margin-top: 150px;
+        margin-bottom: 75px;
+        padding: 0 300px;
+        h1 {
+            font-size: $font__size-5xl;
+            font-weight: 800;
+            line-height: $font__size-h1;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    #hero-photo {
+        height: 800px;
+        h1 {
+            font-size: $font__size-h1;
+            font-weight: 700;
+            margin-top: 350px;
+        }
+        p {
+            color: white;
+            display: block;
+            font-size: $font__size-large;
+            padding: 0 300px;
+        }
+    }
+    #case-studies {
+        position: relative;
+        .case-studies {
+            background-image: url('https://unsplash.it/1920/1080');
+            padding-top: 100px;
+            height: 650px;
+            position: relative;
+            z-index: 10;
+            h1 {
+                color: white;
+                font-size: $font__size-4xl;
+                margin-top: 8px;
+            }
+            .pre-header {
+
+            }
+        }
+        .rhombus-right {
+            -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+            background: linear-gradient(to right, $color__border-button-bottom, $color__border-button-top);
+            clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+            display: block;
+            height: 750px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    .rhombus-left {
+        -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
+        background-color: $color__rhombus-left;
+        display: block;
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
+        height: 640px;
     }
 }

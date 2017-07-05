@@ -556,6 +556,9 @@ a:hover, a:active {
     width: 100%;
     z-index: 10;
   }
+  #masthead #top-buffer {
+    display: none;
+  }
   #masthead .logo {
     padding-left: 25px;
     width: 160px;
@@ -574,6 +577,79 @@ a:hover, a:active {
     right: 25px;
     top: 40px;
     width: 30px;
+  }
+}
+@media (min-width: 767px) {
+  #masthead {
+    display: block;
+    margin: 0 0 0 100px;
+    position: relative;
+    padding: 25px 75px 0 0;
+    width: 100%;
+  }
+  #masthead #site-navigation {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  #masthead #site-navigation .menu-primary-menu-container {
+    float: right;
+    padding: 0 75px;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul {
+    padding: 20px;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li a:after {
+    color: #97da74;
+    content: "\2215";
+    padding-left: 5px;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li:last-of-type a:after {
+    content: none;
+  }
+  #masthead .site-branding {
+    display: inline-block;
+    width: 40%;
+  }
+  #masthead .site-branding a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  #masthead .site-branding .site-title {
+    margin-left: 100px;
+  }
+  #masthead .logo {
+    padding-left: 0;
+    width: 185px;
+  }
+  #top-buffer {
+    background: linear-gradient(#97da74, #62c4a9);
+    color: white;
+    display: block;
+    height: 30px;
+    padding: 3px 75px 0 0;
+    position: relative;
+    text-align: right;
+    width: 100%;
+    z-index: 10;
+  }
+  .site-branding {
+    display: inline-block;
+    width: 40%;
+  }
+  .site-branding a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-branding .site-title {
+    margin-left: 100px;
   }
 }
 /*--------------------------------------------------------------
@@ -628,6 +704,9 @@ a:hover, a:active {
     margin-top: 200px;
     position: relative;
   }
+  #hero-photo p {
+    display: none;
+  }
   #primary {
     text-align: center;
   }
@@ -667,6 +746,9 @@ a:hover, a:active {
     margin-top: 50px;
     text-transform: uppercase;
   }
+  .case-studies .rhombus-right {
+    display: none;
+  }
   .contact-us {
     background-image: url('https://unsplash.it/1920/1600');
     padding: 75px 0 50px 0;
@@ -695,10 +777,77 @@ a:hover, a:active {
     width: 100%;
   }
   .contact-us form select {
-    width: 100%;
+    margin-left: 12px;
+    width: 99%;
   }
   .contact-us p {
     display: none;
+  }
+  .rhombus-left {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  #company-intro {
+    background-color: white;
+    margin-top: 150px;
+    margin-bottom: 75px;
+    padding: 0 300px;
+  }
+  #company-intro h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 52px;
+  }
+  #company-intro p {
+    text-align: center;
+  }
+  #hero-photo {
+    height: 800px;
+  }
+  #hero-photo h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-top: 350px;
+  }
+  #hero-photo p {
+    color: white;
+    display: block;
+    font-size: 20px;
+    padding: 0 300px;
+  }
+  #case-studies {
+    position: relative;
+  }
+  #case-studies .case-studies {
+    background-image: url('https://unsplash.it/1920/1080');
+    padding-top: 100px;
+    height: 650px;
+    position: relative;
+    z-index: 10;
+  }
+  #case-studies .case-studies h1 {
+    color: white;
+    font-size: 36px;
+    margin-top: 8px;
+  }
+  #case-studies .rhombus-right {
+    -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+    background: linear-gradient(to right, #62c4a9, #97da74);
+    clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+    display: block;
+    height: 750px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .rhombus-left {
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
+    background-color: #63c4a8;
+    display: block;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
+    height: 640px;
   }
 }
 /*--------------------------------------------------------------
