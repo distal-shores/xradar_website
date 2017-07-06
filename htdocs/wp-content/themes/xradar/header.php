@@ -26,17 +26,9 @@
 	<header id="masthead" class="site-header" role="banner">
 	
 		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_light.svg">
-				</a>
-			<?php else : ?>
-				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-				</p>
-			<?php endif; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_light.svg">
+			</a>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

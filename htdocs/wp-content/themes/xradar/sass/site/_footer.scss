@@ -1,7 +1,7 @@
 @include respond-to(mobile) {
     #colophon {
         background-color: $color__background-secondary;
-        border-top: 1px solid white;
+        border-top: 1px solid $color__text-footer-lightgrey;
         padding: 25px 50px;
         div {
             box-sizing: border-box;
@@ -22,8 +22,72 @@
                 width: 130px;
             }
         }
-        .footer-legal {
+        .footer-sitemap {
+            display: none;
+        }
+    }
+}
 
+@include respond-to(small) {
+    #colophon {
+        border-top: none;
+        height: 375px;
+        padding-top: 45px;
+        .footer-logo,
+        .footer-sitemap {
+            height: 250px;
+        }
+        .footer-logo {
+            display: inline-block;
+            border-right: 1px solid $color__text-footer-lightgrey;
+            float: left;
+            padding-top: 62px;
+            text-align: center;
+            width: 31%;
+            .logo {
+                width: 260px;
+            }
+        }
+        .footer-sitemap {
+            display: inline-block;
+            float: right;
+            padding: 50px 0 0 25px;
+            width: 67%;
+            .sitemap-list {
+                display: inline-block;
+                float: left;
+                width: 25%;
+                h3 {
+                    color: $color__text-footer-lightgrey;
+                    font-size: $font__size-small-plus;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                }
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        color: $color__text-footer-darkgrey;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .gradient-blend {
+        background: linear-gradient(rgba(31,31,31,0.1), $color__background-secondary 66%, $color__background-secondary);
+        display: block;
+        height: 40px;
+        margin-top: -25px;
+        width: 100%;
+        .transparent-border {
+            background: rgba(0,0,0,0.0);
+            border-bottom: 1px solid $color__text-footer-lightgrey;
+            display: block;
+            height: 15px;
+            width: 100%;
         }
     }
 }

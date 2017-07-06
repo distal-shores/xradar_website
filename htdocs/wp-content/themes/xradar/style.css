@@ -658,7 +658,7 @@ a:hover, a:active {
 @media (min-width: 0) {
   #colophon {
     background-color: #1f1f1f;
-    border-top: 1px solid white;
+    border-top: 1px solid #747e80;
     padding: 25px 50px;
   }
   #colophon div {
@@ -680,12 +680,77 @@ a:hover, a:active {
   #colophon .footer-logo .logo {
     width: 130px;
   }
+  #colophon .footer-sitemap {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  #colophon {
+    border-top: none;
+    height: 375px;
+    padding-top: 45px;
+  }
+  #colophon .footer-logo, #colophon .footer-sitemap {
+    height: 250px;
+  }
+  #colophon .footer-logo {
+    display: inline-block;
+    border-right: 1px solid #747e80;
+    float: left;
+    padding-top: 62px;
+    text-align: center;
+    width: 31%;
+  }
+  #colophon .footer-logo .logo {
+    width: 260px;
+  }
+  #colophon .footer-sitemap {
+    display: inline-block;
+    float: right;
+    padding: 50px 0 0 25px;
+    width: 67%;
+  }
+  #colophon .footer-sitemap .sitemap-list {
+    display: inline-block;
+    float: left;
+    width: 25%;
+  }
+  #colophon .footer-sitemap .sitemap-list h3 {
+    color: #747e80;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  #colophon .footer-sitemap .sitemap-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #colophon .footer-sitemap .sitemap-list ul li {
+    color: #494b4e;
+    margin-bottom: 10px;
+  }
+  .gradient-blend {
+    background: linear-gradient(rgba(31, 31, 31, 0.1), #1f1f1f 66%, #1f1f1f);
+    display: block;
+    height: 40px;
+    margin-top: -25px;
+    width: 100%;
+  }
+  .gradient-blend .transparent-border {
+    background: rgba(0, 0, 0, 0.0);
+    border-bottom: 1px solid #747e80;
+    display: block;
+    height: 15px;
+    width: 100%;
+  }
 }
 /*--------------------------------------------------------------
  # Home
  --------------------------------------------------------------*/
 @media (min-width: 0) {
-  #hero-photo {
+  .site-main #hero-photo {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://xradar.dev/wp-content/uploads/2017/07/home_hero.jpg');
     background-size: cover;
@@ -698,7 +763,7 @@ a:hover, a:active {
     height: 600px;
     z-index: 1;
   }
-  #hero-photo h1 {
+  .site-main #hero-photo h1 {
     color: white;
     font-size: 40px;
     font-weight: 300;
@@ -706,30 +771,30 @@ a:hover, a:active {
     margin-top: 200px;
     position: relative;
   }
-  #hero-photo p {
+  .site-main #hero-photo p {
     display: none;
   }
-  #primary {
+  .site-main #primary {
     text-align: center;
   }
-  #company-intro {
+  .site-main #company-intro {
     background-color: white;
     margin-top: 675px;
     margin-bottom: 75px;
     padding: 0 20px;
   }
-  #company-intro h1 {
+  .site-main #company-intro h1 {
     color: black;
     font-size: 32px;
     line-height: 36px;
   }
-  #company-intro p {
+  .site-main #company-intro p {
     text-align: left;
   }
-  .blogroll {
+  .site-main .blogroll {
     padding-top: 50px;
   }
-  .case-studies {
+  .site-main .case-studies {
     -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
     background-image: url('http://xradar.dev/wp-content/uploads/2017/07/home_cs_hero.jpg');
     clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
@@ -737,42 +802,43 @@ a:hover, a:active {
     text-align: center;
     height: 500px;
   }
-  .case-studies h1 {
+  .site-main .case-studies h1 {
     color: white;
     font-size: 36px;
     margin-top: 8px;
   }
-  .case-studies .pre-header {
+  .site-main .case-studies .pre-header {
     color: white;
     display: block;
     margin-top: 50px;
     text-transform: uppercase;
   }
-  .case-studies .rhombus-right {
+  .site-main .case-studies .rhombus-right {
     display: none;
   }
-  .contact-us {
-    background-image: url('https://unsplash.it/1920/1600');
+  .site-main .contact-us {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('http://xradar.dev/wp-content/uploads/2017/07/constructionsite_b.jpg');
+    background-size: cover;
     padding: 75px 0 50px 0;
   }
-  .contact-us button {
+  .site-main .contact-us button {
     margin-top: 15px;
   }
-  .contact-us h2 {
+  .site-main .contact-us h2 {
     color: white;
     font-size: 28px;
     text-align: center;
   }
-  .contact-us hr {
+  .site-main .contact-us hr {
     display: none;
   }
-  .contact-us form {
+  .site-main .contact-us form {
     display: block;
     position: relative;
     margin: 0 auto;
     width: 80%;
   }
-  .contact-us form input, .contact-us form textarea {
+  .site-main .contact-us form input, .site-main .contact-us form textarea {
     border-color: #97da74;
     border-radius: 20px;
     border-width: 2px;
@@ -781,14 +847,14 @@ a:hover, a:active {
     padding: 5px 0 5px 15px;
     width: 100%;
   }
-  .contact-us form select {
+  .site-main .contact-us form select {
     margin-left: 12px;
     width: 99%;
   }
-  .contact-us p {
+  .site-main .contact-us p {
     display: none;
   }
-  .rhombus-left {
+  .site-main .rhombus-left {
     display: none;
   }
 }
@@ -893,74 +959,133 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # About
  --------------------------------------------------------------*/
-#overview {
-  background-color: white;
-  margin-top: 1180px;
-  padding: 0 150px;
-}
-#overview h1 {
-  color: DimGray;
-  font-size: 36px;
-  text-transform: uppercase;
-}
-#overview h2 {
-  color: DimGray;
-  margin-top: 150px;
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 32px;
-}
-#overview .two-column {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-}
-#overview .grid-wrap {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-#overview .grid-item {
-  flex-basis: 400px;
-  font-size: 14px;
-  height: 500px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-}
-#overview .grid-item img {
-  border-radius: 50%;
-}
-#overview .grid-item p {
-  text-align: justify;
-}
-#method-explanation .method-explanation {
-  background-color: white;
-  width: 40%;
-  font-size: 12px;
-  margin-top: -150px;
-  margin-left: 150px;
-  z-index: 10;
-  position: relative;
-}
-#method-explanation .method-explanation h2 {
-  font-size: 28px;
-  margin-bottom: 50px;
-}
-#method-explanation .hero-image2 {
-  -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-  background-image: url('https://unsplash.it/1920/1080');
-  clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-  padding-top: 100px;
-  text-align: center;
-  height: 500px;
-}
-#method-explanation .hero-image2 h1 {
-  font-size: 64px;
+@media (min-width: 0) {
+  .page-about h1 {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .page-about hr {
+    margin: 20px 0;
+  }
+  .page-about section {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  .page-about #hero-photo {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('http://xradar.dev/wp-content/uploads/2017/07/about_hero.jpg');
+    background-size: cover;
+    background-position: center top;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    padding: 0 75px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+  }
+  .page-about #hero-photo h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .page-about #hero-photo p {
+    display: none;
+  }
+  .page-about .hero-image2 {
+    -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/roof.jpg');
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+    padding-top: 100px;
+    text-align: center;
+    height: 500px;
+  }
+  .page-about .hero-image2 h1 {
+    font-size: 64px;
+  }
+  .page-about #overview {
+    background-color: white;
+    margin-top: 650px;
+  }
+  .page-about #why-xradar h2 {
+    color: black;
+    text-align: center;
+    font-size: 32px;
+  }
+  .page-about #why-xradar .why-icon {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    background: linear-gradient(#97da74, #62c4a9);
+    background-repeat: no-repeat;
+    display: block;
+    height: 130px;
+    margin: 0 auto 20px;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    position: relative;
+    width: 180px;
+  }
+  .page-about #why-xradar .leader {
+    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
+    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
+  }
+  .page-about #why-xradar .radar {
+    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/Radar.svg');
+    -webkit-mask-size: 100% 130%;
+    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
+    mask-size: 100% 130%;
+  }
+  .page-about #why-xradar .canada {
+    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/Canada.svg');
+    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
+  }
+  .page-about #why-xradar .two-column {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+  .page-about #why-xradar .grid-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .page-about #why-xradar .grid-item {
+    flex-basis: 400px;
+    font-size: 14px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  .page-about #why-xradar .grid-item img {
+    border-radius: 50%;
+  }
+  .page-about #why-xradar .grid-item p {
+    text-align: justify;
+  }
+  .page-about #methods .methods-photo {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/chalk_and_lines.jpg');
+    background-size: cover;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+  }
+  .page-about #methods .methods-photo:nth-of-type(2) {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/staring_down.jpg');
+    background-size: cover;
+  }
+  .page-about #methods .methods-photo:nth-of-type(3) {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
+    background-size: cover;
+  }
 }
 /*--------------------------------------------------------------
  # Contact
