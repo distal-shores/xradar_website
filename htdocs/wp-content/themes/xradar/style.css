@@ -1022,8 +1022,8 @@ a:hover, a:active {
  # About
  --------------------------------------------------------------*/
 @media (min-width: 0) {
-  .page-about hr {
-    margin: 40px 0;
+  hr {
+    margin: 20px 0;
   }
   .page-about section {
     margin: 0 auto;
@@ -1070,6 +1070,9 @@ a:hover, a:active {
     color: black;
     text-align: center;
   }
+  .page-about #why-xradar hr {
+    margin: 20px auto;
+  }
   .page-about #why-xradar img {
     height: 100px;
   }
@@ -1100,16 +1103,24 @@ a:hover, a:active {
     text-align: center;
     width: 100%;
   }
+  .page-about #methods .content {
+    order: 2;
+  }
+  .page-about #methods .picture {
+    display: flex;
+    flex-direction: column;
+  }
   .page-about #methods .methods-photo {
     -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
     clip-path: 79% 0, 100% 20%, 100% 100%, 0 100%, 0 0;
-    height: 482px;
-    margin: 0 auto;
-    width: 500px;
+    height: 400px;
+    max-width: 400px;
+    width: 100%;
   }
   .page-about #methods .methods-photo.hard-hat {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/staring_down.jpg');
     background-size: cover;
+    order: 1;
   }
   .page-about #methods .methods-photo.closeup {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
@@ -1121,6 +1132,9 @@ a:hover, a:active {
   }
 }
 @media (min-width: 767px) {
+  .page-about hr {
+    margin: 40px 0;
+  }
   .page-about section {
     margin: initial;
     max-width: none;
@@ -1177,6 +1191,8 @@ a:hover, a:active {
   }
   .page-about #methods .picture .methods-photo {
     flex-basis: 42%;
+    height: 482px;
+    width: 500px;
   }
   .page-about #methods .picture.left .content {
     padding-left: 35px;

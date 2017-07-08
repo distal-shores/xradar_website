@@ -1,8 +1,8 @@
 @include respond-to(mobile) {
+    hr {
+        margin: 20px 0;
+    }
     .page-about {
-        hr {
-            margin: 40px 0;
-        }
         section {
             margin: 0 auto;
             max-width: 400px;
@@ -49,6 +49,9 @@
                 color: black;
                 text-align: center;
             }
+            hr {
+                margin: 20px auto;
+            }
             img {
                 height: 100px;
             }
@@ -81,15 +84,24 @@
             width: 100%;
         }
         #methods {
+            .content {
+                order: 2;
+            }
+            .picture {
+                display: flex;
+                flex-direction: column;
+            }
             .methods-photo {
                 -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
                 clip-path: (79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
-                height: 482px;
-                margin: 0 auto;
-                width: 500px;
+                height: 400px;
+                max-width: 400px;
+                width: 100%;
+
                 &.hard-hat {
                     background: url('http://xradar.dev/wp-content/uploads/2017/07/staring_down.jpg');
                     background-size: cover;
+                    order: 1;
                 }
                 &.closeup {
                     background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
@@ -110,6 +122,9 @@
 
 @include respond-to(small) {
     .page-about {
+        hr {
+            margin: 40px 0;
+        }
         section {
             margin: initial;
             max-width: none;
@@ -169,6 +184,8 @@
                 }
                 .methods-photo {
                     flex-basis: 42%;
+                    height: 482px;
+                    width: 500px;
                 }
                 &.left {
                     .content {
