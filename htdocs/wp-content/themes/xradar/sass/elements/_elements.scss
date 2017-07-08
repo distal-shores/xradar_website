@@ -21,6 +21,24 @@ blockquote, q {
 	}
 }
 
+h1, h2, h3 {
+    color: black;
+    font-family: Galano Grotesque, Impact, serif;
+}
+
+h1 {
+    font-size: $font__size-h1;
+    line-height: 62px;
+}
+
+h2 {
+    font-size: $font__size-h2;
+}
+
+h3 {
+    font-size: $font__size-h3;
+}
+
 hr {
     background-image: linear-gradient(to right, $color__border-button-top, $color__border-button-bottom);
     border: 0;
@@ -41,3 +59,14 @@ figure {
 }
 
 @import "tables";
+
+p {
+    color: $color__text-main;
+    font-family: Apercu Pro, Arial, sans-serif;
+    font-size: $font__size-medium-plus;
+    line-height: 25px;
+    &.feature {
+        font-size: $font__size-xlarge;
+        line-height: $font__size-xxlarge;
+    }
+}

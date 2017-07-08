@@ -16,7 +16,6 @@
                 color: white;
                 font-size: $font__size-5xl;
                 font-weight: 300;
-                line-height: $font__size-7xl;
                 margin-top: 200px;
                 position: relative;
             }
@@ -35,7 +34,7 @@
             h1 {
                 color: black;
                 font-size: $font__size-xxxlarge;
-                line-height: $font__size-4xl;
+                line-height: $font__size-h3;
             }
             p {
                 text-align: left;
@@ -53,7 +52,7 @@
             height: 500px;
             h1 {
                 color: white;
-                font-size: $font__size-4xl;
+                font-size: $font__size-h3;
                 margin-top: 8px;
             }
             .pre-header {

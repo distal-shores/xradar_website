@@ -38,6 +38,41 @@
  ## Captions
  ## Galleries
  --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuApercuPro-Medium.eot');
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.woff') format('woff'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.eot');
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.woff') format('woff'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.eot');
+  src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.woff') format('woff'), url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Galano Grotesque';
+  src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.eot');
+  src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.woff') format('woff'), url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Galano Grotesque';
+  src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.eot');
+  src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.woff') format('woff'), url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 /*--------------------------------------------------------------
  # Normalize
  --------------------------------------------------------------*/
@@ -182,7 +217,7 @@ td, th {
  # Typography
  --------------------------------------------------------------*/
 body, button, input, select, textarea {
-  color: #404040;
+  color: #464646;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -250,6 +285,20 @@ blockquote, q {
 blockquote:before, q:before, blockquote:after, q:after {
   content: "";
 }
+h1, h2, h3 {
+  color: black;
+  font-family: Galano Grotesque, Impact, serif;
+}
+h1 {
+  font-size: 64px;
+  line-height: 62px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 36px;
+}
 hr {
   background-image: linear-gradient(to right, #97da74, #62c4a9);
   border: 0;
@@ -290,6 +339,16 @@ table {
   margin: 0 0 1.5em;
   width: 100%;
 }
+p {
+  color: #464646;
+  font-family: Apercu Pro, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+p.feature {
+  font-size: 24px;
+  line-height: 28px;
+}
 /*--------------------------------------------------------------
  # Forms
  --------------------------------------------------------------*/
@@ -328,6 +387,10 @@ button:active, input[type="button"]:active, input[type="reset"]:active, input[ty
 }
 .cta-button.black {
   color: black;
+}
+.cta-button.white {
+  border-color: white;
+  color: white;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   color: #666;
@@ -767,7 +830,6 @@ a:hover, a:active {
     color: white;
     font-size: 40px;
     font-weight: 300;
-    line-height: 48px;
     margin-top: 200px;
     position: relative;
   }
@@ -868,7 +930,7 @@ a:hover, a:active {
   #company-intro h1 {
     font-size: 40px;
     font-weight: 800;
-    line-height: 60px;
+    line-height: 64px;
   }
   #company-intro p {
     text-align: center;
@@ -877,7 +939,7 @@ a:hover, a:active {
     height: 800px;
   }
   #hero-photo h1 {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
     margin-top: 350px;
   }
@@ -896,7 +958,7 @@ a:hover, a:active {
   }
   #case-studies .case-studies h1 {
     color: white;
-    font-size: 60px;
+    font-size: 64px;
     margin-top: 8px;
   }
   #case-studies .case-studies .pre-header {
@@ -917,7 +979,7 @@ a:hover, a:active {
   }
   .contact-us h1 {
     color: white;
-    font-size: 60px;
+    font-size: 64px;
   }
   .contact-us hr {
     display: block;
@@ -960,14 +1022,8 @@ a:hover, a:active {
  # About
  --------------------------------------------------------------*/
 @media (min-width: 0) {
-  .page-about h1 {
-    color: black;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-  }
   .page-about hr {
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .page-about section {
     margin: 0 auto;
@@ -997,7 +1053,7 @@ a:hover, a:active {
   }
   .page-about .hero-image2 {
     -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/roof.jpg');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/about_method_hero.jpg');
     clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
     padding-top: 100px;
     text-align: center;
@@ -1013,7 +1069,9 @@ a:hover, a:active {
   .page-about #why-xradar h2 {
     color: black;
     text-align: center;
-    font-size: 32px;
+  }
+  .page-about #why-xradar img {
+    height: 100px;
   }
   .page-about #why-xradar .why-icon {
     -webkit-mask-repeat: no-repeat;
@@ -1028,63 +1086,121 @@ a:hover, a:active {
     position: relative;
     width: 180px;
   }
-  .page-about #why-xradar .leader {
-    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
-    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
-  }
-  .page-about #why-xradar .radar {
-    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/Radar.svg');
-    -webkit-mask-size: 100% 130%;
-    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
-    mask-size: 100% 130%;
-  }
-  .page-about #why-xradar .canada {
-    -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/Canada.svg');
-    mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/leader.svg');
-  }
-  .page-about #why-xradar .two-column {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
-  .page-about #why-xradar .grid-wrap {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .page-about #why-xradar .grid-item {
-    flex-basis: 400px;
-    font-size: 14px;
-    height: auto;
-    padding: 10px;
-    margin: 10px;
+  .page-about #why-xradar .column {
     text-align: center;
   }
-  .page-about #why-xradar .grid-item img {
-    border-radius: 50%;
-  }
-  .page-about #why-xradar .grid-item p {
-    text-align: justify;
-  }
-  .page-about #methods .methods-photo {
-    background: url('http://xradar.dev/wp-content/uploads/2017/07/chalk_and_lines.jpg');
+  .page-about #know-more {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
+    background-position: 800px 500px;
     background-size: cover;
-    height: 400px;
-    margin: 0 auto;
-    max-width: 400px;
+    height: 500px;
+    margin: 0;
+    max-width: 100%;
+    padding: 120px 0 0 0;
+    text-align: center;
     width: 100%;
   }
-  .page-about #methods .methods-photo:nth-of-type(2) {
+  .page-about #methods .methods-photo {
+    -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+    clip-path: 79% 0, 100% 20%, 100% 100%, 0 100%, 0 0;
+    height: 482px;
+    margin: 0 auto;
+    width: 500px;
+  }
+  .page-about #methods .methods-photo.hard-hat {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/staring_down.jpg');
     background-size: cover;
   }
-  .page-about #methods .methods-photo:nth-of-type(3) {
+  .page-about #methods .methods-photo.closeup {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
     background-size: cover;
+  }
+  .page-about #methods .methods-photo.spray-paint {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/chalk_and_lines.jpg');
+    background-size: cover;
+  }
+}
+@media (min-width: 767px) {
+  .page-about section {
+    margin: initial;
+    max-width: none;
+    padding: 0 135px;
+  }
+  .page-about .white-box {
+    background-color: white;
+    display: block;
+    margin: -175px 0 0 -35px;
+    padding: 40px 40px 0 60px;
+    position: relative;
+    width: 80%;
+    z-index: 2000;
+  }
+  .page-about #hero-photo {
+    height: 800px;
+  }
+  .page-about #overview .two-column {
+    column-count: 2;
+    height: 345px;
+  }
+  .page-about #overview .two-column p:first-of-type {
+    margin-top: 0;
+  }
+  .page-about #methods .white-box {
+    width: 70%;
+  }
+  .page-about #methods .white-box h1 {
+    margin-top: 0;
+  }
+  .page-about #methods .picture {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 600px;
+    width: 100%;
+  }
+  .page-about #methods .picture h3 {
+    display: inline-block;
+  }
+  .page-about #methods .picture p {
+    padding-right: 45px;
+  }
+  .page-about #methods .picture .content {
+    flex-basis: 58%;
+    padding-right: 40px;
+  }
+  .page-about #methods .picture .content h3 {
+    margin-bottom: 0;
+  }
+  .page-about #methods .picture .content hr {
+    margin: 20px 0;
+  }
+  .page-about #methods .picture .methods-photo {
+    flex-basis: 42%;
+  }
+  .page-about #methods .picture.left .content {
+    padding-left: 35px;
+  }
+  .page-about #why-xradar {
+    margin: 0 0 135px 0;
+  }
+  .page-about #why-xradar h2 {
+    margin-bottom: 90px;
+  }
+  .page-about #why-xradar h3 {
+    margin-bottom: 20px;
+  }
+  .page-about #why-xradar .three-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page-about #why-xradar .column {
+    flex-basis: 33%;
+  }
+  .page-about #why-xradar .column hr {
+    margin: 0 auto;
+    width: 75px;
   }
 }
 /*--------------------------------------------------------------

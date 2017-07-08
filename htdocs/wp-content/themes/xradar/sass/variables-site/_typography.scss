@@ -1,3 +1,54 @@
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuApercuPro-Medium.eot');
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.woff') format('woff'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.eot');
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.woff') format('woff'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.eot');
+    src: url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.woff') format('woff'),
+        url('/wp-content/themes/xradar/fonts/apercu_pro/ApercuPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.eot');
+    src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.woff') format('woff'),
+        url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.eot');
+    src: url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.woff') format('woff'),
+        url('/wp-content/themes/xradar/fonts/galano_grotesque/GalanoGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 $font__main: sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
@@ -12,8 +63,8 @@ $font__size-large: 20px;
 $font__size-xlarge: 24px;
 $font__size-xxlarge: 28px;
 $font__size-xxxlarge: 32px;
-$font__size-4xl: 36px;
+$font__size-h3: 36px;
 $font__size-5xl: 40px;
 $font__size-6xl: 44px;
-$font__size-7xl: 48px;
-$font__size-h1: 60px;
+$font__size-h2: 48px;
+$font__size-h1: 64px;
