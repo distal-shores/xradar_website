@@ -13,3 +13,16 @@
     }
 
 }
+
+@include respond-to(small) {
+
+    .white-box {
+        background-color: white;
+        display: block;
+        margin: -175px 0 0 -35px;
+        padding: 40px 40px 0 60px;
+        position: relative;
+        width: 80%;
+        z-index: 2000;
+    }
+}

@@ -1144,15 +1144,6 @@ a:hover, a:active {
     max-width: none;
     padding: 0 135px;
   }
-  .page-about .white-box {
-    background-color: white;
-    display: block;
-    margin: -175px 0 0 -35px;
-    padding: 40px 40px 0 60px;
-    position: relative;
-    width: 80%;
-    z-index: 2000;
-  }
   .page-about #hero-photo {
     height: 800px;
   }
@@ -1352,10 +1343,50 @@ a:hover, a:active {
   .site-header.services .site-branding .site-title {
     margin-left: 100px;
   }
+  .page-services section:not(.know-more) {
+    padding: 0 80px;
+  }
   .page-services #hero-photo {
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 500px;
+    height: 585px;
+    margin-top: 100px;
+  }
+  .page-services .flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding: 0 200px;
+  }
+  .page-services .flex-wrap section {
+    flex-basis: 50%;
+  }
+  .page-services .flex-wrap section .inner {
+    max-width: 495px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+    width: 90%;
+  }
+  .page-services .flex-wrap section .inner a {
+    display: none;
+  }
+  .page-services .flex-wrap section .services-photo {
+    height: 375px;
+    max-width: none;
+    width: 575px;
+  }
+  .page-services .overview {
+    margin-bottom: 80px;
+  }
+  .page-services .overview p {
+    padding-left: 25px;
+  }
+  .page-services .white-box {
+    margin-bottom: 55px;
+    white-space: nowrap;
+    width: 35%;
   }
 }
 /*--------------------------------------------------------------
@@ -1455,5 +1486,16 @@ embed, iframe, object {
     padding: 120px 0 0 0;
     text-align: center;
     width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .white-box {
+    background-color: white;
+    display: block;
+    margin: -175px 0 0 -35px;
+    padding: 40px 40px 0 60px;
+    position: relative;
+    width: 80%;
+    z-index: 2000;
   }
 }
