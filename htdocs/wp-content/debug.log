@@ -2311,3 +2311,4 @@
 [09-Jul-2017 04:48:11 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [10-Jul-2017 16:44:49 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [10-Jul-2017 16:44:49 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[10-Jul-2017 21:24:06 UTC] PHP Notice:  Array to string conversion in /srv/www/xradar/htdocs/wp-content/themes/xradar/service.php on line 14
