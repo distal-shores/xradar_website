@@ -70,15 +70,28 @@
 @include respond-to(small) {
     .site-header {
         &.services {
+            #site-navigation {
+                .menu-primary-menu-container {
+                    float: none !important;
+                    margin-top: 25px;
+                    #primary-menu {
+                        .menu-item {
+                            a {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
             .submenu {
                 ul {
-                    float: right;
                     padding: 20px;
                     list-style-type: none;
                     li {
                         display: inline-block;
                         a {
                             color: black;
+                            font-family: Galano Grotesque;
                             font-size: $font__size-medium;
                             padding: 0 5px;
                             text-decoration: none;
@@ -96,49 +109,6 @@
                             }
                         }
                     }
-                }
-            }
-            #site-navigation {
-                display: inline-block;
-                float: right;
-                width: 50%;
-                .menu-primary-menu-container {
-                    float: right;
-                    padding: 0 75px;
-                    ul {
-                        padding: 20px;
-                        li {
-                            a {
-                                color: black;
-                                font-size: $font__size-large;
-                                padding: 0 5px;
-                                &:after {
-                                    color: $color__text-accent;
-                                    content: "\2215";
-                                    padding-left: 5px;
-                                }
-                            }
-                            &:last-of-type {
-                                a {
-                                    &:after {
-                                        content: none;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .site-branding {
-                display: inline-block;
-                width: 40%;
-                a {
-                    color: white;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
-                .site-title {
-                    margin-left: 100px;
                 }
             }
         }
