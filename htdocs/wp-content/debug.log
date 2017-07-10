@@ -2303,3 +2303,11 @@
 [17-Jun-2017 00:30:53 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [04-Jul-2017 18:01:01 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
 [05-Jul-2017 17:14:22 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[06-Jul-2017 17:24:36 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[06-Jul-2017 17:24:36 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[06-Jul-2017 20:14:11 UTC] PHP Warning:  unlink(/srv/www/xradar/htdocs/wp-content/plugins/wp-scss/cache/style.css): No such file or directory in /srv/www/xradar/htdocs/wp-content/plugins/wp-scss/class/class-wp-scss.php on line 103
+[08-Jul-2017 00:02:30 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[09-Jul-2017 04:48:11 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[09-Jul-2017 04:48:11 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[10-Jul-2017 16:44:49 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[10-Jul-2017 16:44:49 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227

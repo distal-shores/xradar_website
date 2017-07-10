@@ -414,13 +414,13 @@ textarea {
  ## Links
  --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #5cc4ab;
 }
 a:visited {
   color: purple;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #41a38c;
 }
 a:focus {
   outline: thin dotted;
@@ -1107,17 +1107,6 @@ a:hover, a:active {
   .page-about #why-xradar .column {
     text-align: center;
   }
-  .page-about #know-more {
-    background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
-    background-position: 800px 500px;
-    background-size: cover;
-    height: 500px;
-    margin: 0;
-    max-width: 100%;
-    padding: 120px 0 0 0;
-    text-align: center;
-    width: 100%;
-  }
   .page-about #methods .content {
     order: 2;
   }
@@ -1240,70 +1229,134 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Services
  --------------------------------------------------------------*/
-.site-header.services .submenu ul {
-  float: right;
-  padding: 20px;
-  list-style-type: none;
+@media (min-width: 0) {
+  .page-services section:not(.know-more) {
+    padding: 0 20px;
+  }
+  .page-services section .inner {
+    background-color: white;
+    margin: -90px auto 0;
+    max-width: 320px;
+    padding: 0 40px;
+    position: relative;
+    width: 75%;
+    z-index: 100;
+  }
+  .page-services section .inner a {
+    color: #5cc4ab;
+    display: block;
+    font-family: Apercu Pro, sans-serif;
+    font-weight: 700;
+    margin-bottom: 27px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .page-services section .inner a:after {
+    content: '\00a0 \003e';
+  }
+  .page-services section .inner a:hover {
+    color: #41a38c;
+  }
+  .page-services section .inner h2 {
+    margin-bottom: 0;
+  }
+  .page-services #hero-photo {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
+    position: relative;
+    height: 275px;
+  }
+  .page-services .services-photo {
+    -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+    clip-path: 79% 0, 100% 20%, 100% 100%, 0 100%, 0 0;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  .page-services .services-photo.closeup {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
+    background-size: cover;
+  }
+  .page-services .services-photo.spray-down {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/services-spray-down.jpg');
+    background-size: cover;
+  }
+  .page-services .services-photo.computer {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/services-computer.jpg');
+    background-size: cover;
+  }
+  .page-services .services-photo.port-mann {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/home_cs_hero.jpg');
+    background-size: cover;
+  }
 }
-.site-header.services .submenu ul li {
-  display: inline-block;
-}
-.site-header.services .submenu ul li a {
-  color: black;
-  font-size: 16px;
-  padding: 0 5px;
-  text-decoration: none;
-}
-.site-header.services .submenu ul li a:after {
-  color: #97da74;
-  content: "\2215";
-  padding-left: 5px;
-}
-.site-header.services .submenu ul li:last-of-type a:after {
-  content: none;
-}
-.site-header.services #site-navigation {
-  display: inline-block;
-  float: right;
-  width: 50%;
-}
-.site-header.services #site-navigation .menu-primary-menu-container {
-  float: right;
-  padding: 0 75px;
-}
-.site-header.services #site-navigation .menu-primary-menu-container ul {
-  padding: 20px;
-}
-.site-header.services #site-navigation .menu-primary-menu-container ul li a {
-  color: black;
-  font-size: 20px;
-  padding: 0 5px;
-}
-.site-header.services #site-navigation .menu-primary-menu-container ul li a:after {
-  color: #97da74;
-  content: "\2215";
-  padding-left: 5px;
-}
-.site-header.services #site-navigation .menu-primary-menu-container ul li:last-of-type a:after {
-  content: none;
-}
-.site-header.services .site-branding {
-  display: inline-block;
-  width: 40%;
-}
-.site-header.services .site-branding a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.site-header.services .site-branding .site-title {
-  margin-left: 100px;
-}
-.page-services #hero-photo {
-  background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 500px;
+@media (min-width: 767px) {
+  .site-header.services .submenu ul {
+    float: right;
+    padding: 20px;
+    list-style-type: none;
+  }
+  .site-header.services .submenu ul li {
+    display: inline-block;
+  }
+  .site-header.services .submenu ul li a {
+    color: black;
+    font-size: 16px;
+    padding: 0 5px;
+    text-decoration: none;
+  }
+  .site-header.services .submenu ul li a:after {
+    color: #97da74;
+    content: "\2215";
+    padding-left: 5px;
+  }
+  .site-header.services .submenu ul li:last-of-type a:after {
+    content: none;
+  }
+  .site-header.services #site-navigation {
+    display: inline-block;
+    float: right;
+    width: 50%;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container {
+    float: right;
+    padding: 0 75px;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container ul {
+    padding: 20px;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container ul li a {
+    color: black;
+    font-size: 20px;
+    padding: 0 5px;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container ul li a:after {
+    color: #97da74;
+    content: "\2215";
+    padding-left: 5px;
+  }
+  .site-header.services #site-navigation .menu-primary-menu-container ul li:last-of-type a:after {
+    content: none;
+  }
+  .site-header.services .site-branding {
+    display: inline-block;
+    width: 40%;
+  }
+  .site-header.services .site-branding a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-header.services .site-branding .site-title {
+    margin-left: 100px;
+  }
+  .page-services #hero-photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 500px;
+  }
 }
 /*--------------------------------------------------------------
  # Infinite scroll
@@ -1387,4 +1440,20 @@ embed, iframe, object {
 }
 .gallery-caption {
   display: block;
+}
+/*--------------------------------------------------------------
+ # Shared
+ --------------------------------------------------------------*/
+@media (min-width: 0) {
+  .know-more {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
+    background-position: 800px 500px;
+    background-size: cover;
+    height: 500px;
+    margin: 0;
+    max-width: 100%;
+    padding: 120px 0 0 0;
+    text-align: center;
+    width: 100%;
+  }
 }

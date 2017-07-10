@@ -1,0 +1,15 @@
+@include respond-to(mobile) {
+
+    .know-more {
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
+        background-position: 800px 500px;
+        background-size: cover;
+        height: 500px;
+        margin: 0;
+        max-width: 100%;
+        padding: 120px 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+
+}

@@ -110,7 +110,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section id="know-more">
+            <section class="know-more">
                 <h2>Want to know more?</h2>
                 <button class="cta-button white">View Case Studies</button>
             </section>
