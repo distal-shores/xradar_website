@@ -1,5 +1,84 @@
+.site-header {
+    &.services {
+        .submenu {
+            ul {
+                float: right;
+                padding: 20px;
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    a {
+                        color: black;
+                        font-size: $font__size-medium;
+                        padding: 0 5px;
+                        text-decoration: none;
+                        &:after {
+                            color: $color__text-accent;
+                            content: "\2215";
+                            padding-left: 5px;
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #site-navigation {
+            display: inline-block;
+            float: right;
+            width: 50%;
+            .menu-primary-menu-container {
+                float: right;
+                padding: 0 75px;
+                ul {
+                    padding: 20px;
+                    li {
+                        a {
+                            color: black;
+                            font-size: $font__size-large;
+                            padding: 0 5px;
+                            &:after {
+                                color: $color__text-accent;
+                                content: "\2215";
+                                padding-left: 5px;
+                            }
+                        }
+                        &:last-of-type {
+                            a {
+                                &:after {
+                                    content: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .site-branding {
+            display: inline-block;
+            width: 40%;
+            a {
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .site-title {
+                margin-left: 100px;
+            }
+        }
+    }
+}
+
 .page-services {
     #hero-photo {
-        top: 133px;
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 500px;
     }
 }

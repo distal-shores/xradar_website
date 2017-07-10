@@ -610,7 +610,10 @@ a:hover, a:active {
  # Header
  --------------------------------------------------------------*/
 @media (min-width: 0) {
-  #masthead {
+  #top-buffer {
+    display: none;
+  }
+  #masthead, .site-header {
     background: transparent;
     height: 150px;
     padding-top: 35px;
@@ -619,14 +622,11 @@ a:hover, a:active {
     width: 100%;
     z-index: 10;
   }
-  #masthead #top-buffer {
-    display: none;
-  }
-  #masthead .logo {
+  #masthead .logo, .site-header .logo {
     padding-left: 25px;
     width: 160px;
   }
-  #masthead .menu-toggle {
+  #masthead .menu-toggle, .site-header .menu-toggle {
     -webkit-mask-image: url('http://xradar.dev/wp-content/uploads/2017/07/hamburger_menu.svg');
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: fill;
@@ -640,6 +640,21 @@ a:hover, a:active {
     right: 25px;
     top: 40px;
     width: 30px;
+  }
+  #masthead.services, .site-header.services {
+    background-color: white;
+    display: block;
+    height: 60px;
+    padding: 0;
+    width: 100%;
+  }
+  #masthead.services .logo, .site-header.services .logo {
+    height: 25px;
+    margin-top: 16px;
+    width: 80px;
+  }
+  #masthead.services .menu-toggle, .site-header.services .menu-toggle {
+    top: 15px;
   }
 }
 @media (min-width: 767px) {
@@ -1225,8 +1240,70 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Services
  --------------------------------------------------------------*/
+.site-header.services .submenu ul {
+  float: right;
+  padding: 20px;
+  list-style-type: none;
+}
+.site-header.services .submenu ul li {
+  display: inline-block;
+}
+.site-header.services .submenu ul li a {
+  color: black;
+  font-size: 16px;
+  padding: 0 5px;
+  text-decoration: none;
+}
+.site-header.services .submenu ul li a:after {
+  color: #97da74;
+  content: "\2215";
+  padding-left: 5px;
+}
+.site-header.services .submenu ul li:last-of-type a:after {
+  content: none;
+}
+.site-header.services #site-navigation {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+.site-header.services #site-navigation .menu-primary-menu-container {
+  float: right;
+  padding: 0 75px;
+}
+.site-header.services #site-navigation .menu-primary-menu-container ul {
+  padding: 20px;
+}
+.site-header.services #site-navigation .menu-primary-menu-container ul li a {
+  color: black;
+  font-size: 20px;
+  padding: 0 5px;
+}
+.site-header.services #site-navigation .menu-primary-menu-container ul li a:after {
+  color: #97da74;
+  content: "\2215";
+  padding-left: 5px;
+}
+.site-header.services #site-navigation .menu-primary-menu-container ul li:last-of-type a:after {
+  content: none;
+}
+.site-header.services .site-branding {
+  display: inline-block;
+  width: 40%;
+}
+.site-header.services .site-branding a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-header.services .site-branding .site-title {
+  margin-left: 100px;
+}
 .page-services #hero-photo {
-  top: 133px;
+  background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 500px;
 }
 /*--------------------------------------------------------------
  # Infinite scroll

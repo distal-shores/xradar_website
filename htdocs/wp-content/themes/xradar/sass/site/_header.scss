@@ -1,5 +1,8 @@
 @include respond-to(mobile) {
-    #masthead {
+    #top-buffer {
+        display: none;
+    }
+    #masthead, .site-header {
         background: transparent;
         height: 150px;
         padding-top: 35px;
@@ -7,9 +10,6 @@
         top: 0;
         width: 100%;
         z-index: 10;
-        #top-buffer {
-            display: none;
-        }
         .logo {
             padding-left: 25px;
             width: 160px;
@@ -28,6 +28,22 @@
             right: 25px;
             top: 40px;
             width: 30px;
+        }
+        &.services {
+            background-color: white;
+            display: block;
+            height: 60px;
+            padding: 0;
+            width: 100%;
+            .logo {
+                height: 25px;
+                margin-top: 16px;
+                width: 80px;
+            }
+            .menu-toggle {
+                top: 15px;
+            }
+
         }
     }
 }

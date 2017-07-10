@@ -20,43 +20,33 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
     <header class="site-header services" role="banner">
         <div class="site-branding">
-            <?php if ( is_front_page() && is_home() ) : ?>
-                <h1 class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </h1>
-            <?php else : ?>
-                <p class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        Hello
-                    </a>
-                </p>
-            <?php endif; ?>
+            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.svg">
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'xradar' ); ?></button>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
             <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',
                     'menu_id'        => 'primary-menu',
                 ) );
             ?>
-        </nav><!-- #site-navigation -->
-        <div class="submenu">
-            <ul>
-                <li><a href="/concrete-scanning/">Concrete Scanning</a></li>
-                <li><a href="/concrete-corrosion-mapping/">Concrete Corrosion Mapping</a></li>
-                <li><a href="/pulse-echo/">Pulse Echo</a></li>
-                <li><a href="/reports/">Reports</a></li>
+            <div class="submenu">
+                <ul>
+                    <li><a href="/concrete-scanning/">Concrete Scanning</a></li>
+                    <li><a href="/concrete-corrosion-mapping/">Concrete Corrosion Mapping</a></li>
+                    <li><a href="/pulse-echo/">Pulse Echo</a></li>
+                    <li><a href="/reports/">Reports</a></li>
 
-            </ul>
-        </div>
+                </ul>
+            </div>
+        </nav><!-- #site-navigation -->
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">
