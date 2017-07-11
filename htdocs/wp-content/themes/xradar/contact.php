@@ -67,6 +67,9 @@ get_header('page'); ?>
                     </div>
                 </div>
             </div>
+            <div class="get-in-touch">
+                <?php ninja_forms_display_form(6); ?>
+            </div>
         </main><!-- #main -->
     </div><!-- #primary -->
 

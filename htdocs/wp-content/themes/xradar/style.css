@@ -1237,7 +1237,6 @@ a:hover, a:active {
     width: 100%;
   }
   .contact {
-    margin-bottom: 75px;
     padding-top: 50px;
     text-align: center;
   }
@@ -1299,6 +1298,40 @@ a:hover, a:active {
     position: absolute;
     top: 2px;
     width: 25px;
+  }
+  .contact .get-in-touch {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background-size: cover;
+    padding: 40px 0 0 0;
+    height: 875px;
+    margin-bottom: -22px;
+    width: 100%;
+  }
+  .contact .get-in-touch h3 {
+    color: white;
+  }
+  .contact .get-in-touch .nf-element {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    width: 80%;
+  }
+  .contact .get-in-touch #nf-field-34 {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 80%;
   }
 }
 @media (min-width: 767px) {
