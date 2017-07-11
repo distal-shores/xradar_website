@@ -1535,10 +1535,9 @@ a:hover, a:active {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 80px;
-    padding: 0 200px;
   }
   .page-services .flex-wrap section {
-    flex-basis: 50%;
+    width: 50%;
   }
   .page-services .flex-wrap section .inner {
     max-width: 495px;
@@ -1563,7 +1562,7 @@ a:hover, a:active {
   .page-services .white-box {
     margin-bottom: 55px;
     white-space: nowrap;
-    width: 35%;
+    width: 45%;
   }
   .page-service h1 {
     padding: 0 135px;
