@@ -1227,6 +1227,90 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Contact
  --------------------------------------------------------------*/
+@media (min-width: 0) {
+}
+@media (min-width: 767px) {
+  #contact-hero-photo {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+    height: 600px;
+    width: 100%;
+  }
+  .contact {
+    padding: 0 75px;
+    margin-bottom: 75px;
+  }
+  .contact .flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  .contact .flex-wrap .contact-city {
+    margin: 0 1.66666% 25px 1.66666%;
+    width: 30%;
+  }
+  .contact .flex-wrap .contact-city h3 {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+  }
+  .contact .flex-wrap .contact-city hr {
+    height: 5px;
+    margin: 10px 0;
+    width: 150px;
+  }
+  .contact .flex-wrap .contact-city img {
+    width: 100%;
+    min-height: 255px;
+  }
+  .contact .flex-wrap .contact-city .details {
+    width: 100%;
+  }
+  .contact .flex-wrap .contact-city .details span {
+    display: block;
+    padding: 5px 50px;
+    position: relative;
+    width: 100%;
+  }
+  .contact .flex-wrap .contact-city .details span.pin:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 7px;
+    position: absolute;
+    top: 15px;
+    width: 25px;
+  }
+  .contact .flex-wrap .contact-city .details span.phone:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 7px;
+    position: absolute;
+    top: 3px;
+    width: 25px;
+  }
+  .contact .flex-wrap .contact-city .details span.mail:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 7px;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+  }
+  .contact .white-box {
+    width: 40%;
+  }
+}
 /*--------------------------------------------------------------
  # Services
  --------------------------------------------------------------*/
