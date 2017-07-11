@@ -163,4 +163,88 @@
             width: 35%;
         }
     }
+    .page-service {
+        h1 {
+            padding: 0 135px;
+        }
+        hr {
+            margin-left: 135px;
+        }
+        .service-hero {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            height: 585px;
+            margin-top: 80px;
+            width: 100%;
+        }
+        .flex-wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 80px;
+            padding: 0 135px;
+            .service-content {
+                flex-basis: 65%;
+                padding-right: 50px;
+            }
+            .service-contact {
+                border-left: 1px solid darkgray;
+                flex-basis: 35%;
+                padding-left: 50px;
+                text-align: center;
+                .local-contact {
+                    border-bottom: 1px solid darkgray;
+                    div {
+                        font-family: Apercu Pro, Arial, sans-serif;
+                        text-align: left;
+                    }
+                    .pin {
+                        &:before {
+                            content: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
+                        }
+                    }
+                    .phone {
+                        &:before {
+                            content: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+                        }
+                    }
+                    .email {
+                        &:before {
+                            content: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+                        }
+                    }
+                }
+                .quick-contact {
+                    input, textarea {
+                        background-color: $color__form-background;
+                        border: 2px solid $color__border-button-top;
+                        border-radius: 25px;
+                        display: block;
+                        font-family: Apercu Pro, Arial, sans-serif;
+                        margin: 0 auto 10px;
+                        padding: 10px 0 10px 10px;
+                        position: relative;
+                        width: 80%;
+                    }
+                    textarea {
+                        resize: vertical;
+                    }
+                    .form-submit {
+                        background: linear-gradient(180deg, #98DD6B 0%, #5CC4AB 100%);
+                        border-radius: 25px;
+                        box-shadow: 2px 4px 5px #dedede;
+                        color: white;
+                        font-family: Galano Grotesque, Arial, sans-serif;
+                        font-size: $font__size-medium;
+                        height: 40px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
 }

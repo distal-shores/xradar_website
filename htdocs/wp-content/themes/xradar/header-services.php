@@ -25,7 +25,7 @@
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
     <header id="masthead" class="site-header services" role="banner">
         <div class="site-branding">
-            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.svg">
+            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.png">
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">

@@ -349,6 +349,9 @@ p.feature {
   font-size: 24px;
   line-height: 28px;
 }
+li {
+  font-family: Apercu Pro, Arial, sans-serif;
+}
 /*--------------------------------------------------------------
  # Forms
  --------------------------------------------------------------*/
@@ -660,7 +663,7 @@ a:hover, a:active {
 @media (min-width: 767px) {
   #masthead {
     display: block;
-    margin: 0 0 0 100px;
+    margin: 0;
     position: relative;
     padding: 25px 75px 0 0;
     width: 100%;
@@ -705,6 +708,12 @@ a:hover, a:active {
   }
   #masthead .logo {
     padding-left: 0;
+    width: 185px;
+  }
+  #masthead.services .logo {
+    height: auto;
+    padding-left: 0;
+    margin-top: 25px;
     width: 185px;
   }
   #top-buffer {
@@ -1358,6 +1367,80 @@ a:hover, a:active {
     margin-bottom: 55px;
     white-space: nowrap;
     width: 35%;
+  }
+  .page-service h1 {
+    padding: 0 135px;
+  }
+  .page-service hr {
+    margin-left: 135px;
+  }
+  .page-service .service-hero {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    height: 585px;
+    margin-top: 80px;
+    width: 100%;
+  }
+  .page-service .flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    padding: 0 135px;
+  }
+  .page-service .flex-wrap .service-content {
+    flex-basis: 65%;
+    padding-right: 50px;
+  }
+  .page-service .flex-wrap .service-contact {
+    border-left: 1px solid darkgray;
+    flex-basis: 35%;
+    padding-left: 50px;
+    text-align: center;
+  }
+  .page-service .flex-wrap .service-contact .local-contact {
+    border-bottom: 1px solid darkgray;
+  }
+  .page-service .flex-wrap .service-contact .local-contact div {
+    font-family: Apercu Pro, Arial, sans-serif;
+    text-align: left;
+  }
+  .page-service .flex-wrap .service-contact .local-contact .pin:before {
+    content: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
+  }
+  .page-service .flex-wrap .service-contact .local-contact .phone:before {
+    content: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+  }
+  .page-service .flex-wrap .service-contact .local-contact .email:before {
+    content: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+  }
+  .page-service .flex-wrap .service-contact .quick-contact input, .page-service .flex-wrap .service-contact .quick-contact textarea {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    width: 80%;
+  }
+  .page-service .flex-wrap .service-contact .quick-contact textarea {
+    resize: vertical;
+  }
+  .page-service .flex-wrap .service-contact .quick-contact .form-submit {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    box-shadow: 2px 4px 5px #dedede;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 80%;
   }
 }
 /*--------------------------------------------------------------
