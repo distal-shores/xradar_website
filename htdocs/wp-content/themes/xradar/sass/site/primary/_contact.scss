@@ -1,21 +1,98 @@
 @include respond-to(mobile) {
 
+    #contact-hero-photo {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+        height: 300px;
+        width: 100%;
+    }
+    .contact {
+        margin-bottom: 75px;
+        padding-top: 50px;
+        text-align: center;
+        hr {
+            margin: 0 auto;
+        }
+        .flex-wrap {
+            margin-top: 50px;
+            padding: 0 40px;
+            .contact-city {
+                margin-bottom: 50px;
+                hr {
+                    margin-bottom: 20px;
+                }
+                img {
+                    width: 100%;
+                    min-height: 255px;
+                }
+            }
+            .details {
+                span {
+                    display: block;
+                    padding: 40px 0 5px 0;
+                    position: relative;
+                    width: 100%;
+                    &.pin {
+                        &:before {
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
+                            background-size: 25px 25px;
+                            content: "";
+                            display: inline-block;
+                            height: 25px;
+                            left: 50%;
+                            margin-left: -7px;
+                            position: absolute;
+                            top: 2px;
+                            width: 25px;
+                        }
+                    }
+                    &.phone {
+                        &:before {
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+                            background-size: 25px 25px;
+                            content: "";
+                            display: inline-block;
+                            height: 25px;
+                            left: 50%;
+                            margin-left: -7px;
+                            position: absolute;
+                            top: 2px;
+                            width: 25px;
+                        }
+                    }
+                    &.mail {
+                        &:before {
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+                            background-size: 25px 25px;
+                            content: "";
+                            display: inline-block;
+                            height: 25px;
+                            left: 50%;
+                            margin-left: -7px;
+                            position: absolute;
+                            top: 2px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 
 }
 
 @include respond-to(small) {
 
     #contact-hero-photo {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-        background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
-        background-size: cover;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
         height: 600px;
-        width: 100%;
     }
     .contact {
         padding: 0 75px;
         margin-bottom: 75px;
+        text-align: left;
         .flex-wrap {
             display: flex;
             flex-direction: row;
@@ -33,17 +110,10 @@
                     margin: 10px 0;
                     width: 150px;
                 }
-                img {
-                    width: 100%;
-                    min-height: 255px;
-                }
                 .details {
                     width: 100%;
                     span {
-                        display: block;
                         padding: 5px 50px;
-                        position: relative;
-                        width: 100%;
                         &.pin {
                             &:before {
                                 background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
