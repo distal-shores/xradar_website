@@ -13,7 +13,7 @@
 <div id="top-buffer">1-855-5-Xradar(97-2327)</div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
-    <header id="masthead" class="site-header" role="banner">
+    <header id="masthead" class="site-header page" role="banner">
         <div class="site-branding">
             <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.png">
         </div>

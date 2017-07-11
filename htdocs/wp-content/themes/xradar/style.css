@@ -644,19 +644,18 @@ a:hover, a:active {
     top: 40px;
     width: 30px;
   }
-  #masthead.services, .site-header.services {
+  #masthead.services, .site-header.services, #masthead.page, .site-header.page {
     background-color: white;
     display: block;
     height: 60px;
     padding: 0;
     width: 100%;
   }
-  #masthead.services .logo, .site-header.services .logo {
-    height: 25px;
+  #masthead.services .logo, .site-header.services .logo, #masthead.page .logo, .site-header.page .logo {
     margin-top: 16px;
     width: 80px;
   }
-  #masthead.services .menu-toggle, .site-header.services .menu-toggle {
+  #masthead.services .menu-toggle, .site-header.services .menu-toggle, #masthead.page .menu-toggle, .site-header.page .menu-toggle {
     top: 15px;
   }
 }
@@ -710,11 +709,23 @@ a:hover, a:active {
     padding-left: 0;
     width: 185px;
   }
-  #masthead.services .logo {
+  #masthead.services, #masthead.page {
+    height: 150px;
+  }
+  #masthead.services .site-branding, #masthead.page .site-branding {
+    padding: 20px 0 0 50px;
+  }
+  #masthead.services .logo, #masthead.page .logo {
     height: auto;
     padding-left: 0;
     margin-top: 25px;
     width: 185px;
+  }
+  #masthead.services #site-navigation .menu-primary-menu-container, #masthead.page #site-navigation .menu-primary-menu-container {
+    padding-top: 50px;
+  }
+  #masthead.services #site-navigation .menu-primary-menu-container li a, #masthead.page #site-navigation .menu-primary-menu-container li a {
+    color: black;
   }
   #top-buffer {
     background: linear-gradient(#97da74, #62c4a9);
@@ -1303,12 +1314,17 @@ a:hover, a:active {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
     background-size: cover;
     padding: 40px 0 0 0;
-    height: 875px;
+    height: 925px;
     margin-bottom: -22px;
     width: 100%;
   }
   .contact .get-in-touch h3 {
     color: white;
+  }
+  .contact .get-in-touch .nf-form-fields-required {
+    color: white;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin-bottom: 40px;
   }
   .contact .get-in-touch .nf-element {
     background-color: #f3f3f3;
@@ -1403,6 +1419,9 @@ a:hover, a:active {
   }
   .contact .white-box {
     width: 40%;
+  }
+  .contact .get-in-touch {
+    display: none;
   }
 }
 /*--------------------------------------------------------------

@@ -83,11 +83,16 @@
             background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
             background-size: cover;
             padding: 40px 0 0 0;
-            height: 875px;
+            height: 925px;
             margin-bottom: -22px;
             width: 100%;
             h3 {
                 color: white; 
+            }
+            .nf-form-fields-required {
+                color: white;
+                font-family: Apercu Pro, Arial, sans-serif;
+                margin-bottom: 40px;
             }
             .nf-element {
                 background-color: $color__form-background;
@@ -193,6 +198,9 @@
         }
         .white-box {
             width: 40%;
+        }
+        .get-in-touch {
+            display: none;
         }
 
     }
