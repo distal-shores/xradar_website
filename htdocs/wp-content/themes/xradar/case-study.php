@@ -15,16 +15,16 @@ $heroImage = get_field('case_study_hero');
 get_header('cstudies'); ?>
 
 <div id="primary" class="content-area services">
+    <div class="cstudy-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
     <main id="main" class="site-main page-cstudy" role="main">
 
-        <div class="cstudy-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
+        <span class="title-leader">- Case Study -</span>
 
         <h1><?php echo get_post_meta( get_the_ID(), 'main-heading', true ); ?></h1>
-
         <hr>
 
         <div class="flex-wrap">
-            <div class="service-content">
+            <div class="cstudy-content">
                 <?php
                     while ( have_posts() ) : the_post(); ?>
                         <div class="entry-content-page">
@@ -36,35 +36,24 @@ get_header('cstudies'); ?>
                     wp_reset_query();
                 ?>
             </div>
-            <div class="service-contact">
-                <div class="local-contact">
-                    <h3>Contact Us</h3>
-                    <form>
-                        <select>
-                            <option>Vancouver</option>
-                        </select>
-                    </form>
-                    <div class="pin"><span>114-2799 Gilmore Ave<br>Burnaby, BC<br>V5C 6S5</span></div>
-                    <div class="phone"><span>604-436-7226</span></div>
-                    <div class="email"><span>info@xradar.ca</span></div>
+            <div class="sidebar-contact">
+                <h3>Contact Us</h3>
+                <div class="details">
+                    <span class="pin">4 Place du Commerce, Suite 101, Verdun, QC H3E 1J4</span>
+                    <span class="phone">604-436-7226</span>
+                    <span class="mail">montreal@xradar.ca</span>
                 </div>
-                <div class="quick-contact">
+                <div class="get-in-touch">
                     <h3>Quick Contact</h3>
-                    <form>
-                        <input type="text" value="" name="name" placeholder="Name">
-                        <input class="half-width" type="email" value="" name="email" placeholder="Email">
-                        <input type="text" value="" name="company" placeholder="Company">
-                        <textarea type="text" value="" name="message" placeholder="Your message"></textarea>
-                        <button type="submit" value="Submit" class="form-submit">Submit</button>
-                    </form>
+                    <?php ninja_forms_display_form(6); ?>
                 </div>
             </div>
         </div>
-        <section class="know-more">
-            <h2>See Our Services In Action</h2>
-            <button class="cta-button white">Learn More</button>
-        </section>
     </main>
+    <section class="know-more">
+        <h2>Get to Know Our Services</h2>
+        <button class="cta-button white">View Our Services</button>
+    </section>
 </div>
 
 <?php

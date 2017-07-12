@@ -644,18 +644,21 @@ a:hover, a:active {
     top: 40px;
     width: 30px;
   }
-  #masthead.services, .site-header.services, #masthead.page, .site-header.page {
+  #masthead.services, .site-header.services, #masthead.cstudies, .site-header.cstudies, #masthead.page, .site-header.page {
     background-color: white;
     display: block;
     height: 60px;
     padding: 0;
     width: 100%;
   }
-  #masthead.services .logo, .site-header.services .logo, #masthead.page .logo, .site-header.page .logo {
+  #masthead.services .logo, .site-header.services .logo, #masthead.cstudies .logo, .site-header.cstudies .logo, #masthead.page .logo, .site-header.page .logo {
     margin-top: 16px;
     width: 80px;
   }
-  #masthead.services .menu-toggle, .site-header.services .menu-toggle, #masthead.page .menu-toggle, .site-header.page .menu-toggle {
+  #masthead.services .submenu, .site-header.services .submenu, #masthead.cstudies .submenu, .site-header.cstudies .submenu, #masthead.page .submenu, .site-header.page .submenu {
+    display: none;
+  }
+  #masthead.services .menu-toggle, .site-header.services .menu-toggle, #masthead.cstudies .menu-toggle, .site-header.cstudies .menu-toggle, #masthead.page .menu-toggle, .site-header.page .menu-toggle {
     top: 15px;
   }
 }
@@ -709,22 +712,22 @@ a:hover, a:active {
     padding-left: 0;
     width: 185px;
   }
-  #masthead.services, #masthead.page {
+  #masthead.services, #masthead.cstudies, #masthead.page {
     height: 150px;
   }
-  #masthead.services .site-branding, #masthead.page .site-branding {
+  #masthead.services .site-branding, #masthead.cstudies .site-branding, #masthead.page .site-branding {
     padding: 20px 0 0 50px;
   }
-  #masthead.services .logo, #masthead.page .logo {
+  #masthead.services .logo, #masthead.cstudies .logo, #masthead.page .logo {
     height: auto;
     padding-left: 0;
     margin-top: 25px;
     width: 185px;
   }
-  #masthead.services #site-navigation .menu-primary-menu-container, #masthead.page #site-navigation .menu-primary-menu-container {
+  #masthead.services #site-navigation .menu-primary-menu-container, #masthead.cstudies #site-navigation .menu-primary-menu-container, #masthead.page #site-navigation .menu-primary-menu-container {
     padding-top: 50px;
   }
-  #masthead.services #site-navigation .menu-primary-menu-container li a, #masthead.page #site-navigation .menu-primary-menu-container li a {
+  #masthead.services #site-navigation .menu-primary-menu-container li a, #masthead.cstudies #site-navigation .menu-primary-menu-container li a, #masthead.page #site-navigation .menu-primary-menu-container li a {
     color: black;
   }
   #top-buffer {
@@ -1054,6 +1057,53 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Case Studies
  --------------------------------------------------------------*/
+@media (min-width: 0) {
+  #case-studies-hero {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/casestudies_hero.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    height: 375px;
+    width: 100%;
+  }
+  .page-cstudies {
+    padding: 0 20px;
+  }
+  .cstudy-hero {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    height: 585px;
+    margin-top: 80px;
+    width: 100%;
+  }
+  .page-cstudy {
+    padding: 0 135px;
+  }
+  .page-cstudy h1:first-of-type {
+    margin-top: 10px;
+  }
+  .page-cstudy .title-leader {
+    display: block;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .page-cstudy .flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  .page-cstudy .flex-wrap .cstudy-content {
+    flex-basis: 65%;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 767px) {
+}
 /*--------------------------------------------------------------
  # About
  --------------------------------------------------------------*/
@@ -1241,7 +1291,7 @@ a:hover, a:active {
 @media (min-width: 0) {
   #contact-hero-photo {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/roof.jpg');
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
     height: 300px;
@@ -1590,54 +1640,6 @@ a:hover, a:active {
     flex-basis: 65%;
     padding-right: 50px;
   }
-  .page-service .flex-wrap .service-contact {
-    border-left: 1px solid darkgray;
-    flex-basis: 35%;
-    padding-left: 50px;
-    text-align: center;
-  }
-  .page-service .flex-wrap .service-contact .local-contact {
-    border-bottom: 1px solid darkgray;
-  }
-  .page-service .flex-wrap .service-contact .local-contact div {
-    font-family: Apercu Pro, Arial, sans-serif;
-    text-align: left;
-  }
-  .page-service .flex-wrap .service-contact .local-contact .pin:before {
-    content: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
-  }
-  .page-service .flex-wrap .service-contact .local-contact .phone:before {
-    content: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
-  }
-  .page-service .flex-wrap .service-contact .local-contact .email:before {
-    content: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
-  }
-  .page-service .flex-wrap .service-contact .quick-contact input, .page-service .flex-wrap .service-contact .quick-contact textarea {
-    background-color: #f3f3f3;
-    border: 2px solid #97da74;
-    border-radius: 25px;
-    display: block;
-    font-family: Apercu Pro, Arial, sans-serif;
-    margin: 0 auto 10px;
-    padding: 10px 0 10px 10px;
-    position: relative;
-    width: 80%;
-  }
-  .page-service .flex-wrap .service-contact .quick-contact textarea {
-    resize: vertical;
-  }
-  .page-service .flex-wrap .service-contact .quick-contact .form-submit {
-    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
-    border-radius: 25px;
-    box-shadow: 2px 4px 5px #dedede;
-    color: white;
-    font-family: Galano Grotesque, Arial, sans-serif;
-    font-size: 16px;
-    height: 40px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    width: 80%;
-  }
 }
 /*--------------------------------------------------------------
  # Infinite scroll
@@ -1739,6 +1741,114 @@ embed, iframe, object {
   }
 }
 @media (min-width: 767px) {
+  .secondary-hero {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+  .secondary-hero img {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  .secondary-hero .caption {
+    -webkit-clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
+    background: linear-gradient(#97da74, #62c4a9);
+    clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
+    display: inline-block;
+    height: 400px;
+    left: 0;
+    padding: 0 250px 30px 40px;
+    position: absolute;
+    top: 0;
+    width: 75%;
+    z-index: 10;
+  }
+  .secondary-hero .caption h3 {
+    color: white;
+  }
+  .sidebar-contact .get-in-touch {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background-size: cover;
+    padding: 40px 0 0 0;
+    height: 925px;
+    margin-bottom: -22px;
+    width: 100%;
+  }
+  .sidebar-contact .get-in-touch h3 {
+    color: white;
+  }
+  .sidebar-contact .get-in-touch .nf-form-fields-required {
+    color: white;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin-bottom: 40px;
+  }
+  .sidebar-contact .get-in-touch .nf-element {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    width: 80%;
+  }
+  .sidebar-contact .get-in-touch #nf-field-34 {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 80%;
+  }
+  .sidebar-contact span {
+    display: block;
+    padding: 40px 0 5px 0;
+    position: relative;
+    width: 100%;
+  }
+  .sidebar-contact span.pin:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+  }
+  .sidebar-contact span.phone:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+  }
+  .sidebar-contact span.mail:before {
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
+    background-size: 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+  }
   .white-box {
     background-color: white;
     display: block;

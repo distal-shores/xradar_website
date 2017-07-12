@@ -22,25 +22,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
-    <header class="site-header services" role="banner">
+    <header id="masthead" class="site-header cstudies" role="banner">
         <div class="site-branding">
-            <?php if ( is_front_page() && is_home() ) : ?>
-                <h1 class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </h1>
-            <?php else : ?>
-                <p class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        Hello
-                    </a>
-                </p>
-            <?php endif; ?>
+            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.png">
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'xradar' ); ?></button>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
             <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',

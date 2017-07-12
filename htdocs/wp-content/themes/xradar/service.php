@@ -36,7 +36,7 @@ get_header('services'); ?>
                     wp_reset_query();
                 ?>
             </div>
-            <div class="service-contact">
+            <div class="sidebar-contact">
                 <div class="local-contact">
                     <h3>Contact Us</h3>
                     <form>
@@ -50,13 +50,7 @@ get_header('services'); ?>
                 </div>
                 <div class="quick-contact">
                     <h3>Quick Contact</h3>
-                    <form>
-                        <input type="text" value="" name="name" placeholder="Name">
-                        <input class="half-width" type="email" value="" name="email" placeholder="Email">
-                        <input type="text" value="" name="company" placeholder="Company">
-                        <textarea type="text" value="" name="message" placeholder="Your message"></textarea>
-                        <button type="submit" value="Submit" class="form-submit">Submit</button>
-                    </form>
+                    <?php ninja_forms_display_form(6); ?>
                 </div>
             </div>
         </div>

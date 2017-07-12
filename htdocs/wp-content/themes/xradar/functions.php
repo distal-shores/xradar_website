@@ -189,3 +189,16 @@ function fix_svg() {
         </style>';
 }
 add_action( 'admin_head', 'fix_svg' );
+
+function get_second_image() {
+    $secondaryHero = get_field('case_study_2nd_image_1');
+    $secondaryHeroCaption = get_field('case_study_2nd_image_caption');
+    $html = '<div class="secondary-hero"><img src="' . $secondaryHero['url'] . '"/>
+        <div class="caption"><h3>' . $secondaryHeroCaption . '</h3></div>
+    </div>';
+    return $html;
+}
+
+add_shortcode("case_study_second_image_sc","get_second_image");
+
+

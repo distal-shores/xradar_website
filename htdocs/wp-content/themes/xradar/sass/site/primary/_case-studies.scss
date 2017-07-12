@@ -1,0 +1,53 @@
+@include respond-to(mobile) {
+    #case-studies-hero {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/casestudies_hero.jpg');
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        height: 375px;
+        width: 100%;
+    }
+    .page-cstudies {
+        padding: 0 20px;
+    }
+    .cstudy-hero {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        height: 585px;
+        margin-top: 80px;
+        width: 100%;
+    }
+    .page-cstudy {
+        padding: 0 135px;
+        h1 {
+            &:first-of-type {
+                margin-top: 10px;
+            }
+        }
+        .title-leader {
+            display: block;
+            font-family: Galano Grotesque, Arial, sans-serif;
+            font-size: $font__size-xxlarge;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .flex-wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 80px;
+            // padding: 0 135px;
+            .cstudy-content {
+                flex-basis: 65%;
+                padding-right: 50px;
+            }
+        }
+    }
+
+}
+
+@include respond-to(small) {
+
+}

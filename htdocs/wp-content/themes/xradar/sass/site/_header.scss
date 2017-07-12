@@ -30,6 +30,7 @@
             width: 30px;
         }
         &.services,
+        &.cstudies,
         &.page {
             background-color: white;
             display: block;
@@ -40,6 +41,9 @@
                 // height: 25px;
                 margin-top: 16px;
                 width: 80px;
+            }
+            .submenu {
+                display: none;
             }
             .menu-toggle {
                 top: 15px;
@@ -105,7 +109,8 @@
             padding-left: 0;
             width: 185px;
         }
-        &.services, 
+        &.services,
+        &.cstudies, 
         &.page {
             height: 150px;
             .site-branding {
