@@ -54,6 +54,9 @@ get_header('cstudies'); ?>
         <h2>Get to Know Our Services</h2>
         <button class="cta-button white">View Our Services</button>
     </section>
+    <div class="get-in-touch2">
+        <?php ninja_forms_display_form(7); ?>
+    </div>
 </div>
 
 <?php

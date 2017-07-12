@@ -1069,6 +1069,9 @@ a:hover, a:active {
   .page-cstudies {
     padding: 0 20px;
   }
+  .know-more {
+    display: none;
+  }
   .cstudy-hero {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
     background-size: cover;
@@ -1076,6 +1079,48 @@ a:hover, a:active {
     height: 585px;
     margin-top: 80px;
     width: 100%;
+  }
+  .get-in-touch2 {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background-size: cover;
+    display: block;
+    padding: 40px 0 0 0;
+    height: 925px;
+    margin-bottom: -22px;
+    width: 100%;
+  }
+  .get-in-touch2 h3 {
+    color: white;
+    text-align: center;
+  }
+  .get-in-touch2 .nf-form-fields-required {
+    color: white;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .get-in-touch2 .nf-element {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    width: 80%;
+  }
+  .get-in-touch2 #nf-field-43 {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 80%;
   }
   .page-cstudy {
     padding: 0 135px;
@@ -1093,7 +1138,6 @@ a:hover, a:active {
   .page-cstudy .flex-wrap {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 80px;
   }
@@ -1103,6 +1147,22 @@ a:hover, a:active {
   }
 }
 @media (min-width: 767px) {
+  .know-more {
+    display: block;
+  }
+  .get-in-touch2 {
+    display: none;
+  }
+  .sidebar-contact {
+    border-left: 1px solid lightgray;
+  }
+  .sidebar-contact h3 {
+    color: black;
+    text-align: center;
+  }
+  .sidebar-contact .details {
+    padding-left: 40px;
+  }
 }
 /*--------------------------------------------------------------
  # About
@@ -1739,6 +1799,9 @@ embed, iframe, object {
     text-align: center;
     width: 100%;
   }
+  .sidebar-contact {
+    display: none;
+  }
 }
 @media (min-width: 767px) {
   .secondary-hero {
@@ -1759,6 +1822,7 @@ embed, iframe, object {
     display: inline-block;
     height: 400px;
     left: 0;
+    line-height: 41px;
     padding: 0 250px 30px 40px;
     position: absolute;
     top: 0;
@@ -1768,21 +1832,21 @@ embed, iframe, object {
   .secondary-hero .caption h3 {
     color: white;
   }
+  .sidebar-contact {
+    display: block;
+  }
   .sidebar-contact .get-in-touch {
-    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
-    background-size: cover;
+    background: white;
     padding: 40px 0 0 0;
     height: 925px;
     margin-bottom: -22px;
     width: 100%;
   }
-  .sidebar-contact .get-in-touch h3 {
-    color: white;
+  .sidebar-contact .get-in-touch .nf-form-title {
+    display: none;
   }
   .sidebar-contact .get-in-touch .nf-form-fields-required {
-    color: white;
-    font-family: Apercu Pro, Arial, sans-serif;
-    margin-bottom: 40px;
+    display: none;
   }
   .sidebar-contact .get-in-touch .nf-element {
     background-color: #f3f3f3;
@@ -1809,20 +1873,23 @@ embed, iframe, object {
   }
   .sidebar-contact span {
     display: block;
-    padding: 40px 0 5px 0;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin-bottom: 10px;
+    padding: 0 0 5px 40px;
     position: relative;
     width: 100%;
   }
   .sidebar-contact span.pin:before {
     background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
-    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-size: 21px 26px;
     content: "";
     display: inline-block;
-    height: 25px;
-    left: 50%;
+    height: 26px;
+    left: 0;
     margin-left: -7px;
     position: absolute;
-    top: 2px;
+    top: 9px;
     width: 25px;
   }
   .sidebar-contact span.phone:before {
@@ -1831,7 +1898,7 @@ embed, iframe, object {
     content: "";
     display: inline-block;
     height: 25px;
-    left: 50%;
+    left: 0;
     margin-left: -7px;
     position: absolute;
     top: 2px;
@@ -1843,7 +1910,7 @@ embed, iframe, object {
     content: "";
     display: inline-block;
     height: 25px;
-    left: 50%;
+    left: 0;
     margin-left: -7px;
     position: absolute;
     top: 2px;
