@@ -38,13 +38,26 @@
         </nav><!-- #site-navigation -->
         <div class="submenu">
             <ul>
-                <li><a href="/case-study-1/">Case Study 1</a></li>
-                <li><a href="/case-study-2/">Case Study 2</a></li>
-                <li><a href="/case-study-3/">Case Study 3</a></li>
-                <li><a href="/case-study-4/">Case Study 4</a></li>
+                <?php 
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'page', // set the post type to page
+                        'posts_per_page' => 4, // number of posts (pages) to show
+                        'post_parent'    => 1309, // enter the post ID of the parent page
+                        'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+                        'orderby' => 'ID',
+                    ) );
 
+                    if ( $child_pages->have_posts() ) : while ( $child_pages->have_posts() ) : $child_pages->the_post();
+
+                        echo '<li><a href="' . get_page_link() . '">' . get_the_title() . '</a></li>';
+
+                    endwhile; endif;  
+
+                    wp_reset_postdata();
+                ?>
             </ul>
         </div>
+
     </header><!-- #masthead -->
 
     <div id="content" class="site-content">

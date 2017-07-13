@@ -42,9 +42,6 @@
                 margin-top: 16px;
                 width: 80px;
             }
-            .submenu {
-                display: none;
-            }
             .menu-toggle {
                 top: 15px;
             }
@@ -59,7 +56,7 @@
         display: block;
         margin: 0;
         position:relative;
-        padding: 25px 75px 0 0;
+        padding: 25px 75px 75px 0;
         width: 100%;
         #site-navigation {
             display: inline-block;
@@ -67,9 +64,9 @@
             width: 50%;
             .menu-primary-menu-container {
                 float: right;
-                padding: 0 75px;
+                // padding: 0 75px;
                 ul {
-                    padding: 20px;
+                    padding-top: 20px;
                     li {
                         a {
                             color: white;
@@ -113,6 +110,8 @@
         &.cstudies, 
         &.page {
             height: 150px;
+            margin-bottom: 20px;
+            padding: 0 75px 30px 0;
             .site-branding {
                 padding: 20px 0  0 50px;
             }

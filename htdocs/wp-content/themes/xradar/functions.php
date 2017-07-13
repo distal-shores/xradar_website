@@ -201,4 +201,22 @@ function get_second_image() {
 
 add_shortcode("case_study_second_image_sc","get_second_image");
 
+function my_acf_google_map_api( $api ){
+    
+    $api['key'] = 'AIzaSyDLS0D1XWwFO8sUT8GIeiGZWrC5wwuMUVA';
+    
+    return $api;
+    
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
+}
+
 

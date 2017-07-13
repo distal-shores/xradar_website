@@ -1,0 +1,90 @@
+@include respond-to(mobile) {
+    .city {
+        .city-hero {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+            background-position: center;
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+            padding-left: 75px;
+            width: 100%;
+            height: 385px;
+        }
+        .contact-info {
+            .photos {
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                    height: 150px;
+                    width: 150px;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+        .flex-wrap {
+            margin-bottom: 75px;
+        }
+        .site-main {
+            padding: 0 135px;
+        }
+        .white-box {
+            display: inline-block;
+            padding: 40px 80px;
+            width: auto;
+            h1 {
+                margin-top: 10px;
+            }
+            .sub-heading {
+                display: inline-block;
+                font-family: Apercu Pro, Arial, sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@include respond-to(small) {
+    .city {
+        .city-hero {
+            height: 585px;
+        }
+        .contact-form {
+            flex-basis: 50%;
+            .get-in-touch {
+                margin-bottom: 0;
+                label {
+                    color: $color__text-label;
+                    font-family: Apercu Pro, Arial, sans-serif;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+                .nf-form-title {
+                    display: block;
+                }
+                .nf-element {
+                    margin: 0;
+                }
+            }
+        }
+        .contact-info {
+            flex-basis: 35%;
+            padding: 0 25px;
+        }
+        .map {
+            flex-basis: 65%;
+        }
+        .photos {
+            flex-basis: 50%;
+            padding: 50px;
+            img {
+                margin: 25px;
+                width: 100%;
+            }
+        }
+        .site-main {
+            margin-top: -100px;
+        }
+    }
+}

@@ -15,10 +15,11 @@
     }
     .cstudy-hero {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        background-position: 100%;
         background-size: cover;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
         height: 585px;
-        margin-top: 80px;
+        margin-top: 0;
         width: 100%;
     }
    .get-in-touch2 {
@@ -64,8 +65,9 @@
             width: 80%;
         }
     }
-    .page-cstudy {
-        padding: 0 135px;
+    .page-cstudy,
+    .page-cstudies {
+        padding: 0 50px;
         h1 {
             &:first-of-type {
                 margin-top: 10px;
@@ -79,14 +81,53 @@
             text-transform: uppercase;
         }
         .flex-wrap {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
             margin-bottom: 80px;
-            // padding: 0 135px;
             .cstudy-content {
-                flex-basis: 65%;
+                flex-basis: 100%;
                 padding-right: 50px;
+                .caption {
+                    background: linear-gradient($color__border-button-top, $color__border-button-bottom);
+                    margin-top: -7px;
+                    text-align: center;
+                    h3 {
+                        color: white;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .cstudy-item {
+                -webkit-clip-path: polygon(85% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                background-size: cover;
+                clip-path: polygon(85% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                flex-basis: 100%;
+                margin-top: 50px;
+                min-height: 385px;
+                position: relative;
+                a {
+                    display: inline-block;
+                    height: 100%;
+                    position: relative;
+                    width: 100%;
+                    z-index: 100;
+                }
+                h3 {
+                    margin-bottom: 10px;
+                    // white-space: nowrap;    
+                }
+                hr {
+                    height: 6px;
+                    margin-top: 0;
+                    width: 150px;
+                }
+                .cstudy-caption {
+                    background-color: white;
+                    bottom: 0;
+                    left: 10px;
+                    padding: 0 15px;
+                    position: absolute;
+                    width: 80%;
+                    z-index: 1;
+                }
             }
         }
     }
@@ -95,14 +136,67 @@
 
 @include respond-to(small) {
 
+    #case-studies-hero {
+        height: 585px;
+    }
+
+    #masthead {
+        padding-right: 75px;
+        .submenu {
+            ul {
+                float: right;
+                list-style: none;
+                padding: 10px 0;
+                li {
+                    display: inline-block;
+                    a {
+                        color: black;
+                        font-weight: 700;
+                        padding: 0 5px;
+                        text-decoration: none;
+                        &:after {
+                            color: $color__text-accent;
+                            content: "\2215";
+                            padding-left: 5px;
+                        }
+                    }
+                    &:last-of-type {
+                        a {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+
     .know-more {
         display: block;
     }
     .get-in-touch2 {
         display: none;
     }
-    .page-cstudy {
+    .page-cstudy,
+    .page-cstudies {
+        padding: 0 135px;
+        .flex-wrap {
+            .cstudy-content {
+                flex-basis: 100%;
+                .caption {
+                    margin-top: 0;
+                    padding-top: 10px;
+                    text-align: left;
 
+                }
+            }
+            .cstudy-item {
+                flex-basis: 45%;
+                margin: 50px 0 0 20px;
+            }
+        }
     }
     .sidebar-contact {
         border-left: 1px solid lightgray;

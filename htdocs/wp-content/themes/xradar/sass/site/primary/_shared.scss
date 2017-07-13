@@ -1,8 +1,48 @@
 @include respond-to(mobile) {
+    .details {
+        span {
+            display: block;
+            padding: 12px 0 18px 75px;
+            position: relative;
+            &:before {
+                background-repeat: no-repeat;
+                background-size: 100%;
+                content: "";
+                display: inline-block;
+                height: 40px;
+                left: 20px;
+                position: absolute;
+                top: 10px;
+                width: 25px;
+            }
+            &.pin {
+                &:before {
+                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+                }
+            }
+            &.phone {
+                &:before {
+                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
+                }
+            }
+            &.mail {
+                &:before {
+                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
+                }
+            }
+        }
+    }
+    .flex-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
     .know-more {
         background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
-        background-position: 800px 500px;
+        // background-position: 800px 500px;
         background-size: cover;
+        background-repeat: no-repeat;
         height: 500px;
         margin: 0;
         max-width: 100%;
@@ -21,6 +61,7 @@
     .secondary-hero {
         display: block;
         margin: 0 auto;
+        max-width: 645px;
         position: relative;
         img {
             height: 400px;
@@ -36,8 +77,10 @@
             height: 400px;
             left: 0;
             line-height: 41px;
+            margin-top: 0;
             padding: 0 250px 30px 40px;
             position: absolute;
+            text-align: left;
             top: 0;
             width: 75%;
             z-index: 10;
@@ -46,34 +89,29 @@
             }
         }
     }
-
-   .sidebar-contact {
-        display: block;
-        .get-in-touch {
-            background: white;
-            padding: 40px 0 0 0;
-            height: 925px;
-            margin-bottom: -22px;
-            width: 100%;
-            .nf-form-title {
-                display: none;
-            }
-            .nf-form-fields-required {
-                display: none;
-            }
-            .nf-element {
-                background-color: $color__form-background;
-                border: 2px solid $color__border-button-top;
-                border-radius: 25px;
-                display: block;
-                font-family: Apercu Pro, Arial, sans-serif;
-                margin: 0 auto 10px;
-                padding: 10px 0 10px 20px;
-                position: relative;
-                width: 80%;
-            }
-            // submit button
-            #nf-field-34 {
+    .get-in-touch {
+        background: white;
+        padding: 40px 0 0 0;
+        height: 925px;
+        margin-bottom: -22px;
+        width: 100%;
+        .nf-form-title {
+            display: none;
+        }
+        .nf-form-fields-required {
+            display: none;
+        }
+        .nf-element {
+            background-color: $color__form-background;
+            border: 2px solid $color__border-button-top;
+            border-radius: 25px;
+            display: block;
+            font-family: Apercu Pro, Arial, sans-serif;
+            margin: 0 auto 10px;
+            padding: 10px 0 10px 20px;
+            position: relative;
+            width: 80%;
+            &[value=Submit] {
                 background: linear-gradient(180deg, #98DD6B 0%, #5CC4AB 100%);
                 border-radius: 25px;
                 color: white;
@@ -84,58 +122,6 @@
                 margin: 0 auto;
                 text-transform: uppercase;
                 width: 80%;
-            }
-        }
-        span {
-            display: block;
-            font-family: Apercu Pro, Arial, sans-serif;
-            margin-bottom: 10px;
-            padding: 0 0 5px 40px;
-            position: relative;
-
-            width: 100%;
-            &.pin {
-                &:before {
-                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
-                    background-repeat: no-repeat;
-                    background-size: 21px 26px;
-                    content: "";
-                    display: inline-block;
-                    height: 26px;
-                    left: 0;
-                    margin-left: -7px;
-                    position: absolute;
-                    top: 9px;
-                    width: 25px;
-                }
-            }
-            &.phone {
-                &:before {
-                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
-                    background-size: 25px 25px;
-                    content: "";
-                    display: inline-block;
-                    height: 25px;
-                    left: 0;
-                    margin-left: -7px;
-                    position: absolute;
-                    top: 2px;
-                    width: 25px;
-                }
-            }
-            &.mail {
-                &:before {
-                    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
-                    background-size: 25px 25px;
-                    content: "";
-                    display: inline-block;
-                    height: 25px;
-                    left: 0;
-                    margin-left: -7px;
-                    position: absolute;
-                    top: 2px;
-                    width: 25px;
-                }
             }
         }
     }

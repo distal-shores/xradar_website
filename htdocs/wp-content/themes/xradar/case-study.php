@@ -6,7 +6,7 @@ Template Name: Case Study
 
 <?php 
 
-$heroImage = get_field('case_study_hero');
+    $heroImage = get_field('case_study_hero');
 
 ?>
 
@@ -15,7 +15,7 @@ $heroImage = get_field('case_study_hero');
 get_header('cstudies'); ?>
 
 <div id="primary" class="content-area services">
-    <div class="cstudy-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
+    <div class="cstudy-hero" style="background-image:url('<?php echo $heroImage['url']; ?>');" /></div>
     <main id="main" class="site-main page-cstudy" role="main">
 
         <span class="title-leader">- Case Study -</span>
