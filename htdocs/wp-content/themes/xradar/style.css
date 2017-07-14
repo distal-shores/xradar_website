@@ -275,6 +275,9 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
+a {
+  text-decoration: none;
+}
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
@@ -434,71 +437,144 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  ## Menus
  --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
 /* Small menu. */
-.menu-toggle, .main-navigation.toggled ul {
+.menu-toggle {
   display: block;
 }
-@media screen and (min-width: 37.5em) {
+@media (min-width: 767px) {
   .menu-toggle {
     display: none;
   }
-  .main-navigation ul {
-    display: block;
-  }
 }
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
-  margin: 0 0 1.5em;
+/**
+ * Menu overview.
+ */
+.c-menu {
+  position: fixed;
+  z-index: 200;
+  background: linear-gradient(#97da74, #62c4a9);
+  transition: transform 0.3s;
+}
+.c-menu #primary-menu {
+  list-style: none;
+  margin: 30px 0 0 0;
+}
+.c-menu #primary-menu a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+.c-menu #primary-menu li {
+  padding: 5px 0;
+}
+.c-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Close button resets.
+ */
+.c-menu__close {
+  color: black;
+  background: transparent;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+/**
+ * Close button resets.
+ */
+.c-menu__close:focus {
+  outline: none;
+}
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+body.has-active-menu {
   overflow: hidden;
 }
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
-  float: left;
-  width: 50%;
+/**
+ * Mask component
+ */
+.c-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
 }
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
+.c-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.c-menu--push-right {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+@media all and (min-width: 320px) {
+  .c-menu--push-right {
+    width: 300px;
+  }
+}
+.c-menu--push-right .c-menu__item {
+  display: block;
+  text-align: center;
+  border-top: solid 1px #b5dbe9;
+  border-bottom: solid 1px #3184a1;
+}
+.c-menu--push-right .c-menu__item:first-child {
+  border-top: none;
+}
+.c-menu--push-right .c-menu__item:last-child {
+  border-bottom: none;
+}
+.c-menu--push-right .c-menu__link {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+}
+.c-menu--push-right .c-menu__close {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+}
+.c-menu--push-right {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+@media all and (min-width: 320px) {
+  .c-menu--push-right {
+    transform: translateX(300px);
+  }
+}
+.c-menu--push-right.is-active {
+  transform: translateX(0);
+}
+.o-wrapper.has-push-right {
+  transform: translateX(-100%);
+}
+@media all and (min-width: 320px) {
+  .o-wrapper.has-push-right {
+    transform: translateX(-300px);
+  }
 }
 /*--------------------------------------------------------------
  # Accessibility
@@ -625,6 +701,9 @@ a:hover, a:active {
     width: 100%;
     z-index: 10;
   }
+  #masthead #primary-menu, .site-header #primary-menu {
+    display: none;
+  }
   #masthead .logo, .site-header .logo {
     padding-left: 25px;
     width: 160px;
@@ -672,11 +751,18 @@ a:hover, a:active {
     float: right;
     width: 50%;
   }
+  #masthead #site-navigation #primary-menu {
+    display: block;
+  }
   #masthead #site-navigation .menu-primary-menu-container {
     float: right;
   }
   #masthead #site-navigation .menu-primary-menu-container ul {
     padding-top: 20px;
+    list-style: none;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li {
+    display: inline-block;
   }
   #masthead #site-navigation .menu-primary-menu-container ul li a {
     color: white;
@@ -858,6 +944,7 @@ a:hover, a:active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
     padding: 0 75px;
     position: absolute;
+    text-align: center;
     top: 0;
     width: 100%;
     height: 600px;
@@ -865,8 +952,6 @@ a:hover, a:active {
   }
   .site-main #hero-photo h1 {
     color: white;
-    font-size: 40px;
-    font-weight: 300;
     margin-top: 200px;
     position: relative;
   }
@@ -1621,30 +1706,53 @@ a:hover, a:active {
     background-position: center;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
-    padding-left: 75px;
     width: 100%;
     height: 385px;
   }
-  .city .contact-info .photos {
+  .city .contact-form {
+    flex-basis: 100%;
+  }
+  .city .contact-form .get-in-touch {
+    margin-bottom: 0;
+  }
+  .city .contact-form .get-in-touch label {
+    color: #7d8688;
+    font-family: Apercu Pro, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .city .contact-form .get-in-touch .nf-form-title {
+    display: block;
+  }
+  .city .contact-info {
+    .flex-basis: 100%;
+  }
+  .city .contact-info .contact-photos {
     text-align: center;
   }
-  .city .contact-info .photos img {
+  .city .contact-info .contact-photos img {
     border-radius: 50%;
     height: 150px;
     width: 150px;
   }
-  .city .contact-info .photos span {
+  .city .contact-info .contact-photos span {
     display: block;
   }
   .city .flex-wrap {
     margin-bottom: 75px;
   }
+  .city .map {
+    flex-basis: 100%;
+  }
+  .city .photos {
+    display: none;
+  }
   .city .site-main {
-    padding: 0 135px;
+    padding: 0 75px;
   }
   .city .white-box {
     display: inline-block;
-    padding: 40px 80px;
+    padding: 10px;
     width: auto;
   }
   .city .white-box h1 {
@@ -1683,10 +1791,15 @@ a:hover, a:active {
     flex-basis: 35%;
     padding: 0 25px;
   }
+  .city .contact-info .photo {
+    display: inline-block;
+    padding: 20px;
+  }
   .city .map {
     flex-basis: 65%;
   }
   .city .photos {
+    display: block;
     flex-basis: 50%;
     padding: 50px;
   }
@@ -1696,6 +1809,10 @@ a:hover, a:active {
   }
   .city .site-main {
     margin-top: -100px;
+    padding: 0 135px;
+  }
+  .city .white-box {
+    padding: 40px 80px;
   }
 }
 /*--------------------------------------------------------------
@@ -1976,6 +2093,41 @@ embed, iframe, object {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+  .get-in-touch {
+    background: white;
+    padding: 40px 0 0 0;
+    height: 925px;
+    width: 100%;
+  }
+  .get-in-touch .nf-form-title {
+    display: none;
+  }
+  .get-in-touch .nf-form-fields-required {
+    display: none;
+  }
+  .get-in-touch .nf-element {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    width: 100%;
+  }
+  .get-in-touch .nf-element[value=Submit] {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 80%;
   }
   .know-more {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');

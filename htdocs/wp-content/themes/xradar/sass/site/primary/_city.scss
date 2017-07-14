@@ -5,12 +5,27 @@
             background-position: center;
             background-size: cover;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
-            padding-left: 75px;
             width: 100%;
             height: 385px;
         }
+        .contact-form {
+            flex-basis: 100%;
+            .get-in-touch {
+                margin-bottom: 0;
+                label {
+                    color: $color__text-label;
+                    font-family: Apercu Pro, Arial, sans-serif;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+                .nf-form-title {
+                    display: block;
+                }
+            }
+        }
         .contact-info {
-            .photos {
+            .flex-basis: 100%;
+            .contact-photos {
                 text-align: center;
                 img {
                     border-radius: 50%;
@@ -22,15 +37,24 @@
                 }
             }
         }
+        .details {
+            // margin-bottom: 25px;
+        }
         .flex-wrap {
             margin-bottom: 75px;
         }
+        .map {
+            flex-basis: 100%;
+        }
+        .photos {
+            display: none;
+        }
         .site-main {
-            padding: 0 135px;
+            padding: 0 75px;
         }
         .white-box {
             display: inline-block;
-            padding: 40px 80px;
+            padding: 10px;
             width: auto;
             h1 {
                 margin-top: 10px;
@@ -71,11 +95,16 @@
         .contact-info {
             flex-basis: 35%;
             padding: 0 25px;
+            .photo {
+                display: inline-block;
+                padding: 20px;
+            }
         }
         .map {
             flex-basis: 65%;
         }
         .photos {
+            display: block;
             flex-basis: 50%;
             padding: 50px;
             img {
@@ -85,6 +114,10 @@
         }
         .site-main {
             margin-top: -100px;
+            padding: 0 135px;
+        }
+        .white-box {
+            padding: 40px 80px;
         }
     }
 }

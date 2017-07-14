@@ -15,11 +15,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="o-wrapper" class="o-wrapper">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
 	<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
@@ -32,14 +32,18 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+			<div class="c-buttons">
+				<button id="c-button--push-right" class="c-button menu-toggle"></button>
+			</div>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>
+
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">
+

@@ -10,6 +10,9 @@
         top: 0;
         width: 100%;
         z-index: 10;
+        #primary-menu {
+            display: none;
+        }
         .logo {
             padding-left: 25px;
             width: 160px;
@@ -62,12 +65,17 @@
             display: inline-block;
             float: right;
             width: 50%;
+            #primary-menu {
+                display: block;
+            }
             .menu-primary-menu-container {
                 float: right;
                 // padding: 0 75px;
                 ul {
                     padding-top: 20px;
+                    list-style: none;
                     li {
+                        display: inline-block;
                         a {
                             color: white;
                             font-family: Galano Grotesque;

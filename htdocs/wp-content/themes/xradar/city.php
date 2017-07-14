@@ -22,6 +22,7 @@ get_header('page'); ?>
     $phoneNumber = get_field('phone_number');
     $email = get_field('email');
     $persName1 = get_field('personality_name_1');
+    $persName2 = get_field('personality_name_2');
     $cityPic1 = get_field('city_picture_1');
     $cityPic2 = get_field('city_picture_2');
 
@@ -47,7 +48,7 @@ get_header('page'); ?>
     <main id="main" class="site-main" role="main">
         <div class="white-box">
             <span class="sub-heading">- Contact Us -</span>
-            <h1><?php echo get_the_title() ?></h1>
+            <h1><?php echo get_the_title(); ?></h1>
             <hr>
         </div>
         <div class="flex-wrap">
@@ -65,11 +66,17 @@ get_header('page'); ?>
                     <span class="phone"><?php echo $phoneNumber ?></span>
                     <span class="mail"><?php echo $email ?></span>
                 </div>
-                <div class="photos">
-                    <div class="photo1">
+                <div class="contact-photos">
+                    <div class="photo">
                         <img src="<?php echo $persPhoto1['url']; ?>"/>
                         <span class="photo-caption"><?php echo $persName1 ?></span>
                     </div>
+                    <?php if($persName2): ?>
+                        <div class="photo">
+                            <img src="<?php echo $persPhoto2['url']; ?>"/>
+                            <span class="photo-caption"><?php echo $persName2 ?></span>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="contact-form">
