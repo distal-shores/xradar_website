@@ -32,6 +32,9 @@
             top: 40px;
             width: 30px;
         }
+        .submenu {
+            display: none;
+        }
         &.services,
         &.cstudies,
         &.page {
@@ -67,6 +70,7 @@
             width: 50%;
             #primary-menu {
                 display: block;
+                white-space: nowrap;
             }
             .menu-primary-menu-container {
                 float: right;
@@ -110,6 +114,9 @@
                 margin-left: 100px;
             }
         }
+        .submenu {
+            display: block;
+        }
         .logo {
             padding-left: 0;
             width: 185px;
@@ -131,6 +138,7 @@
             }
 
             #site-navigation {
+                height: 20px;
                 .menu-primary-menu-container {
                     padding-top: 50px;
                     li {

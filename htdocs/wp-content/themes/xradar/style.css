@@ -723,6 +723,9 @@ body.has-active-menu {
     top: 40px;
     width: 30px;
   }
+  #masthead .submenu, .site-header .submenu {
+    display: none;
+  }
   #masthead.services, .site-header.services, #masthead.cstudies, .site-header.cstudies, #masthead.page, .site-header.page {
     background-color: white;
     display: block;
@@ -753,6 +756,7 @@ body.has-active-menu {
   }
   #masthead #site-navigation #primary-menu {
     display: block;
+    white-space: nowrap;
   }
   #masthead #site-navigation .menu-primary-menu-container {
     float: right;
@@ -790,6 +794,9 @@ body.has-active-menu {
   #masthead .site-branding .site-title {
     margin-left: 100px;
   }
+  #masthead .submenu {
+    display: block;
+  }
   #masthead .logo {
     padding-left: 0;
     width: 185px;
@@ -807,6 +814,9 @@ body.has-active-menu {
     padding-left: 0;
     margin-top: 25px;
     width: 185px;
+  }
+  #masthead.services #site-navigation, #masthead.cstudies #site-navigation, #masthead.page #site-navigation {
+    height: 20px;
   }
   #masthead.services #site-navigation .menu-primary-menu-container, #masthead.cstudies #site-navigation .menu-primary-menu-container, #masthead.page #site-navigation .menu-primary-menu-container {
     padding-top: 50px;
@@ -1882,34 +1892,8 @@ body.has-active-menu {
   }
 }
 @media (min-width: 767px) {
-  .site-header.services #site-navigation .menu-primary-menu-container {
-    float: none !important;
-    margin-top: 25px;
-  }
-  .site-header.services #site-navigation .menu-primary-menu-container #primary-menu .menu-item a {
-    color: black;
-  }
-  .site-header.services .submenu ul {
-    padding: 20px;
-    list-style-type: none;
-  }
-  .site-header.services .submenu ul li {
-    display: inline-block;
-  }
-  .site-header.services .submenu ul li a {
-    color: black;
-    font-family: Galano Grotesque;
-    font-size: 16px;
-    padding: 0 5px;
-    text-decoration: none;
-  }
-  .site-header.services .submenu ul li a:after {
-    color: #97da74;
-    content: "\2215";
-    padding-left: 5px;
-  }
-  .site-header.services .submenu ul li:last-of-type a:after {
-    content: none;
+  .services .submenu ul {
+    padding-top: 0 !important;
   }
   .page-services section:not(.know-more) {
     padding: 0 80px;
@@ -1918,7 +1902,6 @@ body.has-active-menu {
     background-repeat: no-repeat;
     background-size: cover;
     height: 585px;
-    margin-top: 100px;
   }
   .page-services .flex-wrap {
     justify-content: space-between;

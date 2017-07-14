@@ -1,15 +1,5 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package xradar
- */
-
-?><!DOCTYPE html>
+<?php?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -21,16 +11,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
+<div id="o-wrapper" class="o-wrapper">
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
+    <div id="top-buffer">1-855-5-Xradar(97-2327)</div>
     <header id="masthead" class="site-header services" role="banner">
+
         <div class="site-branding">
-            <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.png">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_dark.png">
+            </a>
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+            <div class="c-buttons">
+                <button id="c-button--push-right" class="c-button menu-toggle"></button>
+            </div>
             <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',

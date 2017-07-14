@@ -16,57 +16,38 @@ get_header('page'); ?>
                 <hr>
             </div>
             <div class="flex-wrap">
-                <div class="contact-city" id="vancouver">
-                    <img src="http://xradar.dev/wp-content/uploads/2017/07/Vancouver.jpg">
-                    <h3>Vancouver</h3>
-                    <hr>
-                    <div class="details">
-                        <span class="pin">114-2799 Gilmore Ave, Burnaby, BC, V5C 6S5</span>
-                        <span class="phone">604-436-7226</span>
-                        <span class="mail">vancouver@xradar.ca</span>
-                    </div>
-                </div>
-                <div class="contact-city" id="vancouver-island">
-                    <img src="http://xradar.dev/wp-content/uploads/2017/07/eurocityscape.jpg">
-                    <h3>Vancouver Island</h3>
-                    <hr>
-                    <div class="details">
-                        <span class="pin">6186 McGirr Rd, Nanaimo, BC, V9V 1M2</span>
-                        <span class="phone">604-436-7226</span>
-                        <span class="mail">vanisland@xradar.ca</span>
-                    </div>
-                </div>
-                <div class="contact-city" id="toronto">
-                    <img src="http://xradar.dev/wp-content/uploads/2017/07/Toronto-.jpg">
-                    <h3>Toronto</h3>
-                    <hr>
-                    <div class="details">
-                        <span class="pin">2680 Matheson Blvd E #102, Mississauga, ON L4W 0A5</span>
-                        <span class="phone">604-436-7226</span>
-                        <span class="mail">toronto@xradar.ca</span>
-                    </div>
-                </div>
-                <div class="contact-city" id="quebec">
-                    <img src="http://xradar.dev/wp-content/uploads/2017/07/Quebec-City.jpeg">
-                    <h3>Quebec City</h3>
-                    <hr>
-                    <div class="details">
-                        <span class="pin">114 2799 Gilmore Ave, Burnaby, BC V5C 6S5</span>
-                        <span class="phone">604-436-7226</span>
-                        <span class="mail">quebeccity@xradar.ca</span>
-                    </div>
-                </div>
-                <div class="contact-city" id="montreal">
-                    <img src="http://xradar.dev/wp-content/uploads/2017/07/Montreal.jpg">
-                    <h3>Montreal</h3>
-                    <hr>
-                    <div class="details">
-                        <span class="pin">4 Place du Commerce, Suite 101, Verdun, QC H3E 1J4</span>
-                        <span class="phone">604-436-7226</span>
-                        <span class="mail">montreal@xradar.ca</span>
-                    </div>
-                </div>
+                <?php 
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'page', // set the post type to page
+                        'posts_per_page' => 10, // number of posts (pages) to show
+                        'post_parent'    => 1311, // enter the post ID of the parent page
+                        'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+                        'orderby' => 'ID',
+                    ) );
+
+                    if ( $child_pages->have_posts() ) : while ( $child_pages->have_posts() ) : $child_pages->the_post();
+
+                        $heroImage = get_field('city_hero_image');
+
+                        echo
+                        '<div class="contact-city">
+                            <img src="' . $heroImage['url'] . '"/>
+                            <h3>' . get_the_title() . '</h3>
+                            <hr>
+                            <div class="details">
+                                <span class="pin">' . get_field('address') . '</span>
+                                <span class="phone">' . get_field('phone_number') . '</span>
+                                <span class="mail">' . get_field('email') . '</span>
+                            </div>
+                        </div>';
+                
+                    endwhile; endif;  
+
+                    wp_reset_postdata();
+                ?>
+
             </div>
+
             <div class="get-in-touch">
                 <?php ninja_forms_display_form(6); ?>
             </div>

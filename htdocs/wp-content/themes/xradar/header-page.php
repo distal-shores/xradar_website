@@ -11,6 +11,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="o-wrapper" class="o-wrapper">
 <div id="top-buffer">1-855-5-Xradar(97-2327)</div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
@@ -20,7 +21,9 @@
         </div>
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+            <div class="c-buttons">
+                <button id="c-button--push-right" class="c-button menu-toggle"></button>
+            </div>
             <?php
                 wp_nav_menu( array(
                     'theme_location' => 'menu-1',

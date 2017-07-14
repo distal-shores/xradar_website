@@ -68,52 +68,13 @@
 }
 
 @include respond-to(small) {
-    .site-header {
-        &.services {
-            #site-navigation {
-                .menu-primary-menu-container {
-                    float: none !important;
-                    margin-top: 25px;
-                    #primary-menu {
-                        .menu-item {
-                            a {
-                                color: black;
-                            }
-                        }
-                    }
-                }
-            }
-            .submenu {
-                ul {
-                    padding: 20px;
-                    list-style-type: none;
-                    li {
-                        display: inline-block;
-                        a {
-                            color: black;
-                            font-family: Galano Grotesque;
-                            font-size: $font__size-medium;
-                            padding: 0 5px;
-                            text-decoration: none;
-                            &:after {
-                                color: $color__text-accent;
-                                content: "\2215";
-                                padding-left: 5px;
-                            }
-                        }
-                        &:last-of-type {
-                            a {
-                                &:after {
-                                    content: none;
-                                }
-                            }
-                        }
-                    }
-                }
+    .services {
+        .submenu {
+            ul {
+                padding-top: 0 !important;
             }
         }
     }
-
     .page-services {
         section {
             &:not(.know-more) {
@@ -124,7 +85,6 @@
             background-repeat: no-repeat;
             background-size: cover;
             height: 585px;
-            margin-top: 100px;
         }
         .flex-wrap {
             justify-content: space-between;
