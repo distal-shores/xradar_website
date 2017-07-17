@@ -1,4 +1,7 @@
 @include respond-to(mobile) {
+    #top-buffer {
+        display: none;
+    }
     .details {
         span {
             display: block;
@@ -91,8 +94,9 @@
 }
 
 @include respond-to(small) {
-
-
+    #top-buffer {
+        display: block;
+    }
     .secondary-hero {
         display: block;
         margin: 0 auto;

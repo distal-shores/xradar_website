@@ -1,7 +1,4 @@
 @include respond-to(mobile) {
-    #top-buffer {
-        display: none;
-    }
     #masthead, .site-header {
         background: transparent;
         height: 150px;
@@ -135,6 +132,51 @@
         }
         .submenu {
             display: block;
+            ul {
+                float: right;
+                list-style: none;
+                padding: 10px 0;
+                li {
+                    display: inline-block;
+                    a {
+                        color: black;
+                        font-weight: 700;
+                        padding: 0 0 7px 0;
+                        position: relative;
+                        text-decoration: none;
+                        &:before {
+                            background-color: $color__border-button-top;
+                            bottom: 0;
+                            content: "";
+                            height: 2px;
+                            left: 0;
+                            position: absolute;
+                            transform: scaleX(0);
+                            transition: all 0.5s ease-in-out 0s;
+                            visibility: hidden;
+                            width: 100%;
+                            -webkit-transform: scaleX(0);
+                            -webkit-transition: all 0.2s ease-in-out 0s;
+                        }
+                        &:hover:before {
+                            transform: scaleX(1);
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                        }
+                    }
+                    &:after {
+                        color: $color__text-accent;
+                        content: "\2215";
+                        padding: 0 10px;
+                    }
+                    &:last-of-type {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                
+                }
+            }
         }
         .logo {
             margin-left: 75px;

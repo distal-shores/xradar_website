@@ -40,6 +40,7 @@
         }
         .services-photo {
             -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+            -webkit-filter: brightness(100%);
             clip-path: (79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
             height: 400px;
             margin: 0 auto;
@@ -63,15 +64,47 @@
                 background: url('http://xradar.dev/wp-content/uploads/2017/07/home_cs_hero.jpg');
                 background-size: cover;
             }
+            .overlay {
+                display: block;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                background: rgba(0,0,0,0.5);
+                -moz-transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+                position: relative;
+                z-index: 100000;
+            }
+
         }
     }
 }
 
+
 @include respond-to(small) {
-    .services {
-        .submenu {
-            ul {
-                padding-top: 0 !important;
+    .page-service {
+        h1 {
+            padding: 0 135px;
+        }
+        hr {
+            margin-left: 135px;
+        }
+        .service-hero {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            height: 585px;
+            margin-top: 80px;
+            width: 100%;
+        }
+        .flex-wrap {
+            justify-content: flex-start;
+            margin-bottom: 80px;
+            padding: 0 135px;
+            .service-content {
+                flex-basis: 65%;
+                padding-right: 50px;
             }
         }
     }
@@ -95,7 +128,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            z-index: 10000;
+            z-index: 1000;
         }
         .flex-wrap {
             justify-content: space-between;
@@ -130,28 +163,10 @@
             width: 45%;
         }
     }
-    .page-service {
-        h1 {
-            padding: 0 135px;
-        }
-        hr {
-            margin-left: 135px;
-        }
-        .service-hero {
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-            background-size: cover;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-            height: 585px;
-            margin-top: 80px;
-            width: 100%;
-        }
-        .flex-wrap {
-            justify-content: flex-start;
-            margin-bottom: 80px;
-            padding: 0 135px;
-            .service-content {
-                flex-basis: 65%;
-                padding-right: 50px;
+    .services {
+        .submenu {
+            ul {
+                padding-top: 0 !important;
             }
         }
     }

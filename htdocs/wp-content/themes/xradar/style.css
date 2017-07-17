@@ -689,9 +689,6 @@ body.has-active-menu {
  # Header
  --------------------------------------------------------------*/
 @media (min-width: 0) {
-  #top-buffer {
-    display: none;
-  }
   #masthead, .site-header {
     background: transparent;
     height: 150px;
@@ -817,6 +814,48 @@ body.has-active-menu {
   }
   #masthead .submenu {
     display: block;
+  }
+  #masthead .submenu ul {
+    float: right;
+    list-style: none;
+    padding: 10px 0;
+  }
+  #masthead .submenu ul li {
+    display: inline-block;
+  }
+  #masthead .submenu ul li a {
+    color: black;
+    font-weight: 700;
+    padding: 0 0 7px 0;
+    position: relative;
+    text-decoration: none;
+  }
+  #masthead .submenu ul li a:before {
+    background-color: #97da74;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    visibility: hidden;
+    width: 100%;
+    -webkit-transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+  }
+  #masthead .submenu ul li a:hover:before {
+    transform: scaleX(1);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+  }
+  #masthead .submenu ul li:after {
+    color: #97da74;
+    content: "\2215";
+    padding: 0 10px;
+  }
+  #masthead .submenu ul li:last-of-type:after {
+    content: none;
   }
   #masthead .logo {
     margin-left: 75px;
@@ -1298,31 +1337,6 @@ body.has-active-menu {
 @media (min-width: 767px) {
   #case-studies-hero {
     height: 585px;
-  }
-  #masthead {
-    padding-right: 75px;
-  }
-  #masthead .submenu ul {
-    float: right;
-    list-style: none;
-    padding: 10px 0;
-  }
-  #masthead .submenu ul li {
-    display: inline-block;
-  }
-  #masthead .submenu ul li a {
-    color: black;
-    font-weight: 700;
-    padding: 0 5px;
-    text-decoration: none;
-  }
-  #masthead .submenu ul li a:after {
-    color: #97da74;
-    content: "\2215";
-    padding-left: 5px;
-  }
-  #masthead .submenu ul li:last-of-type a:after {
-    content: none;
   }
   .know-more {
     display: block;
@@ -1882,6 +1896,7 @@ body.has-active-menu {
   }
   .page-services .services-photo {
     -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+    -webkit-filter: brightness(100%);
     clip-path: 79% 0, 100% 20%, 100% 100%, 0 100%, 0 0;
     height: 400px;
     margin: 0 auto;
@@ -1906,10 +1921,42 @@ body.has-active-menu {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/home_cs_hero.jpg');
     background-size: cover;
   }
+  .page-services .services-photo .overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 100000;
+  }
 }
 @media (min-width: 767px) {
-  .services .submenu ul {
-    padding-top: 0 !important;
+  .page-service h1 {
+    padding: 0 135px;
+  }
+  .page-service hr {
+    margin-left: 135px;
+  }
+  .page-service .service-hero {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    height: 585px;
+    margin-top: 80px;
+    width: 100%;
+  }
+  .page-service .flex-wrap {
+    justify-content: flex-start;
+    margin-bottom: 80px;
+    padding: 0 135px;
+  }
+  .page-service .flex-wrap .service-content {
+    flex-basis: 65%;
+    padding-right: 50px;
   }
   .page-services section {
     position: relative;
@@ -1930,7 +1977,7 @@ body.has-active-menu {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 10000;
+    z-index: 1000;
   }
   .page-services .flex-wrap {
     justify-content: space-between;
@@ -1964,28 +2011,8 @@ body.has-active-menu {
     white-space: nowrap;
     width: 45%;
   }
-  .page-service h1 {
-    padding: 0 135px;
-  }
-  .page-service hr {
-    margin-left: 135px;
-  }
-  .page-service .service-hero {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-    height: 585px;
-    margin-top: 80px;
-    width: 100%;
-  }
-  .page-service .flex-wrap {
-    justify-content: flex-start;
-    margin-bottom: 80px;
-    padding: 0 135px;
-  }
-  .page-service .flex-wrap .service-content {
-    flex-basis: 65%;
-    padding-right: 50px;
+  .services .submenu ul {
+    padding-top: 0 !important;
   }
 }
 /*--------------------------------------------------------------
@@ -2075,6 +2102,9 @@ embed, iframe, object {
  # Shared
  --------------------------------------------------------------*/
 @media (min-width: 0) {
+  #top-buffer {
+    display: none;
+  }
   .details span {
     display: block;
     padding: 12px 0 18px 75px;
@@ -2157,6 +2187,9 @@ embed, iframe, object {
   }
 }
 @media (min-width: 767px) {
+  #top-buffer {
+    display: block;
+  }
   .secondary-hero {
     display: block;
     margin: 0 auto;

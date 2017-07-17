@@ -5,7 +5,6 @@ Template Name: Services
 ?>
 <?php
 get_header('services'); ?>
-
     <div id="primary" class="content-area services">
         <main id="main" class="site-main page-services" role="main">
             <div id="hero-photo">
@@ -23,7 +22,7 @@ get_header('services'); ?>
             <div class="flex-wrap">
                 <section class="concrete-scanning">
                     <a class="overlay-link" href="/services/concrete-scanning"></a>
-                    <div class="services-photo closeup"></div>
+                    <div class="services-photo closeup"><div class="overlay"></div></div>
                     <div class="inner">
                         <h2>Xradar Enhanced Concrete Scanning</h2>
                         <hr>
@@ -34,7 +33,7 @@ get_header('services'); ?>
                 </section>
                 <section class="corrosion-mapping">
                     <a class="overlay-link" href="/services/concrete-corrosion-mapping"></a>
-                    <div class="services-photo spray-down"></div>
+                    <div class="services-photo spray-down"><div class="overlay"></div></div>
                     <div class="inner">
                         <h2>Concrete Corrosion Mapping</h2>
                         <hr>
@@ -44,7 +43,7 @@ get_header('services'); ?>
                 </section>
                 <section class="pulse-echo">
                     <a class="overlay-link" href="/services/pulse-echo"></a>
-                    <div class="services-photo computer"></div>
+                    <div class="services-photo computer"><div class="overlay"></div></div>
                     <div class="inner">
                         <h2>Pulse Echo</h2>
                         <hr>
@@ -54,7 +53,7 @@ get_header('services'); ?>
                 </section>
                 <section class="engineering-reports">
                     <a class="overlay-link" href="/services/reports"></a>
-                    <div class="services-photo port-mann"></div>
+                    <div class="services-photo port-mann"><div class="overlay"></div></div>
                     <div class="inner">
                         <h2>Engineering Reports</h2>
                         <hr>

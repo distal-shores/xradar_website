@@ -140,38 +140,38 @@
         height: 585px;
     }
 
-    #masthead {
-        padding-right: 75px;
-        .submenu {
-            ul {
-                float: right;
-                list-style: none;
-                padding: 10px 0;
-                li {
-                    display: inline-block;
-                    a {
-                        color: black;
-                        font-weight: 700;
-                        padding: 0 5px;
-                        text-decoration: none;
-                        &:after {
-                            color: $color__text-accent;
-                            content: "\2215";
-                            padding-left: 5px;
-                        }
-                    }
-                    &:last-of-type {
-                        a {
-                            &:after {
-                                content: none;
-                            }
-                        }
-                    }
+    // #masthead {
+    //     padding-right: 75px;
+    //     .submenu {
+    //         ul {
+    //             float: right;
+    //             list-style: none;
+    //             padding: 10px 0;
+    //             li {
+    //                 display: inline-block;
+    //                 a {
+    //                     color: black;
+    //                     font-weight: 700;
+    //                     padding: 0 5px;
+    //                     text-decoration: none;
+    //                     &:after {
+    //                         color: $color__text-accent;
+    //                         content: "\2215";
+    //                         padding-left: 5px;
+    //                     }
+    //                 }
+    //                 &:last-of-type {
+    //                     a {
+    //                         &:after {
+    //                             content: none;
+    //                         }
+    //                     }
+    //                 }
                 
-                }
-            }
-        }
-    }
+    //             }
+    //         }
+    //     }
+    // }
 
     .know-more {
         display: block;
