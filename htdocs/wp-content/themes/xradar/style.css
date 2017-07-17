@@ -772,14 +772,35 @@ body.has-active-menu {
     color: white;
     font-family: Galano Grotesque;
     font-size: 20px;
-    padding: 0 5px;
+    padding: 0 0px 7px 0;
+    position: relative;
   }
-  #masthead #site-navigation .menu-primary-menu-container ul li a:after {
+  #masthead #site-navigation .menu-primary-menu-container ul li a:before {
+    background-color: #97da74;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+    visibility: hidden;
+    width: 100%;
+    -webkit-transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li a:hover:before {
+    transform: scaleX(1);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+  }
+  #masthead #site-navigation .menu-primary-menu-container ul li:after {
     color: #97da74;
     content: "\2215";
-    padding-left: 5px;
+    font-size: 19px;
+    padding: 0 10px;
   }
-  #masthead #site-navigation .menu-primary-menu-container ul li:last-of-type a:after {
+  #masthead #site-navigation .menu-primary-menu-container ul li:last-of-type:after {
     content: none;
   }
   #masthead .site-branding {
@@ -798,6 +819,7 @@ body.has-active-menu {
     display: block;
   }
   #masthead .logo {
+    margin-left: 75px;
     padding-left: 0;
     width: 185px;
   }
@@ -924,8 +946,13 @@ body.has-active-menu {
     padding: 0;
   }
   #colophon .footer-sitemap .sitemap-list ul li {
-    color: #494b4e;
     margin-bottom: 10px;
+  }
+  #colophon .footer-sitemap .sitemap-list ul li a {
+    color: #494b4e;
+  }
+  #colophon .footer-sitemap .sitemap-list ul li a:hover {
+    color: white;
   }
   .gradient-blend {
     background: linear-gradient(rgba(31, 31, 31, 0.1), #1f1f1f 66%, #1f1f1f);
@@ -952,7 +979,8 @@ body.has-active-menu {
     background-size: cover;
     background-position: center top;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-    padding: 0 75px;
+    font-size: 32px;
+    padding: 0 50px;
     position: absolute;
     text-align: center;
     top: 0;
@@ -962,7 +990,9 @@ body.has-active-menu {
   }
   .site-main #hero-photo h1 {
     color: white;
-    margin-top: 200px;
+    font-size: 32px;
+    margin: 220px 0 30px;
+    line-height: 40px;
     position: relative;
   }
   .site-main #hero-photo p {
@@ -981,9 +1011,14 @@ body.has-active-menu {
     color: black;
     font-size: 32px;
     line-height: 36px;
+    text-align: center;
+  }
+  .site-main #company-intro hr {
+    height: 7px;
+    margin: 0 auto;
   }
   .site-main #company-intro p {
-    text-align: left;
+    text-align: center;
   }
   .site-main .blogroll {
     padding-top: 50px;
@@ -1018,87 +1053,84 @@ body.has-active-menu {
   .site-main .contact-us button {
     margin-top: 15px;
   }
-  .site-main .contact-us h2 {
+  .site-main .contact-us h1 {
     color: white;
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
   .site-main .contact-us hr {
     display: none;
   }
-  .site-main .contact-us form {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    width: 80%;
-  }
-  .site-main .contact-us form input, .site-main .contact-us form textarea {
-    border-color: #97da74;
-    border-radius: 20px;
-    border-width: 2px;
-    display: block;
-    margin: 10px;
-    padding: 5px 0 5px 15px;
-    width: 100%;
-  }
-  .site-main .contact-us form select {
-    margin-left: 12px;
-    width: 99%;
-  }
   .site-main .contact-us p {
     display: none;
+  }
+  .site-main .contact-us .get-in-touch {
+    background: transparent;
+    height: 700px;
   }
   .site-main .rhombus-left {
     display: none;
   }
 }
 @media (min-width: 767px) {
-  #company-intro {
+  .site-main #company-intro {
     background-color: white;
-    margin-top: 150px;
+    margin-top: 0;
     margin-bottom: 75px;
     padding: 0 300px;
   }
-  #company-intro h1 {
-    font-size: 40px;
+  .site-main #company-intro h1 {
+    font-size: 48px;
     font-weight: 800;
     line-height: 64px;
-  }
-  #company-intro p {
     text-align: center;
   }
-  #hero-photo {
-    height: 800px;
+  .site-main #company-intro hr {
+    margin: 0 auto;
   }
-  #hero-photo h1 {
+  .site-main #company-intro p {
+    text-align: center;
+  }
+  .site-main .rhombus-left {
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
+    background-color: #63c4a8;
+    display: block;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
+    height: 640px;
+  }
+  .site-main #hero-photo {
+    height: 800px;
+    padding: 0 75px;
+  }
+  .site-main #hero-photo h1 {
     font-size: 64px;
     font-weight: 700;
     margin-top: 350px;
   }
-  #hero-photo p {
+  .site-main #hero-photo p {
     color: white;
     display: block;
     font-size: 20px;
     padding: 0 300px;
   }
-  #case-studies {
+  .site-main #case-studies {
     position: relative;
   }
-  #case-studies .case-studies {
+  .site-main #case-studies .case-studies {
     height: 650px;
     z-index: 10;
   }
-  #case-studies .case-studies h1 {
+  .site-main #case-studies .case-studies h1 {
     color: white;
     font-size: 64px;
     margin-top: 8px;
   }
-  #case-studies .case-studies .pre-header {
+  .site-main #case-studies .case-studies .pre-header {
     letter-spacing: 1px;
     margin-top: 175px;
     font-size: 16px;
   }
-  #case-studies .rhombus-right {
+  .site-main #case-studies .rhombus-right {
     -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
     background: linear-gradient(to right, #62c4a9, #97da74);
     clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
@@ -1109,42 +1141,26 @@ body.has-active-menu {
     width: 100%;
     z-index: -1;
   }
-  .contact-us h1 {
+  .site-main .contact-us h1 {
     color: white;
     font-size: 64px;
+    text-align: center;
   }
-  .contact-us hr {
+  .site-main .contact-us hr {
     display: block;
+    margin: 0 auto;
   }
-  .contact-us p {
+  .site-main .contact-us p {
     color: white;
     display: block;
     font-size: 18px;
     margin-top: 25px;
     padding: 0 400px;
   }
-  .contact-us form {
-    width: 50%;
-    white-space: nowrap;
-  }
-  .contact-us form input, .contact-us form textarea {
-    margin: 10px;
-    padding: 10px 0 10px 15px;
-    width: 100%;
-  }
-  .contact-us form input.half-width, .contact-us form textarea.half-width {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: top;
-    white-space: normal;
-    width: 48%;
-  }
-  .rhombus-left {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
-    background-color: #63c4a8;
-    display: block;
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
-    height: 640px;
+  .site-main .contact-us .get-in-touch {
+    height: 790px;
+    margin: 0 auto;
+    width: 60%;
   }
 }
 /*--------------------------------------------------------------
@@ -1895,6 +1911,9 @@ body.has-active-menu {
   .services .submenu ul {
     padding-top: 0 !important;
   }
+  .page-services section {
+    position: relative;
+  }
   .page-services section:not(.know-more) {
     padding: 0 80px;
   }
@@ -1902,6 +1921,16 @@ body.has-active-menu {
     background-repeat: no-repeat;
     background-size: cover;
     height: 585px;
+  }
+  .page-services .overlay-link {
+    background: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
   }
   .page-services .flex-wrap {
     justify-content: space-between;
@@ -1950,7 +1979,7 @@ body.has-active-menu {
     width: 100%;
   }
   .page-service .flex-wrap {
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 80px;
     padding: 0 135px;
   }
@@ -2098,7 +2127,7 @@ embed, iframe, object {
     margin: 0 auto 10px;
     padding: 10px 0 10px 20px;
     position: relative;
-    width: 100%;
+    width: 80%;
   }
   .get-in-touch .nf-element[value=Submit] {
     background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
@@ -2181,7 +2210,6 @@ embed, iframe, object {
     margin: 0 auto 10px;
     padding: 10px 0 10px 20px;
     position: relative;
-    width: 80%;
   }
   .get-in-touch .nf-element[value=Submit] {
     background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);

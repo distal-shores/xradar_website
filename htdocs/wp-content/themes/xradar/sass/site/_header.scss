@@ -84,18 +84,37 @@
                             color: white;
                             font-family: Galano Grotesque;
                             font-size: $font__size-large;
-                            padding: 0 5px;
-                            &:after {
-                                color: $color__text-accent;
-                                content: "\2215";
-                                padding-left: 5px;
+                            padding: 0 0px 7px 0;
+                            position: relative;
+                            &:before {
+                                background-color: $color__border-button-top;
+                                bottom: 0;
+                                content: "";
+                                height: 2px;
+                                left: 0;
+                                position: absolute;
+                                transform: scaleX(0);
+                                transition: all 0.5s ease-in-out 0s;
+                                visibility: hidden;
+                                width: 100%;
+                                -webkit-transform: scaleX(0);
+                                -webkit-transition: all 0.2s ease-in-out 0s;
+                            }
+                            &:hover:before {
+                                transform: scaleX(1);
+                                visibility: visible;
+                                -webkit-transform: scaleX(1);
                             }
                         }
+                        &:after {
+                            color: $color__text-accent;
+                            content: "\2215";
+                            font-size: 19px;
+                            padding: 0 10px;
+                        }
                         &:last-of-type {
-                            a {
-                                &:after {
-                                    content: none;
-                                }
+                            &:after {
+                                content: none;
                             }
                         }
                     }
@@ -118,6 +137,7 @@
             display: block;
         }
         .logo {
+            margin-left: 75px;
             padding-left: 0;
             width: 185px;
         }

@@ -20,7 +20,7 @@ get_header('cstudies'); ?>
 
         <span class="title-leader">- Case Study -</span>
 
-        <h1><?php echo get_post_meta( get_the_ID(), 'main-heading', true ); ?></h1>
+        <h1><?php echo get_the_title(); ?></h1>
         <hr>
 
         <div class="flex-wrap">

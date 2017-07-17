@@ -6,7 +6,7 @@ Template Name: Service
 
 <?php 
 
-$heroImage = get_field('service_hero_image');
+    $heroImage = get_field('service_hero_image');
 
 ?>
 
@@ -19,7 +19,7 @@ get_header('services'); ?>
 
         <div class="service-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
 
-        <h1><?php echo get_post_meta( get_the_ID(), 'main-heading', true ); ?></h1>
+        <h1><?php echo get_the_title(); ?></h1>
 
         <hr>
 
@@ -56,7 +56,7 @@ get_header('services'); ?>
         </div>
         <section class="know-more">
             <h2>See Our Services In Action</h2>
-            <button class="cta-button white">Learn More</button>
+            <a href="/case-studies"><button class="cta-button white">Learn More</button></a>
         </section>
     </main>
 </div>

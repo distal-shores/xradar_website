@@ -6,7 +6,8 @@
             background-size: cover;
             background-position:center top;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
-            padding: 0 75px;
+            font-size: $font__size-xxxlarge;
+            padding: 0 50px;
             position: absolute;
             text-align: center;
             top: 0;
@@ -15,7 +16,9 @@
             z-index: 1;
             h1 {
                 color: white;
-                margin-top: 200px;
+                font-size: $font__size-xxxlarge;
+                margin: 220px 0 30px;
+                line-height: 40px;
                 position: relative;
             }
             p {
@@ -34,9 +37,15 @@
                 color: black;
                 font-size: $font__size-xxxlarge;
                 line-height: $font__size-h3;
+                text-align: center;
+            }
+            hr {
+                height: 7px;
+                margin: 0 auto;
+
             }
             p {
-                text-align: left;
+                text-align: center;
             }
         }
         .blogroll {
@@ -71,35 +80,20 @@
             button {
                 margin-top: 15px;
             }
-            h2 {
+            h1 {
                 color: white;
-                font-size: $font__size-xxlarge;
+                font-size: $font__size-xxxlarge;
                 text-align: center;
             }
             hr {
                 display: none;
             }
-            form {
-                display: block;
-                position: relative;
-                margin: 0 auto;
-                width: 80%;
-                input, textarea {
-                    border-color: $color__border-button-top;
-                    border-radius: 20px;
-                    border-width: 2px;
-                    display: block;
-                    margin: 10px;
-                    padding: 5px 0 5px 15px;
-                    width: 100%;
-                }
-                select {
-                    margin-left: 12px;
-                    width: 99%;
-                }
-            }
             p {
                 display: none;
+            }
+            .get-in-touch {
+                background: transparent;
+                height: 700px;
             }
         }
         .rhombus-left {
@@ -109,99 +103,98 @@
 }
 
 @include respond-to(small) {
-    #company-intro {
-        background-color: white;
-        margin-top: 150px;
-        margin-bottom: 75px;
-        padding: 0 300px;
-        h1 {
-            font-size: $font__size-5xl;
-            font-weight: 800;
-            line-height: $font__size-h1;
-        }
-        p {
-            text-align: center;
-        }
-    }
-    #hero-photo {
-        height: 800px;
-        h1 {
-            font-size: $font__size-h1;
-            font-weight: 700;
-            margin-top: 350px;
-        }
-        p {
-            color: white;
-            display: block;
-            font-size: $font__size-large;
+    .site-main {
+        #company-intro {
+            background-color: white;
+            margin-top: 0;
+            margin-bottom: 75px;
             padding: 0 300px;
+            h1 {
+                font-size: $font__size-h2;
+                font-weight: 800;
+                line-height: $font__size-h1;
+                text-align: center;
+            }
+            hr {
+                margin: 0 auto;
+            }
+            p {
+                text-align: center;
+            }
+
         }
-    }
-    #case-studies {
-        position: relative;
-        .case-studies {
-            height: 650px;
-            z-index: 10;
+        .rhombus-left {
+            -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
+            background-color: $color__rhombus-left;
+            display: block;
+            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
+            height: 640px;
+        }
+        #hero-photo {
+            height: 800px;
+            padding: 0 75px;
+            h1 {
+                font-size: $font__size-h1;
+                font-weight: 700;
+                margin-top: 350px;
+            }
+            p {
+                color: white;
+                display: block;
+                font-size: $font__size-large;
+                padding: 0 300px;
+            }
+        }
+        #case-studies {
+            position: relative;
+            .case-studies {
+                height: 650px;
+                z-index: 10;
+                h1 {
+                    color: white;
+                    font-size: $font__size-h1;
+                    margin-top: 8px;
+                }
+                .pre-header {
+                    letter-spacing: 1px;
+                    margin-top: 175px;
+                    font-size: $font__size-medium;
+                }
+            }
+            .rhombus-right {
+                -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+                background: linear-gradient(to right, $color__border-button-bottom, $color__border-button-top);
+                clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
+                display: block;
+                height: 750px;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: -1;
+            }
+        }
+        .contact-us {
             h1 {
                 color: white;
                 font-size: $font__size-h1;
-                margin-top: 8px;
+                text-align: center;
             }
-            .pre-header {
-                letter-spacing: 1px;
-                margin-top: 175px;
-                font-size: $font__size-medium;
+            hr {
+                display: block;
+                margin: 0 auto;
             }
-        }
-        .rhombus-right {
-            -webkit-clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
-            background: linear-gradient(to right, $color__border-button-bottom, $color__border-button-top);
-            clip-path: polygon(0 9%, 100% 0, 100% 72%, 0 89%);
-            display: block;
-            height: 750px;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-        }
-    }
-    .contact-us {
-        h1 {
-            color: white;
-            font-size: $font__size-h1;
-        }
-        hr {
-            display: block;
-        }
-        p {
-            color: white;
-            display: block;
-            font-size: $font__size-medium-plus;
-            margin-top: 25px;
-            padding: 0 400px;
-        }
-        form {
-            width: 50%;
-            white-space: nowrap;
-            input, textarea {
-                margin: 10px;
-                padding: 10px 0 10px 15px;
-                width: 100%;
-                &.half-width {
-                    display: inline-block;
-                    margin: 0 10px;
-                    vertical-align: top;
-                    white-space: normal;
-                    width: 48%;
-                }
+            p {
+                color: white;
+                display: block;
+                font-size: $font__size-medium-plus;
+                margin-top: 25px;
+                padding: 0 400px;
+            }
+            .get-in-touch {
+                height: 790px;
+                margin: 0 auto;
+                width: 60%;
             }
         }
-    }
-    .rhombus-left {
-        -webkit-clip-path: polygon(100% 0, 0 0, 0 89%, 100% 100%);
-        background-color: $color__rhombus-left;
-        display: block;
-        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 86%);
-        height: 640px;
     }
 }

@@ -22,6 +22,7 @@ get_header('services'); ?>
             </section>
             <div class="flex-wrap">
                 <section class="concrete-scanning">
+                    <a class="overlay-link" href="/services/concrete-scanning"></a>
                     <div class="services-photo closeup"></div>
                     <div class="inner">
                         <h2>Xradar Enhanced Concrete Scanning</h2>
@@ -29,8 +30,10 @@ get_header('services'); ?>
                         <p>​Prevent injuries, save time, money and headaches by choosing to locate and map the position of post tension cables, voids, rebar and electrical conduits embedded in concrete.</p>
                         <a href="#">Read More</a>
                     </div>
+
                 </section>
                 <section class="corrosion-mapping">
+                    <a class="overlay-link" href="/services/concrete-corrosion-mapping"></a>
                     <div class="services-photo spray-down"></div>
                     <div class="inner">
                         <h2>Concrete Corrosion Mapping</h2>
@@ -40,6 +43,7 @@ get_header('services'); ?>
                     </div>
                 </section>
                 <section class="pulse-echo">
+                    <a class="overlay-link" href="/services/pulse-echo"></a>
                     <div class="services-photo computer"></div>
                     <div class="inner">
                         <h2>Pulse Echo</h2>
@@ -49,6 +53,7 @@ get_header('services'); ?>
                     </div>
                 </section>
                 <section class="engineering-reports">
+                    <a class="overlay-link" href="/services/reports"></a>
                     <div class="services-photo port-mann"></div>
                     <div class="inner">
                         <h2>Engineering Reports</h2>
@@ -60,7 +65,7 @@ get_header('services'); ?>
             </div>
             <section class="know-more">
                 <h2>See Our Services In Action</h2>
-                <button class="cta-button white">Learn More</button>
+                <a href="/case-studies"><button class="cta-button white">Learn More</button></a>
             </section>
         </main><!-- #main -->
     </div><!-- #primary -->

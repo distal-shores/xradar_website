@@ -20,7 +20,7 @@ get_header(); ?>
 			<div id="hero-photo">
 				<h1>Canada Wide Concrete Scanning</h1>
                 <p>Xradar will save you time and money with the most advanced scanning techniques in the industry</p>
-				<button class="cta-button">Our Services</button>
+				<a href="/services"><button class="cta-button">Our Services</button></a>
 			</div>
             <section id="company-intro">
                 <h1>Canada's Leading Provider of Concrete Scanning Services</h1>
@@ -31,14 +31,14 @@ get_header(); ?>
                 <p>
                     We are proud industry leaders and deliver our services to a huge range of sectors, including construction, earth sciences, archaeology, and military, to name a few.
                 </p>
-                <button class="cta-button black">Learn More</button>
+                <a href="/services"><button class="cta-button black">Learn More</button></a>
             </section>
             <section id="case-studies">
                 <div class="rhombus-right"></div>
                 <div class="case-studies">
                     <span class="pre-header">- Case Study -</span>
                     <h1>Port Mann Bridge</h1>
-                    <button class="cta-button">View Case Study</button>
+                    <a href="/case-studies/port-mann-bridge"><button class="cta-button">View Case Study</button></a>
                 </div>
             </section>
             <section class="blogroll">
@@ -51,17 +51,9 @@ get_header(); ?>
                 <p>
                     We have offices all over Canada in Victoria, Vancouver, Toronto, Montreal and Quebec City. Get in touch and we will be happy to provide you with a quote for our services.
                 </p>
-                <form>
-                    <input type="text" value="" name="name" placeholder="Name">
-                    <input type="text" value="" name="company" placeholder="Company">
-                    <input class="half-width" type="email" value="" name="email" placeholder="Email">
-                    <input class="half-width" type="text" value="" name="phone" placeholder="Phone">
-                    <textarea type="text" value="" name="message" placeholder="Your message"></textarea>
-                    <select placeholder="Current Location">
-                        <option>Current Location</option>
-                    </select>
-                    <button type="submit" value="Submit" class="cta-button">Submit</button>
-                </form>
+                <div class="get-in-touch">
+                    <?php ninja_forms_display_form(6); ?>
+                </div>
             </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

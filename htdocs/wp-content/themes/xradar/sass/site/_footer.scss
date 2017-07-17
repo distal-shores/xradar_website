@@ -69,8 +69,13 @@
                     margin: 0;
                     padding: 0;
                     li {
-                        color: $color__text-footer-darkgrey;
                         margin-bottom: 10px;
+                        a {
+                            color: $color__text-footer-darkgrey;
+                            &:hover {
+                                color: white;
+                            }
+                        }
                     }
                 }
             }
