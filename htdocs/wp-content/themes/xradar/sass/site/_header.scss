@@ -132,6 +132,7 @@
         }
         .submenu {
             display: block;
+            white-space: nowrap;
             ul {
                 float: right;
                 list-style: none;
@@ -236,6 +237,11 @@
             margin-left: 100px;
         }
     }
+}
+
+@include respond-to(medium) {
+
+
 }
 
  

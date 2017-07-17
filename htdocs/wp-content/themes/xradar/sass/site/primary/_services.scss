@@ -2,7 +2,7 @@
     .page-services {
         section {
             &:not(.know-more) {
-                padding: 0 20px;
+                padding: 0 50px;
             }
             .inner {
                 background-color: white;
@@ -29,7 +29,10 @@
 
                 }
                 h2 {
+                    font-size: $font__size-xxxlarge;
                     margin-bottom: 0;
+                    padding-top: 25px;
+                    text-align: center;
                 }
             }
         }
@@ -37,6 +40,12 @@
             background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
             position: relative;
             height: 275px;
+        }
+        .flex-wrap {
+            justify-content: center;
+            section {
+                width: 100%;
+            }
         }
         .services-photo {
             -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
@@ -142,6 +151,10 @@
                     width: 90%;
                     a {
                         display: none;
+                    }
+                    h2 {
+                        font-size: $font__size-h3;
+                        text-align: left;
                     }
                 }
                 .services-photo {

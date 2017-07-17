@@ -5,7 +5,8 @@
     .page-about {
         section {
             margin: 0 auto;
-            max-width: 400px;
+            padding: 0 50px;
+            // max-width: 400px;
         }
         #hero-photo {
             -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
@@ -39,6 +40,16 @@
             h1 {
                 font-size: 64px;
             }
+        }
+        .read-more,
+        .read-less {
+            display: block;
+            font-size: $font__size-large;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 auto;
+            padding: 0;
         }
         #overview {
             background-color: white;
@@ -95,21 +106,64 @@
                 &.closeup {
                     background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
                     background-size: cover;
+                    order: 1;
                 }
                 &.spray-paint {
                     background: url('http://xradar.dev/wp-content/uploads/2017/07/chalk_and_lines.jpg');
                     background-size: cover;
+
                 }
 
             }
 
         }
+        .know-more {
+            display: block;
+            max-width: initial;
+            padding-top: 120px;
+            text-align: center;
+            width: 100%;
+        }
 
     }
-
 }
 
 @include respond-to(small) {
+    .page-about {
+
+        .white-box {
+            padding-left: 35px;
+            width: 100%;
+        }
+        #methods {
+            .picture {
+                height: 500px;  
+                display: block;
+                .content {
+                    display: inline-block;
+                    float: left;
+                    width: 60%;
+                }
+                .methods-photo {
+                    display: inline-block;
+                    float: right;
+                    height: 300px;
+                    right: 0;
+                    top: 0;
+                    width: 34%;
+                }
+            }
+        }
+        #overview {
+            margin-top: 560px;
+        }
+        .know-more {
+            clear: both;
+        }
+    }
+}
+
+@include respond-to(medium) {
     .page-about {
         hr {
             margin: 40px 0;
@@ -126,7 +180,7 @@
 
             .two-column {
                 column-count: 2;
-                height: 345px;
+                height: 400px;
                 p:first-of-type {
                     margin-top: 0;
                 }
@@ -165,7 +219,14 @@
                 .methods-photo {
                     flex-basis: 42%;
                     height: 482px;
+                    max-width: initial;
                     width: 500px;
+                    &.hard-hat {
+                        order: 3;
+                    }
+                    &.spray-paint {
+                        order: 3;
+                    }
                 }
                 &.left {
                     .content {
@@ -173,12 +234,6 @@
                     }
                 }
             }
-            // .float-right {
-            //     display: inline-block;
-            //     float: right;
-            //     padding-left: 45px;
-            //     width: 60%;
-            // }
         }
         #why-xradar {
             margin: 0 0 135px 0;
@@ -199,12 +254,13 @@
                     margin: 0 auto;
                     width: 75px;
                 }
-                // p {
-                //     padding: 0 50px;
-                // }
             }
+        }
+        .hero-image2 {
+            height: 680px;
         }
     }
 
 }
+
 

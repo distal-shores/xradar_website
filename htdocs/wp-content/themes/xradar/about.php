@@ -25,12 +25,14 @@ get_header(); ?>
                     <p>
                         With offices in Victoria, Vancouver, Toronto, Montreal, and Quebec City, we are ideally positioned to deliver services throughout all of Canada. We ensure the highest standard of service through our in house development program and unique training philosophy. Our dedicated team are fully equipped with the most advanced concrete scanning technology and are here to meet your needs.
                     </p>
-                    <p>
-                        As pioneers of the industry and GPR’s practical application, we have always strived to innovate ways in which we can better serve our clients and the industry. None is more exemplary than our bespoke ​Xradar concrete scanning system. 
-                    </p>
-                    <p>
-                        This unique form of ground penetrating radar can be used for construction, engineering, archaeological applications, and more. Our employees collect and verify information on site, allowing you to make informed, timely and cost effective decisions, while ensuring safety.
-                    </p>
+                    <span class="expandable">
+                        <p>
+                            As pioneers of the industry and GPR’s practical application, we have always strived to innovate ways in which we can better serve our clients and the industry. None is more exemplary than our bespoke ​Xradar concrete scanning system. 
+                        </p>
+                        <p>
+                            This unique form of ground penetrating radar can be used for construction, engineering, archaeological applications, and more. Our employees collect and verify information on site, allowing you to make informed, timely and cost effective decisions, while ensuring safety.
+                        </p>
+                    </span>
                 </div>
             </section>
             <section id="why-xradar">
@@ -112,7 +114,7 @@ get_header(); ?>
             </section>
             <section class="know-more">
                 <h2>Want to know more?</h2>
-                <button class="cta-button white">View Case Studies</button>
+                <a href="/case-studies"><button class="cta-button white">View Case Studies</button></a>
             </section>
         </main><!-- #main -->
     </div><!-- #primary -->

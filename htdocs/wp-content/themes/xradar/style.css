@@ -814,6 +814,7 @@ body.has-active-menu {
   }
   #masthead .submenu {
     display: block;
+    white-space: nowrap;
   }
   #masthead .submenu ul {
     float: right;
@@ -909,6 +910,8 @@ body.has-active-menu {
     margin-left: 100px;
   }
 }
+@media (min-width: 992px) {
+}
 /*--------------------------------------------------------------
  # Footer
  --------------------------------------------------------------*/
@@ -954,9 +957,9 @@ body.has-active-menu {
     display: inline-block;
     border-right: 1px solid #747e80;
     float: left;
-    padding-top: 62px;
+    padding: 62px 30px 0 0;
     text-align: center;
-    width: 31%;
+    width: 23%;
   }
   #colophon .footer-logo .logo {
     width: 260px;
@@ -964,13 +967,16 @@ body.has-active-menu {
   #colophon .footer-sitemap {
     display: inline-block;
     float: right;
-    padding: 50px 0 0 25px;
+    padding: 0;
     width: 67%;
   }
   #colophon .footer-sitemap .sitemap-list {
     display: inline-block;
     float: left;
-    width: 25%;
+    font-size: 14px;
+    padding: 40px 0 0 0;
+    text-align: center;
+    width: 33%;
   }
   #colophon .footer-sitemap .sitemap-list h3 {
     color: #747e80;
@@ -1006,6 +1012,14 @@ body.has-active-menu {
     display: block;
     height: 15px;
     width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #colophon .footer-sitemap .sitemap-list {
+    font-size: 16px;
+    padding: 40px 0 0 0;
+    text-align: left;
+    width: 33%;
   }
 }
 /*--------------------------------------------------------------
@@ -1379,7 +1393,7 @@ body.has-active-menu {
   }
   .page-about section {
     margin: 0 auto;
-    max-width: 400px;
+    padding: 0 50px;
   }
   .page-about #hero-photo {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
@@ -1413,6 +1427,15 @@ body.has-active-menu {
   }
   .page-about .hero-image2 h1 {
     font-size: 64px;
+  }
+  .page-about .read-more, .page-about .read-less {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    padding: 0;
   }
   .page-about #overview {
     background-color: white;
@@ -1466,13 +1489,50 @@ body.has-active-menu {
   .page-about #methods .methods-photo.closeup {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/radar_closeup.jpg');
     background-size: cover;
+    order: 1;
   }
   .page-about #methods .methods-photo.spray-paint {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/chalk_and_lines.jpg');
     background-size: cover;
   }
+  .page-about .know-more {
+    display: block;
+    max-width: initial;
+    padding-top: 120px;
+    text-align: center;
+    width: 100%;
+  }
 }
 @media (min-width: 767px) {
+  .page-about .white-box {
+    padding-left: 35px;
+    width: 100%;
+  }
+  .page-about #methods .picture {
+    height: 500px;
+    display: block;
+  }
+  .page-about #methods .picture .content {
+    display: inline-block;
+    float: left;
+    width: 60%;
+  }
+  .page-about #methods .picture .methods-photo {
+    display: inline-block;
+    float: right;
+    height: 300px;
+    right: 0;
+    top: 0;
+    width: 34%;
+  }
+  .page-about #overview {
+    margin-top: 560px;
+  }
+  .page-about .know-more {
+    clear: both;
+  }
+}
+@media (min-width: 992px) {
   .page-about hr {
     margin: 40px 0;
   }
@@ -1486,7 +1546,7 @@ body.has-active-menu {
   }
   .page-about #overview .two-column {
     column-count: 2;
-    height: 345px;
+    height: 400px;
   }
   .page-about #overview .two-column p:first-of-type {
     margin-top: 0;
@@ -1524,7 +1584,14 @@ body.has-active-menu {
   .page-about #methods .picture .methods-photo {
     flex-basis: 42%;
     height: 482px;
+    max-width: initial;
     width: 500px;
+  }
+  .page-about #methods .picture .methods-photo.hard-hat {
+    order: 3;
+  }
+  .page-about #methods .picture .methods-photo.spray-paint {
+    order: 3;
   }
   .page-about #methods .picture.left .content {
     padding-left: 35px;
@@ -1549,6 +1616,9 @@ body.has-active-menu {
   .page-about #why-xradar .column hr {
     margin: 0 auto;
     width: 75px;
+  }
+  .page-about .hero-image2 {
+    height: 680px;
   }
 }
 /*--------------------------------------------------------------
@@ -1860,7 +1930,7 @@ body.has-active-menu {
  --------------------------------------------------------------*/
 @media (min-width: 0) {
   .page-services section:not(.know-more) {
-    padding: 0 20px;
+    padding: 0 50px;
   }
   .page-services section .inner {
     background-color: white;
@@ -1887,12 +1957,21 @@ body.has-active-menu {
     color: #41a38c;
   }
   .page-services section .inner h2 {
+    font-size: 32px;
     margin-bottom: 0;
+    padding-top: 25px;
+    text-align: center;
   }
   .page-services #hero-photo {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/services_hero.jpg');
     position: relative;
     height: 275px;
+  }
+  .page-services .flex-wrap {
+    justify-content: center;
+  }
+  .page-services .flex-wrap section {
+    width: 100%;
   }
   .page-services .services-photo {
     -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
@@ -1994,6 +2073,10 @@ body.has-active-menu {
   }
   .page-services .flex-wrap section .inner a {
     display: none;
+  }
+  .page-services .flex-wrap section .inner h2 {
+    font-size: 36px;
+    text-align: left;
   }
   .page-services .flex-wrap section .services-photo {
     height: 375px;

@@ -7,8 +7,7 @@ Template Name: Services
 get_header('services'); ?>
     <div id="primary" class="content-area services">
         <main id="main" class="site-main page-services" role="main">
-            <div id="hero-photo">
-            </div>
+            <div id="hero-photo"></div>
             <section class="overview">
                 <div class="white-box">
                     <h1>Our Services</h1>
@@ -27,7 +26,7 @@ get_header('services'); ?>
                         <h2>Xradar Enhanced Concrete Scanning</h2>
                         <hr>
                         <p>​Prevent injuries, save time, money and headaches by choosing to locate and map the position of post tension cables, voids, rebar and electrical conduits embedded in concrete.</p>
-                        <a href="#">Read More</a>
+                        <a href="/services/concrete-scanning">Read More</a>
                     </div>
 
                 </section>
@@ -38,7 +37,7 @@ get_header('services'); ?>
                         <h2>Concrete Corrosion Mapping</h2>
                         <hr>
                         <p>Using ​Computer-Assisted image analysis of Xradar we are able to process and determine the corrosion of concrete.</p>
-                        <a href="#">Read More</a>
+                        <a href="/services/concrete-corrosion-mapping">Read More</a>
                     </div>
                 </section>
                 <section class="pulse-echo">
@@ -48,7 +47,7 @@ get_header('services'); ?>
                         <h2>Pulse Echo</h2>
                         <hr>
                         <p>The use of Pulse Echo is a scanning technique ideal for thick concrete structures outside the limitation of GPR in isolation.</p>
-                        <a href="#">Read More</a>
+                        <a href="/services/pulse-echo">Read More</a>
                     </div>
                 </section>
                 <section class="engineering-reports">
@@ -58,7 +57,7 @@ get_header('services'); ?>
                         <h2>Engineering Reports</h2>
                         <hr>
                         <p>Make informed decisions without the need for a site visit. Using our bespoke reporting services, we provide you with all the information needed to make decisions off-site allowing you to save time and keep projects moving.</p>
-                        <a href="#">Read More</a>
+                        <a href="/services/reports">Read More</a>
                     </div>
                 </section>
             </div>
