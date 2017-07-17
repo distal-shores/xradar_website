@@ -8,6 +8,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 
     <?php wp_head(); ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.overlay-link').hover(function() {
+                $(this).parent().find('img').addClass('tinted');
+            }, function() {
+                $(this).parent().find('img').removeClass('tinted');   
+            });
+        });
+
+    </script>
 </head>
 
 <body <?php body_class(); ?>>

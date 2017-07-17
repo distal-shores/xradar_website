@@ -31,6 +31,8 @@ get_header('page'); ?>
 
                         echo
                         '<div class="contact-city">
+                            <a class="overlay-link" href="' . get_page_link() .'"></a>
+                            <div class="overlay"></div>
                             <img src="' . $heroImage['url'] . '"/>
                             <h3>' . get_the_title() . '</h3>
                             <hr>

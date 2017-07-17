@@ -75,6 +75,8 @@
                         margin-bottom: 10px;
                         a {
                             color: $color__text-footer-darkgrey;
+                            -webkit-transition: color 0.3s;                            
+                            transition: color 0.3s;
                             &:hover {
                                 color: white;
                             }

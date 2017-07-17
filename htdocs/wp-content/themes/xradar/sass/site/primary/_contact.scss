@@ -25,6 +25,12 @@
                 img {
                     width: 100%;
                     min-height: 255px;
+                    -webkit-transition: all 0.5s; /* Safari */
+                    transition: all 0.5s;
+                    &.tinted {
+                       -webkit-filter: brightness(70%);
+                       filter: brightness(70%);
+                    }
                 }
             }
             .details {
@@ -136,6 +142,7 @@
             margin-top: 50px;
             .contact-city {
                 margin: 0 1.66666% 25px 1.66666%;
+                position: relative;
                 width: 30%;
                 h3 {
                     font-size: $font__size-xxlarge;
@@ -145,6 +152,30 @@
                     height: 5px;
                     margin: 10px 0;
                     width: 150px;
+                }
+                .overlay {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    background: rgba(0,0,0,0.5);
+                    -moz-transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    position: absolute;
+                    z-index: 100;
+                }
+                .overlay-link {
+                    background: transparent;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1000;
                 }
                 .details {
                     width: 100%;
