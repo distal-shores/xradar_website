@@ -34,12 +34,6 @@
             color: white;
             text-align: center;
         }
-        .nf-form-fields-required {
-            color: white;
-            font-family: Apercu Pro, Arial, sans-serif;
-            margin-bottom: 40px;
-            text-align: center;
-        }
         .nf-element {
             background-color: $color__form-background;
             border: 2px solid $color__border-button-top;
@@ -104,11 +98,14 @@
                 min-height: 385px;
                 position: relative;
                 a {
-                    display: inline-block;
+                    background: transparent;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     height: 100%;
-                    position: relative;
                     width: 100%;
-                    z-index: 100;
+                    z-index: 1000000;
                 }
                 h3 {
                     margin-bottom: 10px;
@@ -128,6 +125,18 @@
                     width: 80%;
                     z-index: 1;
                 }
+                .overlay {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    background: rgba(0,0,0,0.5);
+                    -moz-transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    position: relative;
+                    z-index: 100000;
+                }
             }
         }
     }
@@ -135,44 +144,9 @@
 }
 
 @include respond-to(small) {
-
     #case-studies-hero {
         height: 585px;
     }
-
-    // #masthead {
-    //     padding-right: 75px;
-    //     .submenu {
-    //         ul {
-    //             float: right;
-    //             list-style: none;
-    //             padding: 10px 0;
-    //             li {
-    //                 display: inline-block;
-    //                 a {
-    //                     color: black;
-    //                     font-weight: 700;
-    //                     padding: 0 5px;
-    //                     text-decoration: none;
-    //                     &:after {
-    //                         color: $color__text-accent;
-    //                         content: "\2215";
-    //                         padding-left: 5px;
-    //                     }
-    //                 }
-    //                 &:last-of-type {
-    //                     a {
-    //                         &:after {
-    //                             content: none;
-    //                         }
-    //                     }
-    //                 }
-                
-    //             }
-    //         }
-    //     }
-    // }
-
     .know-more {
         display: block;
     }
@@ -181,14 +155,17 @@
     }
     .page-cstudy,
     .page-cstudies {
-        padding: 0 135px;
+        padding: 0 50px;
         .flex-wrap {
             .cstudy-content {
                 flex-basis: 100%;
                 .caption {
                     margin-top: 0;
-                    padding-top: 10px;
+                    padding-top: 30px;
                     text-align: left;
+                    h3 {
+                        font-size: $font__size-xxxlarge;
+                    }
 
                 }
             }
@@ -208,5 +185,10 @@
             padding-left: 40px;
         }
     }
+}
+
+@include respond-to(medium) {
+
+
 
 }

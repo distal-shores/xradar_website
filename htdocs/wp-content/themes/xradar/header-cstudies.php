@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <?php wp_head(); ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.cstudy-item a').hover(function() {
+                $(this).parent().find('.overlay').css('opacity','1');
+            }, function() {
+                $(this).parent().find('.overlay').css('opacity','0');   
+            });
+        });
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="o-wrapper" class="o-wrapper">
-<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
+<div id="top-buffer"><a href="tel:1-855-597-2327">1-855-5-Xradar(97-2327)</a></div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
     <header id="masthead" class="site-header cstudies" role="banner">

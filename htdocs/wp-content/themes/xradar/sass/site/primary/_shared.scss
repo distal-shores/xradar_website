@@ -49,9 +49,6 @@
         .nf-form-title {
             display: none;
         }
-        .nf-form-fields-required {
-            display: none;
-        }
         .nf-element {
             background-color: $color__form-background;
             border: 2px solid $color__border-button-top;
@@ -87,6 +84,9 @@
         padding: 120px 0 0 0;
         text-align: center;
         width: 100%;
+    }
+    .nf-form-fields-required {
+        display: none;
     }
     .sidebar-contact {
         display: none;
@@ -135,9 +135,6 @@
         margin-bottom: -22px;
         width: 100%;
         .nf-form-title {
-            display: none;
-        }
-        .nf-form-fields-required {
             display: none;
         }
         .nf-element {

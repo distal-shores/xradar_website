@@ -22,7 +22,7 @@
 <div id="o-wrapper" class="o-wrapper">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'xradar' ); ?></a>
-	<div id="top-buffer">1-855-5-Xradar(97-2327)</div>
+	<div id="top-buffer"><a href="tel:1-855-597-2327">1-855-5-Xradar(97-2327)</a></div>
 	<header id="masthead" class="site-header" role="banner">
 	
 		<div class="site-branding">

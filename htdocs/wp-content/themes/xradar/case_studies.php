@@ -32,6 +32,7 @@ get_header('cstudies'); ?>
                         echo 
                         '<div style="background-image:url(\'' . $heroImage['url'] . '\')" class="cstudy-item">
                                 <a href="' . get_page_link() . '"></a>
+                                <div class="overlay"></div>
                                 <div class="cstudy-caption">
                                     <h3>' . get_the_title() . '</h3>
                                     <hr>

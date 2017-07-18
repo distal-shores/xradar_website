@@ -896,6 +896,9 @@ body.has-active-menu {
     width: 100%;
     z-index: 10;
   }
+  #top-buffer a {
+    color: white;
+  }
   .site-branding {
     display: inline-block;
     width: 40%;
@@ -910,10 +913,16 @@ body.has-active-menu {
   }
 }
 @media (min-width: 992px) {
+  #masthead {
+    padding-right: 75px;
+  }
   #masthead.page {
     padding-right: 75px;
   }
   #masthead.page .site-branding {
+    padding-left: 75px;
+  }
+  #masthead .site-branding {
     padding-left: 75px;
   }
   #top-buffer {
@@ -1266,12 +1275,6 @@ body.has-active-menu {
     color: white;
     text-align: center;
   }
-  .get-in-touch2 .nf-form-fields-required {
-    color: white;
-    font-family: Apercu Pro, Arial, sans-serif;
-    margin-bottom: 40px;
-    text-align: center;
-  }
   .get-in-touch2 .nf-element {
     background-color: #f3f3f3;
     border: 2px solid #97da74;
@@ -1334,11 +1337,14 @@ body.has-active-menu {
     position: relative;
   }
   .page-cstudy .flex-wrap .cstudy-item a, .page-cstudies .flex-wrap .cstudy-item a {
-    display: inline-block;
+    background: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    position: relative;
     width: 100%;
-    z-index: 100;
+    z-index: 1000000;
   }
   .page-cstudy .flex-wrap .cstudy-item h3, .page-cstudies .flex-wrap .cstudy-item h3 {
     margin-bottom: 10px;
@@ -1357,6 +1363,18 @@ body.has-active-menu {
     width: 80%;
     z-index: 1;
   }
+  .page-cstudy .flex-wrap .cstudy-item .overlay, .page-cstudies .flex-wrap .cstudy-item .overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 100000;
+  }
 }
 @media (min-width: 767px) {
   #case-studies-hero {
@@ -1369,15 +1387,18 @@ body.has-active-menu {
     display: none;
   }
   .page-cstudy, .page-cstudies {
-    padding: 0 135px;
+    padding: 0 50px;
   }
   .page-cstudy .flex-wrap .cstudy-content, .page-cstudies .flex-wrap .cstudy-content {
     flex-basis: 100%;
   }
   .page-cstudy .flex-wrap .cstudy-content .caption, .page-cstudies .flex-wrap .cstudy-content .caption {
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 30px;
     text-align: left;
+  }
+  .page-cstudy .flex-wrap .cstudy-content .caption h3, .page-cstudies .flex-wrap .cstudy-content .caption h3 {
+    font-size: 32px;
   }
   .page-cstudy .flex-wrap .cstudy-item, .page-cstudies .flex-wrap .cstudy-item {
     flex-basis: 45%;
@@ -1393,6 +1414,8 @@ body.has-active-menu {
   .sidebar-contact .details {
     padding-left: 40px;
   }
+}
+@media (min-width: 992px) {
 }
 /*--------------------------------------------------------------
  # About
@@ -1751,11 +1774,6 @@ body.has-active-menu {
   }
   .contact .get-in-touch .nf-form-title {
     display: block;
-  }
-  .contact .get-in-touch .nf-form-fields-required {
-    color: white;
-    font-family: Apercu Pro, Arial, sans-serif;
-    margin-bottom: 40px;
   }
   .contact .get-in-touch .nf-element {
     background-color: #f3f3f3;
@@ -2274,9 +2292,6 @@ embed, iframe, object {
   .get-in-touch .nf-form-title {
     display: none;
   }
-  .get-in-touch .nf-form-fields-required {
-    display: none;
-  }
   .get-in-touch .nf-element {
     background-color: #f3f3f3;
     border: 2px solid #97da74;
@@ -2310,6 +2325,9 @@ embed, iframe, object {
     padding: 120px 0 0 0;
     text-align: center;
     width: 100%;
+  }
+  .nf-form-fields-required {
+    display: none;
   }
   .sidebar-contact {
     display: none;
@@ -2358,9 +2376,6 @@ embed, iframe, object {
     width: 100%;
   }
   .get-in-touch .nf-form-title {
-    display: none;
-  }
-  .get-in-touch .nf-form-fields-required {
     display: none;
   }
   .get-in-touch .nf-element {
