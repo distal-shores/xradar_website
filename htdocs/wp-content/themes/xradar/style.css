@@ -1321,6 +1321,7 @@ body.has-active-menu {
   .page-cstudy .flex-wrap .cstudy-content .caption, .page-cstudies .flex-wrap .cstudy-content .caption {
     background: linear-gradient(#97da74, #62c4a9);
     margin-top: -7px;
+    padding: 0 50px;
     text-align: center;
   }
   .page-cstudy .flex-wrap .cstudy-content .caption h3, .page-cstudies .flex-wrap .cstudy-content .caption h3 {
@@ -1377,6 +1378,8 @@ body.has-active-menu {
   }
 }
 @media (min-width: 767px) {
+}
+@media (min-width: 992px) {
   #case-studies-hero {
     height: 585px;
   }
@@ -1390,11 +1393,11 @@ body.has-active-menu {
     padding: 0 50px;
   }
   .page-cstudy .flex-wrap .cstudy-content, .page-cstudies .flex-wrap .cstudy-content {
-    flex-basis: 100%;
+    flex-basis: 70%;
   }
   .page-cstudy .flex-wrap .cstudy-content .caption, .page-cstudies .flex-wrap .cstudy-content .caption {
     margin-top: 0;
-    padding-top: 30px;
+    padding: 30px 250px 30px 40px;
     text-align: left;
   }
   .page-cstudy .flex-wrap .cstudy-content .caption h3, .page-cstudies .flex-wrap .cstudy-content .caption h3 {
@@ -1404,18 +1407,18 @@ body.has-active-menu {
     flex-basis: 45%;
     margin: 50px 0 0 20px;
   }
-  .sidebar-contact {
+  .page-cstudy .flex-wrap .sidebar-contact, .page-cstudies .flex-wrap .sidebar-contact {
     border-left: 1px solid lightgray;
+    display: block;
+    flex-basis: 30%;
   }
-  .sidebar-contact h3 {
+  .page-cstudy .flex-wrap .sidebar-contact h3, .page-cstudies .flex-wrap .sidebar-contact h3 {
     color: black;
     text-align: center;
   }
-  .sidebar-contact .details {
+  .page-cstudy .flex-wrap .sidebar-contact .details, .page-cstudies .flex-wrap .sidebar-contact .details {
     padding-left: 40px;
   }
-}
-@media (min-width: 992px) {
 }
 /*--------------------------------------------------------------
  # About
@@ -2337,37 +2340,6 @@ embed, iframe, object {
   #top-buffer {
     display: block;
   }
-  .secondary-hero {
-    display: block;
-    margin: 0 auto;
-    max-width: 645px;
-    position: relative;
-  }
-  .secondary-hero img {
-    height: 400px;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-  }
-  .secondary-hero .caption {
-    -webkit-clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
-    background: linear-gradient(#97da74, #62c4a9);
-    clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
-    display: inline-block;
-    height: 400px;
-    left: 0;
-    line-height: 41px;
-    margin-top: 0;
-    padding: 0 250px 30px 40px;
-    position: absolute;
-    text-align: left;
-    top: 0;
-    width: 75%;
-    z-index: 10;
-  }
-  .secondary-hero .caption h3 {
-    color: white;
-  }
   .get-in-touch {
     background: white;
     padding: 40px 0 0 0;
@@ -2408,5 +2380,38 @@ embed, iframe, object {
     position: relative;
     width: 80%;
     z-index: 2000;
+  }
+}
+@media (min-width: 992px) {
+  .secondary-hero {
+    display: block;
+    margin: 0 auto;
+    max-width: 645px;
+    padding: 0 25px;
+    position: relative;
+  }
+  .secondary-hero img {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  .secondary-hero .caption {
+    -webkit-clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
+    background: linear-gradient(#97da74, #62c4a9);
+    clip-path: polygon(0 0, 70% 0, 50% 100%, 0 100%);
+    display: inline-block;
+    height: 400px;
+    left: 0;
+    line-height: 41px;
+    margin-top: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 75%;
+    z-index: 10;
+  }
+  .secondary-hero .caption h3 {
+    color: white;
   }
 }
