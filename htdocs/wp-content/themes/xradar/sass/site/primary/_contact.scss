@@ -19,6 +19,7 @@
             padding: 0 40px;
             .contact-city {
                 margin-bottom: 50px;
+                position: relative;
                 hr {
                     margin-bottom: 20px;
                 }
@@ -32,6 +33,30 @@
                        filter: brightness(70%);
                     }
                 }
+                .overlay {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    background: rgba(0,0,0,0.5);
+                    -moz-transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    position: absolute;
+                    z-index: 100;
+                }
+                .overlay-link {
+                    background: transparent;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1000;
+                }
             }
             .details {
                 span {
@@ -41,11 +66,11 @@
                     width: 100%;
                     &.pin {
                         &:before {
-                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
-                            background-size: 25px 25px;
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+                            background-size: 20px 27px;
                             content: "";
                             display: inline-block;
-                            height: 25px;
+                            height: 27px;
                             left: 50%;
                             margin-left: -7px;
                             position: absolute;
@@ -55,7 +80,7 @@
                     }
                     &.phone {
                         &:before {
-                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
                             background-size: 25px 25px;
                             content: "";
                             display: inline-block;
@@ -69,7 +94,7 @@
                     }
                     &.mail {
                         &:before {
-                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+                            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
                             background-size: 25px 25px;
                             content: "";
                             display: inline-block;
@@ -93,7 +118,10 @@
             margin-bottom: -22px;
             width: 100%;
             h3 {
-                color: white; 
+                color: white;
+            }
+            .nf-form-title {
+                display: block;
             }
             .nf-form-fields-required {
                 color: white;
@@ -153,41 +181,17 @@
                     margin: 10px 0;
                     width: 150px;
                 }
-                .overlay {
-                    display: block;
-                    height: 100%;
-                    width: 100%;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    background: rgba(0,0,0,0.5);
-                    -moz-transition: all 0.5s;
-                    -webkit-transition: all 0.5s;
-                    transition: all 0.5s;
-                    position: absolute;
-                    z-index: 100;
-                }
-                .overlay-link {
-                    background: transparent;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    z-index: 1000;
-                }
                 .details {
                     width: 100%;
                     span {
                         padding: 5px 50px;
                         &.pin {
                             &:before {
-                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
-                                background-size: 25px 25px;
+                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+                                background-size: 20px 27px;
                                 content: "";
                                 display: inline-block;
-                                height: 25px;
+                                height: 27px;
                                 left: 7px;
                                 position: absolute;
                                 top: 15px;
@@ -196,7 +200,7 @@
                         }
                         &.phone {
                             &:before {
-                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
                                 background-size: 25px 25px;
                                 content: "";
                                 display: inline-block;
@@ -209,7 +213,7 @@
                         }
                         &.mail {
                             &:before {
-                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+                                background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
                                 background-size: 25px 25px;
                                 content: "";
                                 display: inline-block;

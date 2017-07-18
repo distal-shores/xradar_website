@@ -743,7 +743,7 @@ body.has-active-menu {
     display: block;
     margin: 0;
     position: relative;
-    padding: 25px 75px 75px 0;
+    padding: 25px 25px 75px 0;
     width: 100%;
   }
   #masthead #site-navigation {
@@ -859,17 +859,16 @@ body.has-active-menu {
     content: none;
   }
   #masthead .logo {
-    margin-left: 75px;
     padding-left: 0;
     width: 185px;
   }
   #masthead.services, #masthead.cstudies, #masthead.page {
     height: 150px;
     margin-bottom: 20px;
-    padding: 0 75px 30px 0;
+    padding: 0 25px 30px 0;
   }
   #masthead.services .site-branding, #masthead.cstudies .site-branding, #masthead.page .site-branding {
-    padding: 20px 0 0 50px;
+    padding: 20px 0 0 25px;
   }
   #masthead.services .logo, #masthead.cstudies .logo, #masthead.page .logo {
     height: auto;
@@ -891,7 +890,7 @@ body.has-active-menu {
     color: white;
     display: block;
     height: 30px;
-    padding: 3px 75px 0 0;
+    padding: 3px 25px 0 0;
     position: relative;
     text-align: right;
     width: 100%;
@@ -911,6 +910,15 @@ body.has-active-menu {
   }
 }
 @media (min-width: 992px) {
+  #masthead.page {
+    padding-right: 75px;
+  }
+  #masthead.page .site-branding {
+    padding-left: 75px;
+  }
+  #top-buffer {
+    padding-right: 75px;
+  }
 }
 /*--------------------------------------------------------------
  # Footer
@@ -1648,6 +1656,7 @@ body.has-active-menu {
   }
   .contact .flex-wrap .contact-city {
     margin-bottom: 50px;
+    position: relative;
   }
   .contact .flex-wrap .contact-city hr {
     margin-bottom: 20px;
@@ -1663,6 +1672,30 @@ body.has-active-menu {
     -webkit-filter: brightness(70%);
     filter: brightness(70%);
   }
+  .contact .flex-wrap .contact-city .overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 100;
+  }
+  .contact .flex-wrap .contact-city .overlay-link {
+    background: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+  }
   .contact .flex-wrap .details span {
     display: block;
     padding: 40px 0 5px 0;
@@ -1670,11 +1703,11 @@ body.has-active-menu {
     width: 100%;
   }
   .contact .flex-wrap .details span.pin:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
-    background-size: 25px 25px;
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+    background-size: 20px 27px;
     content: "";
     display: inline-block;
-    height: 25px;
+    height: 27px;
     left: 50%;
     margin-left: -7px;
     position: absolute;
@@ -1682,7 +1715,7 @@ body.has-active-menu {
     width: 25px;
   }
   .contact .flex-wrap .details span.phone:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
     background-size: 25px 25px;
     content: "";
     display: inline-block;
@@ -1694,7 +1727,7 @@ body.has-active-menu {
     width: 25px;
   }
   .contact .flex-wrap .details span.mail:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
     background-size: 25px 25px;
     content: "";
     display: inline-block;
@@ -1715,6 +1748,9 @@ body.has-active-menu {
   }
   .contact .get-in-touch h3 {
     color: white;
+  }
+  .contact .get-in-touch .nf-form-title {
+    display: block;
   }
   .contact .get-in-touch .nf-form-fields-required {
     color: white;
@@ -1771,30 +1807,6 @@ body.has-active-menu {
     margin: 10px 0;
     width: 150px;
   }
-  .contact .flex-wrap .contact-city .overlay {
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    position: absolute;
-    z-index: 100;
-  }
-  .contact .flex-wrap .contact-city .overlay-link {
-    background: transparent;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1000;
-  }
   .contact .flex-wrap .contact-city .details {
     width: 100%;
   }
@@ -1802,18 +1814,18 @@ body.has-active-menu {
     padding: 5px 50px;
   }
   .contact .flex-wrap .contact-city .details span.pin:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/placeholder.png');
-    background-size: 25px 25px;
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/location-pin-2@2x.png');
+    background-size: 20px 27px;
     content: "";
     display: inline-block;
-    height: 25px;
+    height: 27px;
     left: 7px;
     position: absolute;
     top: 15px;
     width: 25px;
   }
   .contact .flex-wrap .contact-city .details span.phone:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-call.png');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/phone-icon@2x.png');
     background-size: 25px 25px;
     content: "";
     display: inline-block;
@@ -1824,7 +1836,7 @@ body.has-active-menu {
     width: 25px;
   }
   .contact .flex-wrap .contact-city .details span.mail:before {
-    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/message.png');
+    background-image: url('http://xradar.dev/wp-content/uploads/2017/07/email-icon@2x.png');
     background-size: 25px 25px;
     content: "";
     display: inline-block;

@@ -59,7 +59,7 @@
         display: block;
         margin: 0;
         position:relative;
-        padding: 25px 75px 75px 0;
+        padding: 25px 25px 75px 0;
         width: 100%;
         #site-navigation {
             display: inline-block;
@@ -180,7 +180,6 @@
             }
         }
         .logo {
-            margin-left: 75px;
             padding-left: 0;
             width: 185px;
         }
@@ -189,9 +188,9 @@
         &.page {
             height: 150px;
             margin-bottom: 20px;
-            padding: 0 75px 30px 0;
+            padding: 0 25px 30px 0;
             .site-branding {
-                padding: 20px 0  0 50px;
+                padding: 20px 0 0 25px;
             }
             .logo {
                 height: auto;
@@ -218,7 +217,7 @@
         color: white;
         display: block;
         height: 30px;
-        padding: 3px 75px 0 0;
+        padding: 3px 25px 0 0;
         position: relative;
         text-align: right;
         width: 100%;
@@ -240,7 +239,17 @@
 }
 
 @include respond-to(medium) {
-
+    #masthead {
+        &.page {
+            padding-right: 75px;
+            .site-branding {
+                padding-left: 75px;
+            }
+        }
+    }
+    #top-buffer {
+        padding-right: 75px;
+    }
 
 }
 
