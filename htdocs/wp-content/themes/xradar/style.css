@@ -389,6 +389,9 @@ button:active, input[type="button"]:active, input[type="reset"]:active, input[ty
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: border-color 0.5s;
+  /* Safari */
+  transition: border-color 0.5s;
   width: 250px;
 }
 .cta-button.black {
@@ -397,6 +400,9 @@ button:active, input[type="button"]:active, input[type="reset"]:active, input[ty
 .cta-button.white {
   border-color: white;
   color: white;
+}
+.cta-button:hover {
+  border-color: #62c4a9;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   color: #666;
@@ -455,17 +461,37 @@ a:hover, a:active {
   background: linear-gradient(#97da74, #62c4a9);
   transition: transform 0.3s;
 }
-.c-menu #primary-menu {
+.c-menu #mobile-menu ul {
   list-style: none;
   margin: 30px 0 0 0;
 }
-.c-menu #primary-menu a {
+.c-menu #mobile-menu ul a {
   color: black;
   font-size: 20px;
   text-decoration: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
-.c-menu #primary-menu li {
+.c-menu #mobile-menu ul a:hover {
+  color: white;
+}
+.c-menu #mobile-menu ul li {
   padding: 5px 0;
+}
+.c-menu #mobile-menu ul .page_item_has_children > a:first-of-type:after {
+  content: '\002B';
+}
+.c-menu #mobile-menu ul .page_item_has_children.active > a:first-of-type:after {
+  content: '\2212';
+}
+.c-menu #mobile-menu ul .page_item_has_children ul {
+  display: none;
+}
+.c-menu #mobile-menu ul .children {
+  margin-top: 0;
+}
+.c-menu #mobile-menu ul .children li a {
+  font-size: 16px;
 }
 .c-menu__items {
   list-style: none;
@@ -884,6 +910,9 @@ body.has-active-menu {
   }
   #masthead.services #site-navigation .menu-primary-menu-container li a, #masthead.cstudies #site-navigation .menu-primary-menu-container li a, #masthead.page #site-navigation .menu-primary-menu-container li a {
     color: black;
+  }
+  #masthead.services #site-navigation .menu-primary-menu-container li a:hover, #masthead.cstudies #site-navigation .menu-primary-menu-container li a:hover, #masthead.page #site-navigation .menu-primary-menu-container li a:hover {
+    color: white;
   }
   #top-buffer {
     background: linear-gradient(#97da74, #62c4a9);

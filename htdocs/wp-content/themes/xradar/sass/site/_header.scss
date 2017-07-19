@@ -206,6 +206,9 @@
                     li {
                         a {
                             color: black;
+                            &:hover {
+                                color: white;
+                            }
                         }
                     }
                 }

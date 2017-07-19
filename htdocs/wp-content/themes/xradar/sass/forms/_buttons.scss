@@ -34,6 +34,8 @@ input[type="submit"] {
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
+	-webkit-transition: border-color 0.5s; /* Safari */
+    transition: border-color 0.5s;
 	width: 250px;
 	&.black {
 		color: black;
@@ -41,5 +43,8 @@ input[type="submit"] {
 	&.white {
 		border-color: white;
 		color: white;
+	}
+	&:hover {
+		border-color: $color__border-button-bottom;
 	}
 }

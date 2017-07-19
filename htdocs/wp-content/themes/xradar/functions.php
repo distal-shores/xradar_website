@@ -47,6 +47,10 @@ function xradar_setup() {
 		'menu-1' => esc_html__( 'Primary', 'xradar' ),
 	) );
 
+    register_nav_menus( array(
+        'mobile-menu' => esc_html__( 'Mobile', 'xradar' ),
+    ) );
+
 
 
 	/*
@@ -114,6 +118,8 @@ function xradar_scripts() {
     wp_enqueue_script( 'xradar-menu', get_template_directory_uri() . '/js/menu.js', array(), '20151215', true );
 
     wp_enqueue_script( 'expander', get_template_directory_uri() . '/js/jquery.expander.js', array(), '20151215', true);
+
+    wp_enqueue_script( 'sidebar', get_template_directory_uri() . '/js/sidebar.js', array(), '20151215', true);
 
     wp_enqueue_script( 'expander-custom', get_template_directory_uri() . '/js/expander-custom.js', array(), '20151215', true);
 
