@@ -231,4 +231,25 @@ function my_jquery_enqueue() {
    wp_enqueue_script('jquery');
 }
 
+add_filter('the_content', function( $content ){
+    //--Remove all inline styles--
+    $content = preg_replace('/ style=("|\')(.*?)("|\')/','',$content);
+    return $content;
+}, 20);
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+remove_filter('the_excerpt', 'wpautop');
+
+add_filter('excerpt_more','__return_false');
+
 

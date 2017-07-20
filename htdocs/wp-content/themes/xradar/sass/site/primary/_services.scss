@@ -115,6 +115,18 @@
                 flex-basis: 65%;
                 padding-right: 50px;
             }
+            .sidebar-contact {
+                border-left: 1px solid lightgray;
+                display: block;
+                flex-basis: 30%;
+                h3 {
+                    color: black;
+                    text-align: center;
+                }
+                .details {
+                    padding-left: 40px;
+                }
+            }
         }
     }
     .page-services {

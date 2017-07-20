@@ -1,28 +1,148 @@
-.sticky {
-	display: block;
+@include respond-to(mobile) {
+    .post {
+        .content {
+            margin-bottom: 50px;
+            padding: 0 20px;
+            blockquote {
+                p {
+                    color: $color__border-button-bottom;
+                    font-style: italic;
+                    font-weight: 400;
+                    &:before {
+                        content: '\201C';
+                    }
+                    &:after {
+                        content: '\201D';
+                    }
+                }
+            }
+            figure {
+                width: 100%;
+                figcaption {
+                    font-family: Apercu Pro, Arial, sans-serif;
+                }
+                img {
+                    -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                    clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                }
+            }
+            > p:first-of-type {
+                font-weight: 700;
+            }
+            a[rel=next] {
+                color: black;
+                display: block;
+                font-family: Galano Grotesque;
+                font-size: $font__size-xxlarge;
+                font-weight: 700;
+                text-align: center;
+                transition: color 0.3s;
+                -webkit-transition: color 0.3s;
+                &:after {
+                    content: '\00a0 \2192';
+                }
+                &:hover {
+                    color: $color__border-button-top;
+                }
+            }
+        }
+        .featured {
+            display: none;
+        }
+        .post-frontmatter {
+            padding: 0 20px;
+        }
+        .post-hero {
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+            height: 285px;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+
+        }
+    }
 }
 
-.hentry {
-	margin: 0 0 1.5em;
+@include respond-to(small) {
+    .post {
+        .content {
+            padding: 0 45px;
+        }
+        .featured {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0 45px 50px;
+            .featured-post {
+                flex-basis: 50%;
+                margin-right: 20px;
+                .blog-title {
+                    background-color: white;
+                    display: inline-block;
+                    margin-top: -60px;
+                    padding: 0 10px 0 25px;
+                    position: relative;
+                    width: 80%;
+                    z-index: 10;
+                    h3 {
+                        font-size: $font__size-xlarge;
+                        margin-top: 0;
+                    }
+                    hr {
+                        height: 4px;
+                        width: 115px;
+                    }
+                    span {
+                        color: $color__link;
+                        display: block;
+                        font-family: Galano Grotesque, Arial, sans-serif;
+                        font-size: $font__size-medium;
+                        line-height: 25px;
+                        letter-spacing: 0.5px;
+                        margin: 15px 0;
+                        text-transform: uppercase;
+                    }
+                }
+                .field-content {
+                    overflow:hidden;
+                    padding-bottom:100%;
+                    position:relative;
+                    width:100%;
+                    z-index: 1;
+                    img {
+                        clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                        min-width:100%;
+                        min-height:100%;
+                        object-fit: cover;
+                        position:absolute;
+                        width:auto;
+                        -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                    }
+                }
+                .read-more {
+                    font-family: Galano Grotesque, Arial, sans-serif;
+                    text-transform: uppercase;
+                }
+                p {
+                    margin-top: 5px;
+                    padding: 0 15px 0 25px;
+                }
+            }
+            .flex-wrap {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+            }
+        }
+        .post-frontmatter {
+            padding: 0 45px;
+        }
+        .post-hero {
+            height: 460px;
+        }
+    }
 }
 
-.byline,
-.updated:not(.published){
-	display: none;
-}
+@include respond-to(medium) {
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
 }
