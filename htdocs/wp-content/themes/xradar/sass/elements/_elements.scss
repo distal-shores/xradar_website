@@ -31,25 +31,50 @@ h1, h2, h3 {
     font-family: Galano Grotesque, Impact, serif;
 }
 
-h1 {
-    font-size: $font__size-h1;
-    line-height: 62px;
+@include respond-to(mobile) {
+    h1 {
+        font-size: $font__size-xxlarge;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-size: $font__size-large;
+    }
+
+    h3 {
+        font-size: $font__size-medium;
+    }
+
+    hr {
+        background-image: linear-gradient(to right, $color__border-button-top, $color__border-button-bottom);
+        border: 0;
+        height: 4px;
+        margin: 10px auto;
+        width: 125px;
+    }
+
 }
 
-h2 {
-    font-size: $font__size-h2;
-}
+@include respond-to(small) {
+    h1 {
+        font-size: $font__size-h1;
+        line-height: 62px;
+    }
 
-h3 {
-    font-size: $font__size-h3;
-}
+    h2 {
+        font-size: $font__size-h2;
+    }
 
-hr {
-    background-image: linear-gradient(to right, $color__border-button-top, $color__border-button-bottom);
-    border: 0;
-    height: 10px;
-    margin: 20px auto;
-    width: 200px;
+    h3 {
+        font-size: $font__size-h3;
+    }
+
+    hr {
+        height: 10px;
+        margin: 20px auto;
+        width: 200px;
+    }
+
 }
 
 @import "lists";

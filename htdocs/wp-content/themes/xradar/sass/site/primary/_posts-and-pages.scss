@@ -1,4 +1,7 @@
 @include respond-to(mobile) {
+    article {
+        padding: 0 20px;
+    }
     .post {
         .content {
             margin-bottom: 50px;
@@ -63,6 +66,9 @@
 }
 
 @include respond-to(small) {
+    article {
+        padding: 0 45px;
+    }
     .post {
         .content {
             padding: 0 45px;
@@ -143,6 +149,38 @@
 }
 
 @include respond-to(medium) {
-
-
+    .post {
+        .flex-wrap {
+            .content {
+                flex-basis: 63%;
+            }
+            .sidebar-contact {
+                border-left: 1px solid lightgray;
+                display: initial;
+                flex-basis: 30%;
+                h3 {
+                    color: black;
+                    text-align: center;
+                }
+                .details {
+                    padding-left: 40px;
+                }
+            }
+        }
+        .featured {
+            .featured-post {
+                box-shadow: 5px 5px 5px #d6d3d3;
+                .field-content {
+                    padding-bottom: 0;
+                    img {
+                        height: 375px;
+                        min-width: initial;
+                        min-height: initial;
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

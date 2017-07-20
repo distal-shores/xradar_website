@@ -58,7 +58,7 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="/about">About</a></li>
-                        <li>Privacy Policy</li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

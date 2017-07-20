@@ -1,0 +1,121 @@
+@include respond-to(mobile) {
+    .blog {
+        .blog-hero {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+            background-image: url('http://xradar.dev/wp-content/uploads/2017/07/blog_hero.jpg');
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);
+            height: 275px;
+
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            .post {
+                flex-basis: 100%;
+                margin: 0 20px 50px 0;
+                padding-bottom: 50px;
+                .blog-title {
+                    background-color: white;
+                    display: inline-block;
+                    margin-top: -60px;
+                    padding: 0 10px 0 25px;
+                    position: relative;
+                    width: 80%;
+                    z-index: 10;
+                    h3 {
+                        font-size: $font__size-xlarge;
+                        margin-top: 0;
+                    }
+                    hr {
+                        height: 4px;
+                        width: 115px;
+                    }
+                    span {
+                        color: $color__link;
+                        display: block;
+                        font-family: Galano Grotesque, Arial, sans-serif;
+                        font-size: $font__size-medium;
+                        line-height: 25px;
+                        letter-spacing: 0.5px;
+                        margin: 15px 0;
+                        text-transform: uppercase;
+                    }
+                }
+                .field-content {
+                    overflow:hidden;
+                    padding-bottom:100%;
+                    position:relative;
+                    width:100%;
+                    z-index: 1;
+                    img {
+                        clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                        min-width:100%;
+                        min-height:100%;
+                        object-fit: cover;
+                        position:absolute;
+                        width:auto;
+                        -webkit-clip-path: polygon(79% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                    }
+                }
+                .read-more {
+                    font-family: Galano Grotesque, Arial, sans-serif;
+                    text-transform: uppercase;
+                }
+                p {
+                    margin-top: 5px;
+                    padding: 0 15px 0 25px;
+                }
+            }
+            .know-more {
+                display: none;
+            }
+        }
+        .frontmatter {
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+    }
+}
+
+@include respond-to(small) {
+    .blog {
+        .blog-hero {
+            height: 460px;
+        }
+        .content {
+            justify-content: space-around;
+            .post {
+                flex-basis: 46%;
+            }
+        }
+    }
+}
+
+@include respond-to(medium) {
+    .blog {
+        .content {
+            .post {
+                box-shadow: 5px 5px 5px #d6d3d3;
+                .field-content {
+                    padding-bottom: 0;
+                    img {
+                        height: 375px;
+                        min-width: initial;
+                        min-height: initial;
+                        position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .know-more {
+            display: block;
+            max-width: initial;
+            padding-top: 120px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

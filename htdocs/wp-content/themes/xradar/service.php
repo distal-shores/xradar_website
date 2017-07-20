@@ -37,18 +37,13 @@ get_header('services'); ?>
                 ?>
             </div>
             <div class="sidebar-contact">
-                <div class="local-contact">
-                    <h3>Contact Us</h3>
-                    <form>
-                        <select>
-                            <option>Vancouver</option>
-                        </select>
-                    </form>
-                    <div class="pin"><span>114-2799 Gilmore Ave<br>Burnaby, BC<br>V5C 6S5</span></div>
-                    <div class="phone"><span>604-436-7226</span></div>
-                    <div class="email"><span>info@xradar.ca</span></div>
+                <h3>Contact Us</h3>
+                <div class="details">
+                    <span class="pin">4 Place du Commerce, Suite 101, Verdun, QC H3E 1J4</span>
+                    <span class="phone">604-436-7226</span>
+                    <span class="mail">montreal@xradar.ca</span>
                 </div>
-                <div class="quick-contact">
+                <div class="get-in-touch">
                     <h3>Quick Contact</h3>
                     <?php ninja_forms_display_form(6); ?>
                 </div>

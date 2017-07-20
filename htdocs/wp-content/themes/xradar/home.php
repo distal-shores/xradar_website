@@ -32,10 +32,34 @@ get_header(); ?>
                     <a href="/case-studies/port-mann-bridge"><button class="cta-button">View Case Study</button></a>
                 </div>
             </section>
-            <section class="blogroll">
-                <h1>Latest Blog Posts</h1>
+            <div class="featured">
+                <h2>Latest Blog Post</h2>
                 <hr>
-            </section>
+                <div class="flex-wrap">
+
+                    <?php
+                    global $post;
+                    $args = array( 'numberposts' => 2);
+                    $myposts = get_posts( $args );
+                    foreach( $myposts as $post ) :  setup_postdata($post); ?>
+
+                    <div class="featured-post">
+                            <?php if(has_post_thumbnail()): ?>
+                                <div class="field-content">
+                                    <img src="<?php echo the_post_thumbnail_url() ?>"/>
+                                </div>
+                            <?php endif ?>
+                            <div class="blog-title">
+                                <span><?php echo the_date('F Y') ?></span>
+                                <h3><?php the_title() ?></h3>
+                                <hr>
+                            </div>
+                            <p><?php the_excerpt(); ?></p>
+                            <p class="read-more"><a href="<?php the_permalink(); ?>">Read More ></a></p>
+                    </div>
+                    <?php endforeach; wp_reset_postdata(); ?> 
+                </div>
+            </div>
             <section class="contact-us">
                 <h1>Get in Touch</h1>
                 <hr>

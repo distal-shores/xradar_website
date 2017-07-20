@@ -11,36 +11,29 @@ get_header('page'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main post" role="main">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="post-hero" style="background-image:url('<?php if(has_post_thumbnail()) {
+					echo the_post_thumbnail_url();
+				} ?>');"></div>
+			<div class="post-frontmatter">
+				<h1><?php echo get_the_title(); ?></h1>
+				<hr>
+			</div>
 			<div class="flex-wrap">
-				<div class="the-post">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<div class="post-hero" style="background-image:url('<?php if(has_post_thumbnail()) {
-							echo the_post_thumbnail_url();
-						} ?>');"></div>
-						<div class="post-frontmatter">
-							<h1><?php echo get_the_title(); ?></h1>
-							<hr>
-						</div>
-						<section class="content">
-							<?php echo the_content(); ?>
-							<?php next_post_link( '%link', 'Next Blog Post', TRUE ); ?>
-						</section>
-					<?php endwhile; // End of the loop. ?>
-					<?php wp_reset_query(); ?>
-				</div>
+				<section class="content">
+					<?php echo the_content(); ?>
+					<?php next_post_link( '%link', 'Next Blog Post', TRUE ); ?>
+				</section>
+				<?php endwhile; // End of the loop. ?>
+				<?php wp_reset_query(); ?>
 	            <div class="sidebar-contact">
-	                <div class="local-contact">
-	                    <h3>Contact Us</h3>
-	                    <form>
-	                        <select>
-	                            <option>Vancouver</option>
-	                        </select>
-	                    </form>
-	                    <div class="pin"><span>114-2799 Gilmore Ave<br>Burnaby, BC<br>V5C 6S5</span></div>
-	                    <div class="phone"><span>604-436-7226</span></div>
-	                    <div class="email"><span>info@xradar.ca</span></div>
+	                <h3>Contact Us</h3>
+	                <div class="details">
+	                    <span class="pin">4 Place du Commerce, Suite 101, Verdun, QC H3E 1J4</span>
+	                    <span class="phone">604-436-7226</span>
+	                    <span class="mail">montreal@xradar.ca</span>
 	                </div>
-	                <div class="quick-contact">
+	                <div class="get-in-touch">
 	                    <h3>Quick Contact</h3>
 	                    <?php ninja_forms_display_form(6); ?>
 	                </div>
