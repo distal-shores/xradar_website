@@ -110,43 +110,44 @@
             }
 
         }
-        .get-in-touch {
-            background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
-            background-size: cover;
-            padding: 40px 0 0 0;
-            height: 925px;
-            margin-bottom: -22px;
-            width: 100%;
-            h3 {
-                color: white;
-            }
-            .nf-form-title {
-                display: block;
-            }
-            .nf-element {
-                background-color: $color__form-background;
-                border: 2px solid $color__border-button-top;
-                border-radius: 25px;
-                display: block;
-                font-family: Apercu Pro, Arial, sans-serif;
-                margin: 0 auto 10px;
-                padding: 10px 0 10px 20px;
-                position: relative;
-                width: 80%;
-            }
-            // submit button
-            #nf-field-34 {
-                background: linear-gradient(180deg, #98DD6B 0%, #5CC4AB 100%);
-                border-radius: 25px;
-                color: white;
-                font-family: Galano Grotesque, Arial, sans-serif;
-                font-size: $font__size-medium;
-                height: 40px;
-                letter-spacing: 1px;
-                margin: 0 auto;
-                text-transform: uppercase;
-                width: 80%;
-            }
+    }
+   .get-in-touch-contact {
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+        background-size: cover;
+        padding: 40px 0 0 0;
+        height: 925px;
+        margin-bottom: -22px;
+        text-align: center;
+        width: 100%;
+        h3 {
+            color: white;
+        }
+        .nf-form-title {
+            display: block;
+        }
+        .nf-element {
+            background-color: $color__form-background;
+            border: 2px solid $color__border-button-top;
+            border-radius: 25px;
+            display: block;
+            font-family: Apercu Pro, Arial, sans-serif;
+            margin: 0 auto 10px;
+            padding: 10px 0 10px 20px;
+            position: relative;
+            width: 80%;
+        }
+        // submit button
+        #nf-field-34 {
+            background: linear-gradient(180deg, #98DD6B 0%, #5CC4AB 100%);
+            border-radius: 25px;
+            color: white;
+            font-family: Galano Grotesque, Arial, sans-serif;
+            font-size: $font__size-medium;
+            height: 40px;
+            letter-spacing: 1px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            width: 80%;
         }
     }
 
@@ -157,6 +158,19 @@
     #contact-hero-photo {
         height: 600px;
     }
+    .get-in-touch-contact {
+        .nf-form-title {
+            h3 {
+                font-size: $font__size-xxlarge; 
+            }
+        }
+        .nf-element {
+            width: 60%;
+        }
+        #nf-field-34 {
+            width: 60%;
+        }
+    }
     .contact {
         padding: 0 75px;
         margin-bottom: 75px;
@@ -166,7 +180,7 @@
             .contact-city {
                 margin: 0 1.66666% 25px 1.66666%;
                 position: relative;
-                width: 30%;
+                width: 45%;
                 h3 {
                     font-size: $font__size-xxlarge;
                     margin: 20px 0 10px 0;
@@ -224,11 +238,28 @@
             }
         }
         .white-box {
-            width: 40%;
-        }
-        .get-in-touch {
-            display: none;
+            width: 60%;
+            hr {
+                margin: 0;
+            }
         }
 
+    }
+}
+
+@include respond-to(medium) {
+    .get-in-touch-contact {
+        .nf-form-title {
+            h3 {
+                font-size: $font__size-5xl; 
+            }
+        }
+    }
+    .contact {
+        .flex-wrap {
+            .contact-city {
+                width: 30%;
+            }
+        }
     }
 }

@@ -3478,3 +3478,6 @@ Stack trace:
 [21-Jul-2017 01:21:26 UTC] PHP Notice:  ninja_forms_display_form is <strong>deprecated</strong> since Ninja Forms version 3.0! Use Ninja_Forms()->display( $form_id, $is_preview ) instead. in /srv/www/xradar/htdocs/wp-content/plugins/ninja-forms/ninja-forms.php on line 686
 [21-Jul-2017 01:22:32 UTC] PHP Notice:  ninja_forms_display_form is <strong>deprecated</strong> since Ninja Forms version 3.0! Use Ninja_Forms()->display( $form_id, $is_preview ) instead. in /srv/www/xradar/htdocs/wp-content/plugins/ninja-forms/ninja-forms.php on line 686
 [21-Jul-2017 01:22:32 UTC] PHP Notice:  ninja_forms_display_form is <strong>deprecated</strong> since Ninja Forms version 3.0! Use Ninja_Forms()->display( $form_id, $is_preview ) instead. in /srv/www/xradar/htdocs/wp-content/plugins/ninja-forms/ninja-forms.php on line 686
+[21-Jul-2017 21:08:56 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[21-Jul-2017 21:08:56 UTC] PHP Notice:  Undefined offset: 1 in /srv/www/xradar/htdocs/wp-admin/includes/dashboard.php on line 1227
+[21-Jul-2017 21:11:32 UTC] PHP Notice:  ninja_forms_display_form is <strong>deprecated</strong> since Ninja Forms version 3.0! Use Ninja_Forms()->display( $form_id, $is_preview ) instead. in /srv/www/xradar/htdocs/wp-content/plugins/ninja-forms/ninja-forms.php on line 686

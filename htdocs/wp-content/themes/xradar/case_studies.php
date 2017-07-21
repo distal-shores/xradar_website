@@ -46,6 +46,10 @@ get_header('cstudies'); ?>
                 ?>
 
         </main><!-- #main -->
+        <section class="know-more">
+            <h2>Get to Know Our Services</h2>
+            <a href="/services"><button class="cta-button white">Learn More</button></a>
+        </section>
     </div><!-- #primary -->
 
 <?php

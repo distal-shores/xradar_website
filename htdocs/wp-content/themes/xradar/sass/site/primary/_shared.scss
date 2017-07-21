@@ -51,6 +51,7 @@
         width: 100%;
         .nf-form-title {
             display: none;
+            font-size: $font__size-5xl;
         }
         .nf-element {
             background-color: $color__form-background;
@@ -88,6 +89,11 @@
             color: white;
             text-align: center;
         }
+        .nf-form-title {
+            h3 {
+                font-size: $font__size-5xl;
+            }
+        }
         .nf-element {
             background-color: $color__form-background;
             border: 2px solid $color__border-button-top;
@@ -124,6 +130,9 @@
         padding: 120px 0 0 0;
         text-align: center;
         width: 100%;
+        h2 {
+            font-size: $font__size-h2;
+        }
     }
     .nf-form-fields-required {
         display: none;
@@ -171,6 +180,9 @@
                 width: 80%;
             }
         }
+    }
+    .site-main {
+        margin-bottom: 80px;    
     }
 
     .white-box {

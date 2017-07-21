@@ -33,16 +33,16 @@ h1, h2, h3 {
 
 @include respond-to(mobile) {
     h1 {
-        font-size: $font__size-xxlarge;
+        font-size: $font__size-xxxlarge;
         line-height: 32px;
     }
 
     h2 {
-        font-size: $font__size-large;
+        font-size: $font__size-xlarge;
     }
 
     h3 {
-        font-size: $font__size-medium;
+        font-size: $font__size-large;
     }
 
     hr {
@@ -57,7 +57,7 @@ h1, h2, h3 {
 
 @include respond-to(small) {
     h1 {
-        font-size: $font__size-5xl;
+        font-size: $font__size-h2;
         line-height: 62px;
     }
 

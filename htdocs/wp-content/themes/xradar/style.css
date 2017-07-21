@@ -295,14 +295,14 @@ h1, h2, h3 {
 }
 @media (min-width: 0) {
   h1 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 32px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
   hr {
     background-image: linear-gradient(to right, #97da74, #62c4a9);
@@ -314,7 +314,7 @@ h1, h2, h3 {
 }
 @media (min-width: 767px) {
   h1 {
-    font-size: 40px;
+    font-size: 48px;
     line-height: 62px;
   }
   h2 {
@@ -790,7 +790,7 @@ body.has-active-menu {
   }
   .post .featured {
     display: block;
-    margin-bottom: 30px;
+    margin: 0 0 30px !important;
     padding: 0 45px 50px;
   }
   .post .featured .featured-post {
@@ -862,6 +862,9 @@ body.has-active-menu {
   }
 }
 @media (min-width: 992px) {
+  .post .flex-wrap {
+    margin-top: 50px;
+  }
   .post .flex-wrap .content {
     flex-basis: 63%;
   }
@@ -1080,15 +1083,18 @@ body.has-active-menu {
     padding-left: 0;
     width: 185px;
   }
+  #masthead.services .submenu {
+    display: none;
+  }
   #masthead.services, #masthead.cstudies, #masthead.page {
     height: 150px;
     margin-bottom: 20px;
-    padding: 0 25px 30px 0;
+    padding: 0 25px 30px 16px;
   }
   #masthead.services .logo, #masthead.cstudies .logo, #masthead.page .logo {
     height: auto;
     padding-left: 0;
-    margin-top: 25px;
+    margin-top: 50px;
     width: 185px;
   }
   #masthead.services #site-navigation, #masthead.cstudies #site-navigation, #masthead.page #site-navigation {
@@ -1139,6 +1145,9 @@ body.has-active-menu {
   }
   #masthead .site-branding {
     padding-left: 75px;
+  }
+  #masthead.services #site-navigation .submenu {
+    display: block;
   }
   #top-buffer {
     padding-right: 75px;
@@ -1435,7 +1444,7 @@ body.has-active-menu {
   }
   .site-main .featured {
     display: block;
-    margin-bottom: 30px;
+    margin: 80px 0 30px 0;
     padding: 0 45px 50px;
   }
   .site-main .featured .featured-post {
@@ -1865,6 +1874,9 @@ body.has-active-menu {
 }
 @media (min-width: 767px) {
   .page-about .white-box {
+    background: transparent;
+    display: block;
+    margin-top: 0;
     padding-left: 35px;
     width: 100%;
   }
@@ -1886,7 +1898,7 @@ body.has-active-menu {
     width: 34%;
   }
   .page-about #overview {
-    margin-top: 560px;
+    margin-top: 400px;
   }
   .page-about .know-more {
     clear: both;
@@ -1903,6 +1915,9 @@ body.has-active-menu {
   }
   .page-about #hero-photo {
     height: 800px;
+  }
+  .page-about #overview {
+    margin-top: 560px;
   }
   .page-about #overview .two-column {
     column-count: 2;
@@ -1979,6 +1994,13 @@ body.has-active-menu {
   }
   .page-about .hero-image2 {
     height: 680px;
+  }
+  .page-about .white-box {
+    background-color: white;
+    margin-top: -110px;
+  }
+  .page-about .white-box h1 {
+    margin-top: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -2088,21 +2110,22 @@ body.has-active-menu {
     top: 2px;
     width: 25px;
   }
-  .contact .get-in-touch {
+  .get-in-touch-contact {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
     background-size: cover;
     padding: 40px 0 0 0;
     height: 925px;
     margin-bottom: -22px;
+    text-align: center;
     width: 100%;
   }
-  .contact .get-in-touch h3 {
+  .get-in-touch-contact h3 {
     color: white;
   }
-  .contact .get-in-touch .nf-form-title {
+  .get-in-touch-contact .nf-form-title {
     display: block;
   }
-  .contact .get-in-touch .nf-element {
+  .get-in-touch-contact .nf-element {
     background-color: #f3f3f3;
     border: 2px solid #97da74;
     border-radius: 25px;
@@ -2113,7 +2136,7 @@ body.has-active-menu {
     position: relative;
     width: 80%;
   }
-  .contact .get-in-touch #nf-field-34 {
+  .get-in-touch-contact #nf-field-34 {
     background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
     border-radius: 25px;
     color: white;
@@ -2130,6 +2153,15 @@ body.has-active-menu {
   #contact-hero-photo {
     height: 600px;
   }
+  .get-in-touch-contact .nf-form-title h3 {
+    font-size: 28px;
+  }
+  .get-in-touch-contact .nf-element {
+    width: 60%;
+  }
+  .get-in-touch-contact #nf-field-34 {
+    width: 60%;
+  }
   .contact {
     padding: 0 75px;
     margin-bottom: 75px;
@@ -2141,7 +2173,7 @@ body.has-active-menu {
   .contact .flex-wrap .contact-city {
     margin: 0 1.66666% 25px 1.66666%;
     position: relative;
-    width: 30%;
+    width: 45%;
   }
   .contact .flex-wrap .contact-city h3 {
     font-size: 28px;
@@ -2192,10 +2224,18 @@ body.has-active-menu {
     width: 25px;
   }
   .contact .white-box {
-    width: 40%;
+    width: 60%;
   }
-  .contact .get-in-touch {
-    display: none;
+  .contact .white-box hr {
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  .get-in-touch-contact .nf-form-title h3 {
+    font-size: 40px;
+  }
+  .contact .flex-wrap .contact-city {
+    width: 30%;
   }
 }
 /*--------------------------------------------------------------
@@ -2420,6 +2460,7 @@ body.has-active-menu {
 @media (min-width: 767px) {
   .page-service .service-hero {
     height: 460px;
+    margin-top: 0;
   }
   .page-service .flex-wrap {
     flex-wrap: nowrap;
@@ -2428,13 +2469,68 @@ body.has-active-menu {
   .page-service .flex-wrap .service-content {
     flex-basis: 100%;
   }
+  .page-services section {
+    position: relative;
+  }
+  .page-services #hero-photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 585px;
+  }
+  .page-services .overlay-link {
+    background: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+  }
+  .page-services .white-box {
+    display: block;
+    margin-top: 0;
+    padding-left: 35px;
+    width: 100%;
+  }
+  .page-services .white-box hr {
+    width: 130px;
+  }
+  .page-services .know-more {
+    display: block;
+  }
+  .page-services .overview {
+    margin-bottom: 50px;
+  }
+  .page-services .flex-wrap {
+    justify-content: space-around;
+    margin-bottom: 80px;
+  }
+  .page-services .flex-wrap section {
+    flex-basis: 50%;
+  }
+  .page-services .flex-wrap section .inner {
+    max-width: 495px;
+    margin: -90px 0 0;
+    padding: 0 20px;
+    width: 90%;
+  }
+  .page-services .flex-wrap section .inner a {
+    display: none;
+  }
+  .page-services .flex-wrap section .inner h2 {
+    font-size: 36px;
+    text-align: left;
+  }
+  .page-services .flex-wrap section .services-photo {
+    height: 375px;
+    max-width: none;
+    width: auto;
+  }
 }
 @media (min-width: 992px) {
-  .page-service h1 {
+  .page-service .frontmatter {
     padding: 0 135px;
-  }
-  .page-service hr {
-    margin-left: 135px;
   }
   .page-service .service-hero {
     height: 585px;
@@ -2442,7 +2538,7 @@ body.has-active-menu {
   .page-service .flex-wrap {
     justify-content: flex-start;
     margin-bottom: 80px;
-    padding: 0 135px;
+    padding: 0 75px 0 135px;
   }
   .page-service .flex-wrap .service-content {
     flex-basis: 65%;
@@ -2451,7 +2547,8 @@ body.has-active-menu {
   .page-service .flex-wrap .sidebar-contact {
     border-left: 1px solid lightgray;
     display: block;
-    flex-basis: 30%;
+    flex-basis: 40%;
+    padding: 0 20px;
   }
   .page-service .flex-wrap .sidebar-contact h3 {
     color: black;
@@ -2480,31 +2577,6 @@ body.has-active-menu {
     height: 100%;
     width: 100%;
     z-index: 1000;
-  }
-  .page-services .flex-wrap {
-    justify-content: space-around;
-    margin-bottom: 80px;
-  }
-  .page-services .flex-wrap section {
-    flex-basis: 50%;
-  }
-  .page-services .flex-wrap section .inner {
-    max-width: 495px;
-    margin-bottom: 60px;
-    padding: 0 20px;
-    width: 90%;
-  }
-  .page-services .flex-wrap section .inner a {
-    display: none;
-  }
-  .page-services .flex-wrap section .inner h2 {
-    font-size: 36px;
-    text-align: left;
-  }
-  .page-services .flex-wrap section .services-photo {
-    height: 375px;
-    max-width: none;
-    width: auto;
   }
   .page-services .overview {
     margin-bottom: 80px;
@@ -2652,6 +2724,7 @@ embed, iframe, object {
   }
   .get-in-touch .nf-form-title {
     display: none;
+    font-size: 40px;
   }
   .get-in-touch .nf-element {
     background-color: #f3f3f3;
@@ -2689,6 +2762,9 @@ embed, iframe, object {
     color: white;
     text-align: center;
   }
+  .get-in-touch2 .nf-form-title h3 {
+    font-size: 40px;
+  }
   .get-in-touch2 .nf-element {
     background-color: #f3f3f3;
     border: 2px solid #97da74;
@@ -2722,6 +2798,9 @@ embed, iframe, object {
     padding: 120px 0 0 0;
     text-align: center;
     width: 100%;
+  }
+  .know-more h2 {
+    font-size: 48px;
   }
   .nf-form-fields-required {
     display: none;
@@ -2768,6 +2847,9 @@ embed, iframe, object {
     margin: 0 auto;
     text-transform: uppercase;
     width: 80%;
+  }
+  .site-main {
+    margin-bottom: 80px;
   }
   .white-box {
     background-color: white;

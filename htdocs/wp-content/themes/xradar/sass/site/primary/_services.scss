@@ -109,6 +109,7 @@
 
         .service-hero {
             height: 460px;
+            margin-top: 0;
         }
         .flex-wrap {
             flex-wrap: nowrap;
@@ -119,15 +120,73 @@
             
         }
     }
+
+    .page-services {
+        section {
+            position: relative;
+        }
+        #hero-photo {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 585px;
+        }
+        .overlay-link {
+            background: transparent;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1000;
+        }
+        .white-box {
+            display: block;
+            margin-top: 0;
+            padding-left: 35px;
+            width: 100%;
+            hr {
+                width: 130px;
+            }
+        }
+        .know-more {
+            display: block;
+        }
+        .overview {
+            margin-bottom: 50px;
+        }
+       .flex-wrap {
+            justify-content: space-around;
+            margin-bottom: 80px;
+            section {
+                flex-basis: 50%;
+                .inner {
+                    max-width: 495px;
+                    margin: -90px 0 0;
+                    padding: 0 20px;
+                    width: 90%;
+                    a {
+                        display: none;
+                    }
+                    h2 {
+                        font-size: $font__size-h3;
+                        text-align: left;
+                    }
+                }
+                .services-photo {
+                    height: 375px;
+                    max-width: none;
+                    width: auto;
+                }
+            }
+        }
+    }
 }
 
 @include respond-to(medium) {
     .page-service {
-        h1 {
+        .frontmatter {
             padding: 0 135px;
-        }
-        hr {
-            margin-left: 135px;
         }
         .service-hero {
             height: 585px;
@@ -135,7 +194,7 @@
         .flex-wrap {
             justify-content: flex-start;
             margin-bottom: 80px;
-            padding: 0 135px;
+            padding: 0 75px 0 135px;
             .service-content {
                 flex-basis: 65%;
                 padding-right: 50px;
@@ -143,7 +202,8 @@
             .sidebar-contact {
                 border-left: 1px solid lightgray;
                 display: block;
-                flex-basis: 30%;
+                flex-basis: 40%;
+                padding: 0 20px;
                 h3 {
                     color: black;
                     text-align: center;
@@ -175,31 +235,6 @@
             height: 100%;
             width: 100%;
             z-index: 1000;
-        }
-        .flex-wrap {
-            justify-content: space-around;
-            margin-bottom: 80px;
-            section {
-                flex-basis: 50%;
-                .inner {
-                    max-width: 495px;
-                    margin-bottom: 60px;
-                    padding: 0 20px;
-                    width: 90%;
-                    a {
-                        display: none;
-                    }
-                    h2 {
-                        font-size: $font__size-h3;
-                        text-align: left;
-                    }
-                }
-                .services-photo {
-                    height: 375px;
-                    max-width: none;
-                    width: auto;
-                }
-            }
         }
         .overview {
             margin-bottom: 80px;

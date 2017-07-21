@@ -49,11 +49,11 @@ get_header('page'); ?>
                 ?>
 
             </div>
-
-            <div class="get-in-touch">
-                <?php ninja_forms_display_form(6); ?>
-            </div>
         </main><!-- #main -->
+
+        <div class="get-in-touch-contact">
+            <?php ninja_forms_display_form(6); ?>
+        </div>
     </div><!-- #primary -->
 
 <?php

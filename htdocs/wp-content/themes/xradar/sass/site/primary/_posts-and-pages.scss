@@ -75,7 +75,7 @@
         }
         .featured {
             display: block;
-            margin-bottom: 30px;
+            margin: 0 0 30px !important;
             padding: 0 45px 50px;
             .featured-post {
                 flex-basis: 50%;
@@ -151,6 +151,7 @@
 @include respond-to(medium) {
     .post {
         .flex-wrap {
+            margin-top: 50px;
             .content {
                 flex-basis: 63%;
             }
