@@ -41,6 +41,9 @@
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+    .frontmatter {
+        padding: 0 20px;
+    }
     .get-in-touch {
         background: white;
         padding: 40px 0 0 0;
@@ -73,6 +76,43 @@
             }
         }
     }
+   .get-in-touch2 {
+        background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+        background-size: cover;
+        display: block;
+        padding: 40px 0 0 0;
+        height: 925px;
+        margin-bottom: -22px;
+        width: 100%;
+        h3 {
+            color: white;
+            text-align: center;
+        }
+        .nf-element {
+            background-color: $color__form-background;
+            border: 2px solid $color__border-button-top;
+            border-radius: 25px;
+            display: block;
+            font-family: Apercu Pro, Arial, sans-serif;
+            margin: 0 auto 10px;
+            padding: 10px 0 10px 20px;
+            position: relative;
+            width: 80%;
+        }
+        // submit button
+        #nf-field-43 {
+            background: linear-gradient(180deg, #98DD6B 0%, #5CC4AB 100%);
+            border-radius: 25px;
+            color: white;
+            font-family: Galano Grotesque, Arial, sans-serif;
+            font-size: $font__size-medium;
+            height: 40px;
+            letter-spacing: 1px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            width: 80%;
+        }
+    }
     .know-more {
         background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
         // background-position: 800px 500px;
@@ -96,6 +136,9 @@
 @include respond-to(small) {
     #top-buffer {
         display: block;
+    }
+    .frontmatter {
+        padding: 0 40px;
     }
     .get-in-touch {
         background: white;
@@ -142,6 +185,12 @@
 }
 
 @include respond-to(medium) {
+    .frontmatter {
+        padding: 0 75px;
+    }
+    .get-in-touch2 {
+        display: none;
+    }
     .secondary-hero {
         display: block;
         margin: 0 auto;

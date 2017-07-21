@@ -314,6 +314,23 @@ h1, h2, h3 {
 }
 @media (min-width: 767px) {
   h1 {
+    font-size: 40px;
+    line-height: 62px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  hr {
+    height: 10px;
+    margin: 20px auto;
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
     font-size: 64px;
     line-height: 62px;
   }
@@ -481,36 +498,36 @@ a:hover, a:active {
   background: linear-gradient(#97da74, #62c4a9);
   transition: transform 0.3s;
 }
-.c-menu #mobile-menu ul {
+.c-menu .menu-mobile-container ul {
   list-style: none;
   margin: 30px 0 0 0;
 }
-.c-menu #mobile-menu ul a {
+.c-menu .menu-mobile-container ul a {
   color: black;
   font-size: 20px;
   text-decoration: none;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
 }
-.c-menu #mobile-menu ul a:hover {
+.c-menu .menu-mobile-container ul a:hover {
   color: white;
 }
-.c-menu #mobile-menu ul li {
+.c-menu .menu-mobile-container ul li {
   padding: 5px 0;
 }
-.c-menu #mobile-menu ul .page_item_has_children > a:first-of-type:after {
+.c-menu .menu-mobile-container ul .menu-item-has-children > a:first-of-type:after {
   content: '\002B';
 }
-.c-menu #mobile-menu ul .page_item_has_children.active > a:first-of-type:after {
+.c-menu .menu-mobile-container ul .menu-item-has-children.active > a:first-of-type:after {
   content: '\2212';
 }
-.c-menu #mobile-menu ul .page_item_has_children ul {
+.c-menu .menu-mobile-container ul .menu-item-has-children ul {
   display: none;
 }
-.c-menu #mobile-menu ul .children {
+.c-menu .menu-mobile-container ul .menu-item-has-children .sub-menu {
   margin-top: 0;
 }
-.c-menu #mobile-menu ul .children li a {
+.c-menu .menu-mobile-container ul .menu-item-has-children .sub-menu li a {
   font-size: 16px;
 }
 .c-menu__items {
@@ -944,6 +961,9 @@ body.has-active-menu {
     padding: 25px 25px 75px 0;
     width: 100%;
   }
+  #masthead .site-branding {
+    padding: 0 0 0 30px;
+  }
   #masthead #site-navigation {
     display: inline-block;
     float: right;
@@ -1064,9 +1084,6 @@ body.has-active-menu {
     height: 150px;
     margin-bottom: 20px;
     padding: 0 25px 30px 0;
-  }
-  #masthead.services .site-branding, #masthead.cstudies .site-branding, #masthead.page .site-branding {
-    padding: 20px 0 0 25px;
   }
   #masthead.services .logo, #masthead.cstudies .logo, #masthead.page .logo {
     height: auto;
@@ -1602,42 +1619,6 @@ body.has-active-menu {
     margin-top: 0;
     width: 100%;
   }
-  .get-in-touch2 {
-    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
-    background-size: cover;
-    display: block;
-    padding: 40px 0 0 0;
-    height: 925px;
-    margin-bottom: -22px;
-    width: 100%;
-  }
-  .get-in-touch2 h3 {
-    color: white;
-    text-align: center;
-  }
-  .get-in-touch2 .nf-element {
-    background-color: #f3f3f3;
-    border: 2px solid #97da74;
-    border-radius: 25px;
-    display: block;
-    font-family: Apercu Pro, Arial, sans-serif;
-    margin: 0 auto 10px;
-    padding: 10px 0 10px 20px;
-    position: relative;
-    width: 80%;
-  }
-  .get-in-touch2 #nf-field-43 {
-    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
-    border-radius: 25px;
-    color: white;
-    font-family: Galano Grotesque, Arial, sans-serif;
-    font-size: 16px;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 80%;
-  }
   .page-cstudy, .page-cstudies {
     padding: 0 50px;
   }
@@ -1816,6 +1797,9 @@ body.has-active-menu {
   .page-about #overview {
     background-color: white;
     margin-top: 650px;
+  }
+  .page-about #why-xradar {
+    margin-bottom: 100px;
   }
   .page-about #why-xradar h2 {
     color: black;
@@ -2242,14 +2226,14 @@ body.has-active-menu {
     display: block;
   }
   .city .contact-info {
-    .flex-basis: 100%;
+    flex-basis: 100%;
   }
   .city .contact-info .contact-photos {
     text-align: center;
   }
   .city .contact-info .contact-photos img {
     border-radius: 50%;
-    height: 150px;
+    height: auto;
     width: 150px;
   }
   .city .contact-info .contact-photos span {
@@ -2282,7 +2266,7 @@ body.has-active-menu {
     text-transform: uppercase;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   .city .city-hero {
     height: 585px;
   }
@@ -2311,9 +2295,11 @@ body.has-active-menu {
   .city .contact-info .photo {
     display: inline-block;
     padding: 20px;
+    width: 45%;
+    height: auto;
   }
   .city .map {
-    flex-basis: 65%;
+    flex-basis: 60%;
   }
   .city .photos {
     display: block;
@@ -2336,6 +2322,17 @@ body.has-active-menu {
  # Services
  --------------------------------------------------------------*/
 @media (min-width: 0) {
+  .page-service .flex-wrap {
+    padding: 0 20px;
+  }
+  .page-service .service-hero {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    height: 350px;
+    margin-top: 80px;
+    width: 100%;
+  }
   .page-services section:not(.know-more) {
     padding: 0 50px;
   }
@@ -2421,6 +2418,18 @@ body.has-active-menu {
   }
 }
 @media (min-width: 767px) {
+  .page-service .service-hero {
+    height: 460px;
+  }
+  .page-service .flex-wrap {
+    flex-wrap: nowrap;
+    padding: 0 40px;
+  }
+  .page-service .flex-wrap .service-content {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 992px) {
   .page-service h1 {
     padding: 0 135px;
   }
@@ -2428,12 +2437,7 @@ body.has-active-menu {
     margin-left: 135px;
   }
   .page-service .service-hero {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
     height: 585px;
-    margin-top: 80px;
-    width: 100%;
   }
   .page-service .flex-wrap {
     justify-content: flex-start;
@@ -2478,11 +2482,11 @@ body.has-active-menu {
     z-index: 1000;
   }
   .page-services .flex-wrap {
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 80px;
   }
   .page-services .flex-wrap section {
-    width: 50%;
+    flex-basis: 50%;
   }
   .page-services .flex-wrap section .inner {
     max-width: 495px;
@@ -2500,7 +2504,7 @@ body.has-active-menu {
   .page-services .flex-wrap section .services-photo {
     height: 375px;
     max-width: none;
-    width: 575px;
+    width: auto;
   }
   .page-services .overview {
     margin-bottom: 80px;
@@ -2511,7 +2515,6 @@ body.has-active-menu {
   .page-services .white-box {
     margin-bottom: 55px;
     white-space: nowrap;
-    width: 45%;
   }
   .services .submenu ul {
     padding-top: 0 !important;
@@ -2638,6 +2641,9 @@ embed, iframe, object {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  .frontmatter {
+    padding: 0 20px;
+  }
   .get-in-touch {
     background: white;
     padding: 40px 0 0 0;
@@ -2670,6 +2676,42 @@ embed, iframe, object {
     text-transform: uppercase;
     width: 80%;
   }
+  .get-in-touch2 {
+    background: url('http://xradar.dev/wp-content/uploads/2017/07/Contact-BG.jpg');
+    background-size: cover;
+    display: block;
+    padding: 40px 0 0 0;
+    height: 925px;
+    margin-bottom: -22px;
+    width: 100%;
+  }
+  .get-in-touch2 h3 {
+    color: white;
+    text-align: center;
+  }
+  .get-in-touch2 .nf-element {
+    background-color: #f3f3f3;
+    border: 2px solid #97da74;
+    border-radius: 25px;
+    display: block;
+    font-family: Apercu Pro, Arial, sans-serif;
+    margin: 0 auto 10px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    width: 80%;
+  }
+  .get-in-touch2 #nf-field-43 {
+    background: linear-gradient(180deg, #98dd6b 0%, #5cc4ab 100%);
+    border-radius: 25px;
+    color: white;
+    font-family: Galano Grotesque, Arial, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 80%;
+  }
   .know-more {
     background: url('http://xradar.dev/wp-content/uploads/2017/07/lower_cta.jpg');
     background-size: cover;
@@ -2691,6 +2733,9 @@ embed, iframe, object {
 @media (min-width: 767px) {
   #top-buffer {
     display: block;
+  }
+  .frontmatter {
+    padding: 0 40px;
   }
   .get-in-touch {
     background: white;
@@ -2735,6 +2780,12 @@ embed, iframe, object {
   }
 }
 @media (min-width: 992px) {
+  .frontmatter {
+    padding: 0 75px;
+  }
+  .get-in-touch2 {
+    display: none;
+  }
   .secondary-hero {
     display: block;
     margin: 0 auto;

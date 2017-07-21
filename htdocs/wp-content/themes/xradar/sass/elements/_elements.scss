@@ -57,6 +57,28 @@ h1, h2, h3 {
 
 @include respond-to(small) {
     h1 {
+        font-size: $font__size-5xl;
+        line-height: 62px;
+    }
+
+    h2 {
+        font-size: $font__size-xxlarge;
+    }
+
+    h3 {
+        font-size: $font__size-large;
+    }
+
+    hr {
+        height: 10px;
+        margin: 20px auto;
+        width: 200px;
+    }
+
+}
+
+@include respond-to(medium) {
+    h1 {
         font-size: $font__size-h1;
         line-height: 62px;
     }

@@ -1,4 +1,17 @@
 @include respond-to(mobile) {
+    .page-service {
+        .flex-wrap {
+            padding: 0 20px;
+        }
+        .service-hero {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            height: 350px;
+            margin-top: 80px;
+            width: 100%;
+        }
+    }
     .page-services {
         section {
             &:not(.know-more) {
@@ -90,8 +103,25 @@
     }
 }
 
-
 @include respond-to(small) {
+
+    .page-service {
+
+        .service-hero {
+            height: 460px;
+        }
+        .flex-wrap {
+            flex-wrap: nowrap;
+            padding: 0 40px;
+            .service-content {
+                flex-basis: 100%;
+            }
+            
+        }
+    }
+}
+
+@include respond-to(medium) {
     .page-service {
         h1 {
             padding: 0 135px;
@@ -100,12 +130,7 @@
             margin-left: 135px;
         }
         .service-hero {
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-            background-size: cover;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
             height: 585px;
-            margin-top: 80px;
-            width: 100%;
         }
         .flex-wrap {
             justify-content: flex-start;
@@ -152,10 +177,10 @@
             z-index: 1000;
         }
         .flex-wrap {
-            justify-content: space-between;
+            justify-content: space-around;
             margin-bottom: 80px;
             section {
-                width: 50%;
+                flex-basis: 50%;
                 .inner {
                     max-width: 495px;
                     margin-bottom: 60px;
@@ -172,7 +197,7 @@
                 .services-photo {
                     height: 375px;
                     max-width: none;
-                    width: 575px;
+                    width: auto;
                 }
             }
         }
@@ -185,7 +210,7 @@
         .white-box {
             margin-bottom: 55px;
             white-space: nowrap;
-            width: 45%;
+            // width: 45%;
         }
     }
     .services {

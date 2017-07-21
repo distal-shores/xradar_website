@@ -24,12 +24,12 @@
             }
         }
         .contact-info {
-            .flex-basis: 100%;
+            flex-basis: 100%;
             .contact-photos {
                 text-align: center;
                 img {
                     border-radius: 50%;
-                    height: 150px;
+                    height: auto;
                     width: 150px;
                 }
                 span {
@@ -69,7 +69,7 @@
     }
 }
 
-@include respond-to(small) {
+@include respond-to(medium) {
     .city {
         .city-hero {
             height: 585px;
@@ -98,10 +98,12 @@
             .photo {
                 display: inline-block;
                 padding: 20px;
+                width: 45%;
+                height: auto;
             }
         }
         .map {
-            flex-basis: 65%;
+            flex-basis: 60%;
         }
         .photos {
             display: block;

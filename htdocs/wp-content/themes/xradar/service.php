@@ -17,11 +17,12 @@ get_header('services'); ?>
 <div id="primary" class="content-area services">
     <main id="main" class="site-main page-service" role="main">
 
-        <div class="service-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
+            <div class="service-hero" style="background:url('<?php echo $heroImage['url']; ?>');" /></div>
+        <div class="frontmatter">
+            <h1><?php echo get_the_title(); ?></h1>
+            <hr>
+        </div>
 
-        <h1><?php echo get_the_title(); ?></h1>
-
-        <hr>
 
         <div class="flex-wrap">
             <div class="service-content">
@@ -48,6 +49,9 @@ get_header('services'); ?>
                     <?php ninja_forms_display_form(6); ?>
                 </div>
             </div>
+        </div>
+        <div class="get-in-touch2">
+            <?php ninja_forms_display_form(7); ?>
         </div>
         <section class="know-more">
             <h2>See Our Services In Action</h2>

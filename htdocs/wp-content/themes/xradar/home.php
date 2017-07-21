@@ -33,7 +33,7 @@ get_header(); ?>
                 </div>
             </section>
             <div class="featured">
-                <h2>Latest Blog Post</h2>
+                <h2>Latest Blog Posts</h2>
                 <hr>
                 <div class="flex-wrap">
 

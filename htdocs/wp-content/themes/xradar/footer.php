@@ -18,7 +18,7 @@
         </span>
         <footer id="colophon" class="site-footer" role="contentinfo">
             <div class="footer-logo">
-                <img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_light.svg">
+                <a href="/"><img class="logo" src="http://xradar.dev/wp-content/uploads/2017/07/xr_logo_light.svg"></a>
                 <span>2017 Xradar &copy; <br> All rights reserved</span>      
             </div>
             <div class="footer-sitemap">

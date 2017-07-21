@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.page_item_has_children').click(function(e) {
+    $('.menu-item-has-children').click(function(e) {
         e.preventDefault();
         $(this).find('ul').toggle();
         $(this).toggleClass('active');
